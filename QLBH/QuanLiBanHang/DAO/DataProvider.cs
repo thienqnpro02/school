@@ -25,6 +25,7 @@ namespace DAO
                 }
         }
 
+        //private string STRconnection = "Data Source=.;Initial Catalog=QL_BanHang;Integrated Security=True";
         private string STRconnection = "Data Source=.;Initial Catalog=QL_BanHang;Integrated Security=True";
 
         private DataProvider() { }

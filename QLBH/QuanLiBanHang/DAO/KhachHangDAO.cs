@@ -31,7 +31,7 @@ namespace DAO
         {
             DataTable data = new DataTable();
 
-            string sql = "select * from KhachHang";
+            string sql = "select * from KhachHang2";
 
             data = DataProvider.Instance.ExecuteQuery(sql);
 

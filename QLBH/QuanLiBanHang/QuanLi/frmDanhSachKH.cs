@@ -21,8 +21,8 @@ namespace QuanLi
 
         public bool checkLoaded = false;
         public List<KhachHang> ds_kh;
-        public delegate void SendMsg(string str);
-
+        public delegate void SendDetail(KhachHang kh);
+        public SendDetail SendDetail_KH;
         
 
         private void frmDanhSachKH_Load(object sender, EventArgs e)
@@ -38,9 +38,13 @@ namespace QuanLi
 
             KhachHang kh = lbKhachHang.SelectedItem as KhachHang;
 
+            SendDetail_KH(kh);
             
         }
 
-
+        private void LbKhachHang_DoubleClick(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -30,22 +30,27 @@ namespace QuanLi
 
         void KhoiTao() 
         {
-            txtSoDH.Text = DonHanBUS.Instance.TaoMaDH();
+            //txtSoDH.Text = DonHanBUS.Instance.TaoMaDH();
             ds_kh = KhachHangBUS.Instance.DanhSach_KhachHang();
             
+        }
+
+        void ReceiveDetail_KH(KhachHang kh)
+        {
+            txtTenKH.Text = kh.TenKH;
+            txtNoiGiaoHang.Text = kh.DiaChi;
         }
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
             frmDanhSachKH frm = new frmDanhSachKH();
             frm.ds_kh = this.ds_kh;
-            
-            frm.ShowDialog();
+            frm.SendDetail_KH = ReceiveDetail_KH;
+
+            frm.Show();
         }
 
-        public void SendMsg(string str)
-        {
-            MessageBox.Show(str);
-        }
+        
+        
     }
 }

@@ -39,6 +39,7 @@
             this.lbKhachHang.Size = new System.Drawing.Size(299, 212);
             this.lbKhachHang.TabIndex = 0;
             this.lbKhachHang.SelectedIndexChanged += new System.EventHandler(this.lbKhachHang_SelectedIndexChanged);
+            this.lbKhachHang.DoubleClick += new System.EventHandler(this.LbKhachHang_DoubleClick);
             // 
             // frmDanhSachKH
             // 
