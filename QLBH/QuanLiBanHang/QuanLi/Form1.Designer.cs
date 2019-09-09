@@ -203,6 +203,7 @@
             this.simpleButton2.Size = new System.Drawing.Size(72, 32);
             this.simpleButton2.TabIndex = 15;
             this.simpleButton2.Text = "(F6)";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // simpleButton1
             // 

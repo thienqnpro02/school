@@ -25,7 +25,7 @@ namespace QuanLi
         private void Form1_Load(object sender, EventArgs e)
         {
             KhoiTao();
-            MessageBox.Show(ds_kh.Count.ToString());
+            
         }
 
         void KhoiTao() 
@@ -33,6 +33,19 @@ namespace QuanLi
             txtSoDH.Text = DonHanBUS.Instance.TaoMaDH();
             ds_kh = KhachHangBUS.Instance.DanhSach_KhachHang();
             
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            frmDanhSachKH frm = new frmDanhSachKH();
+            frm.ds_kh = this.ds_kh;
+            
+            frm.ShowDialog();
+        }
+
+        public void SendMsg(string str)
+        {
+            MessageBox.Show(str);
         }
     }
 }

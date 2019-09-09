@@ -36,7 +36,8 @@ namespace BUS
         {
             string maDH = "DHL_{0}_{1}";
             int tongDH = DonHangDAO.Instance.TongDonHangHomNay() +1;
-            return string.Format(maDH, DateTime.Now.ToShortDateString(), tongDH);
+            string ngayHT = DateTime.Now.ToShortDateString();
+            return string.Format(maDH, ngayHT , tongDH);
         }
     }
 }
