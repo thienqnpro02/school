@@ -29,7 +29,7 @@ namespace DAO
 
         private DataProvider() { }
 
-        private DataTable ExecuteQuery(string query, object[] parameters = null)
+        public DataTable ExecuteQuery(string query, object[] parameters = null)
         {
             DataTable data = new DataTable();
 
@@ -71,7 +71,7 @@ namespace DAO
             return data;
         }
 
-        private int ExecuteNonQuery(string query, object[] parameters = null)
+        public int ExecuteNonQuery(string query, object[] parameters = null)
         {
             int data = 0;
 
@@ -112,7 +112,7 @@ namespace DAO
             return data;
         }
 
-        private object ExecuteScalar(string query, object[] parameters = null) 
+        public object ExecuteScalar(string query, object[] parameters = null) 
         {
             object data;
 
