@@ -30,6 +30,7 @@ namespace QuanLi
             lbKhachHang.DataSource = ds_kh;
             lbKhachHang.DisplayMember = "TenKH";
             checkLoaded = true;
+            lbKhachHang.SelectedIndex = 2;
         }
 
         private void lbKhachHang_SelectedIndexChanged(object sender, EventArgs e)
