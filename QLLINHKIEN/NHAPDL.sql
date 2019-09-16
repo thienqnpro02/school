@@ -1,0 +1,116 @@
+-- DANHMUC 
+INSERT INTO DANHMUCLOAIHANG(TENDM) VALUES
+('CPU - BO VI XU LI'), --1
+('MAINBOARD - BO MACH CHU'),--2
+('RAM - BO NHO TRONG'),--3
+('O CUNG HDD'),--4
+('O CUNG SSD'),--5
+('ODD - O DIA QUANG'),--6
+('VGA - CARD MAN HINH'),--7
+('CARD AM THANH'),--8
+('CASE - VO MAY TINH'),--9
+('PSU - NGUON MAY TINH'),--10
+('BAN PHIM - CHUOT')--11
+
+-- LOAI HANG
+INSERT INTO LOAIHANG(TENHANG,MADM) VALUES 
+-- CPU
+('Intel Core i3',1),
+('Intel Core i5',1),
+('Intel Core i7',1),
+('Intel Core i9',1),
+('AMD Ryzen 7',1),
+('AMD Ryzen 9',1),
+
+--MAIN
+('Main ASUS',2),
+('Main Asrock',2),
+('Main GIGABYTE',2),
+('Main MSI',2),
+('Main INTEL H SERIES',2),
+('Main INTEL B SERIES',2),
+('Main INTEL Z SERIES',2),
+('Main AMD A SERIES',2),
+('Main AMD B SERIES',2),
+('Main AMD Z SERIES',2),
+
+-- RAM
+('RAM ADATA',3),
+('RAM ANTEC',3),
+('RAM KINGMAX',3),
+('RAM KINGSTON',3),
+('RAM TEAM',3),
+
+-- VGA
+('VGA ASUS',7),
+('VGA GIGABYTE',7),
+('VGA GALAX',7),
+('VGA MSI',7),
+('VGA GTR SERIES',7),
+('VGA GTR SUPER',7),
+-- O CUNG SSD
+('O CUNG SSD 2.5',5),
+('O CUNG M.2 SATA',5),
+('O CUNG M.2 NVME',5),
+('O CUNG SSD 2.5',5),
+('O CUNG SSD 240G-256G',5),
+('O CUNG SSD 480G-512G',5),
+('O CUNG SSD >960G',5),
+
+-- O CUNG HDD
+('O CUNG DESKTOP',4),
+('O CUNG LAPTOP',4),
+('O CUNG 2.5 INCH',4),
+('O CUNG 3.5 INCH',4),
+
+-- BAN PHIM - CHUOT
+('BO BAN PHIM ,CHUOT',11),
+('BAN PHIM',11),
+('CHUOT MAY TINH',11),
+('PHU KIEN BAN PHIM CHUOT',11),
+('BAN DI CHUOT',11),
+
+-- PSU - NGUON MAY TINH
+('NGUON DUOI 400W',10),
+('NGUON TU 400W-550W',10),
+('NGUON TU 550W-650W',10),
+('NGUON TU 650W-800',10),
+('NGUON TU 800W-1000W',10),
+('NGUON TREN 1000W',10),
+
+-- CASE 
+('VO CASE >1 TRIEU',9),
+('VO CASE 1 - 2 TRIEU',9),
+('VO CASE 2 - 3 TRIEU',9),
+('VO CASE TREN 3 TRIEU',9),
+('VO CASE MINI TOWER',9),
+('VO CASE MID TOWER',9),
+('VO CASE SUPER FULL TOWER',9)
+
+SELECT *FROM LOAIHANG;
+-- HANG
+INSERT INTO HANG(THONGSO,BAOHANG,SOLUONG,GIA,MALOAIHANG) VALUES 
+('CPU Intel Core i3-7100 3.9 GHz / 3MB / HD 630 Series Graphics / Socket 1151 (Kabylake)',36,145331, 3199000,1),
+('CPU Intel Core i3-9100F 3.6Ghz / 6MB / 4 Cores, 4 Threads / Socket 1151 / Coffee Lake',36,35754, 2199000,1),
+('CPU Intel Core i3-7100 3.9 GHz / 3MB / HD 630 Series Graphics / Socket 1151 (Kabylake)',36,145332, 3199000,1),
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
