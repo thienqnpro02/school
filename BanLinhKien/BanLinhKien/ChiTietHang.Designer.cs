@@ -57,12 +57,12 @@
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(194, 65);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 13);
+            this.label2.Size = new System.Drawing.Size(296, 115);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Thông số ....";
+            this.label2.Text = "Thông số .... Thông số ....Thông số ....Thông số ....Thông số ....Thông số ....Th" +
+    "ông số ....Thông số ....Thông số ....Thông số ....Thông số ....Thông số ....";
             // 
             // label3
             // 
