@@ -1,4 +1,4 @@
--- DANHMUC 
+﻿-- DANHMUC 
 INSERT INTO DANHMUCLOAIHANG(TENDM) VALUES
 ('CPU - BO VI XU LI'), --1
 ('MAINBOARD - BO MACH CHU'),--2
@@ -90,9 +90,16 @@ INSERT INTO LOAIHANG(TENHANG,MADM) VALUES
 SELECT *FROM LOAIHANG;
 SELECT *FROM HANG;
 -- HANG
-INSERT INTO HANG(THONGSO,BAOHANG,SOLUONG,GIA,MALOAIHANG) VALUES 
-('CPU Intel Core i3-7100 3.9 GHz / 3MB / HD 630 Series Graphics / Socket 1151 (Kabylake)',36,145331, 3199000,1),
-('CPU Intel Core i3-9100F 3.6Ghz / 6MB / 4 Cores, 4 Threads / Socket 1151 / Coffee Lake',36,35754, 2199000,1),
+INSERT INTO HANG(TENHANG,THONGSO,BAOHANH,SOLUONG,GIA,MALOAIHANG) VALUES 
+('CPU Intel Pentium Gold G5400 ',N'Tiến trình sản xuất 14nm
+2 nhân, 4 luồng, xung nhịp cơ bản 3.7 GHz, không có Turbo boost
+Hỗ trợ RAM DDR4, bus tối đa 2400 MHz
+Tích hợp card đồ hoạ Intel® UHD Graphics 610
+Có đi kèm quạt tản nhiệt',36,145331, 3199000,1),
+('CPU Intel Core i3-9100F',N'Intel Core i3 9100
+Là sản phẩm dựa trên kiến trúc Coffee Lake Refresh thế hệ mới nhất
+Bộ vi xử lý này có tần số cơ bản là 3.7 GHz. Mức TDP 65W
+Hỗ trợ RAM DDR4 2400 / Dual Channel',36,35754, 2199000,1),
 ('CPU Intel Core i3-7100 3.9 GHz / 3MB / HD 630 Series Graphics / Socket 1151 (Kabylake)',36,145332, 3199000,1),
 
 ('CPU Intel Core i5 9400 2.9 GHz turbo up to 4.1 GHz /6 Cores 6 Threads/ 9MB /Socket 1151/Coffee Lake',36,34859, 4599000,2),
@@ -164,7 +171,7 @@ INSERT INTO HANG(THONGSO,BAOHANG,SOLUONG,GIA,MALOAIHANG) VALUES
 
 ('Samsung 860 EVO 1TB M2 SATA 6Gb/s',36,791,5499000 ,29),
 
-('Samsung 860 EVO 1TB M2 SATA 6Gb/s',36,791,5499000 ,29),
+('Samsung 860 EVO 1TB M2 SATA 6Gb/s',36,791,5499000 ,29)
 
 
 
@@ -201,17 +208,12 @@ INSERT INTO HANG(THONGSO,BAOHANG,SOLUONG,GIA,MALOAIHANG) VALUES
 
 
 
+SELECT *FROM HANG
 
 
 
 
-
-SELECT *FROM LOAIHANG
-
-
-
-
-
+ 
 
 
 
