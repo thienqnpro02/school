@@ -28,40 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.picHang = new System.Windows.Forms.PictureBox();
+            this.lblTenHang = new System.Windows.Forms.Label();
+            this.lblThongSo = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblBaoHanh = new System.Windows.Forms.Label();
+            this.lblGia = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHang)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // picHang
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(176, 181);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.picHang.Location = new System.Drawing.Point(12, 12);
+            this.picHang.Name = "picHang";
+            this.picHang.Size = new System.Drawing.Size(176, 181);
+            this.picHang.TabIndex = 0;
+            this.picHang.TabStop = false;
             // 
-            // label1
+            // lblTenHang
             // 
-            this.label1.Location = new System.Drawing.Point(194, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(296, 23);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Tên Hàng";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTenHang.Location = new System.Drawing.Point(194, 12);
+            this.lblTenHang.Name = "lblTenHang";
+            this.lblTenHang.Size = new System.Drawing.Size(296, 23);
+            this.lblTenHang.TabIndex = 1;
+            this.lblTenHang.Text = "Tên Hàng";
+            this.lblTenHang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // lblThongSo
             // 
-            this.label2.Location = new System.Drawing.Point(194, 65);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(296, 115);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Thông số .... Thông số ....Thông số ....Thông số ....Thông số ....Thông số ....Th" +
+            this.lblThongSo.Location = new System.Drawing.Point(194, 65);
+            this.lblThongSo.Name = "lblThongSo";
+            this.lblThongSo.Size = new System.Drawing.Size(296, 115);
+            this.lblThongSo.TabIndex = 2;
+            this.lblThongSo.Text = "Thông số .... Thông số ....Thông số ....Thông số ....Thông số ....Thông số ....Th" +
     "ông số ....Thông số ....Thông số ....Thông số ....Thông số ....Thông số ....";
             // 
             // label3
@@ -73,23 +73,23 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Bảo hành: ";
             // 
-            // label4
+            // lblBaoHanh
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(259, 180);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 13);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "36 tháng";
+            this.lblBaoHanh.AutoSize = true;
+            this.lblBaoHanh.Location = new System.Drawing.Point(259, 180);
+            this.lblBaoHanh.Name = "lblBaoHanh";
+            this.lblBaoHanh.Size = new System.Drawing.Size(49, 13);
+            this.lblBaoHanh.TabIndex = 2;
+            this.lblBaoHanh.Text = "36 tháng";
             // 
-            // label5
+            // lblGia
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(415, 228);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 13);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "9999999 VND";
+            this.lblGia.AutoSize = true;
+            this.lblGia.Location = new System.Drawing.Point(415, 228);
+            this.lblGia.Name = "lblGia";
+            this.lblGia.Size = new System.Drawing.Size(75, 13);
+            this.lblGia.TabIndex = 2;
+            this.lblGia.Text = "9999999 VND";
             // 
             // label6
             // 
@@ -105,16 +105,16 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(502, 266);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblBaoHanh);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblGia);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.lblThongSo);
+            this.Controls.Add(this.lblTenHang);
+            this.Controls.Add(this.picHang);
             this.Name = "ChiTietHang";
             this.Text = "ChiTietHang";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHang)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -122,12 +122,12 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox picHang;
+        private System.Windows.Forms.Label lblTenHang;
+        private System.Windows.Forms.Label lblThongSo;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblBaoHanh;
+        private System.Windows.Forms.Label lblGia;
         private System.Windows.Forms.Label label6;
     }
 }
