@@ -62,6 +62,12 @@
     <Compile Include="GioHang.Designer.cs">
       <DependentUpon>GioHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="LichSuBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LichSuBan.Designer.cs">
+      <DependentUpon>LichSuBan.cs</DependentUpon>
+    </Compile>
     <Compile Include="main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GioHang.resx">
       <DependentUpon>GioHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LichSuBan.resx">
+      <DependentUpon>LichSuBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>

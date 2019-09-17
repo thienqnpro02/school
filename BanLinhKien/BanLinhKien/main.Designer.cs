@@ -37,7 +37,6 @@
             this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.heThongToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lichSuBanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dangXuatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dangXuatToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.btnThemVaoGio = new System.Windows.Forms.Button();
@@ -119,7 +118,6 @@
             // 
             this.heThongToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lichSuBanToolStripMenuItem,
-            this.dangXuatToolStripMenuItem,
             this.dangXuatToolStripMenuItem1});
             this.heThongToolStripMenuItem.Name = "heThongToolStripMenuItem";
             this.heThongToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
@@ -130,12 +128,6 @@
             this.lichSuBanToolStripMenuItem.Name = "lichSuBanToolStripMenuItem";
             this.lichSuBanToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.lichSuBanToolStripMenuItem.Text = "Lịch Sử Bán";
-            // 
-            // dangXuatToolStripMenuItem
-            // 
-            this.dangXuatToolStripMenuItem.Name = "dangXuatToolStripMenuItem";
-            this.dangXuatToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.dangXuatToolStripMenuItem.Text = "Báo Cáo";
             // 
             // dangXuatToolStripMenuItem1
             // 
@@ -293,7 +285,6 @@
         private System.Windows.Forms.ToolStripMenuItem adminToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem heThongToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lichSuBanToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dangXuatToolStripMenuItem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem dangXuatToolStripMenuItem1;
         private System.Windows.Forms.Button btnThemVaoGio;
