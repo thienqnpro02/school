@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTaiKhoan = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.txtMatKhau = new System.Windows.Forms.TextBox();
+            this.btnDangNhap = new System.Windows.Forms.Button();
+            this.btnThoat = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -45,12 +45,12 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Tài khoản";
             // 
-            // textBox1
+            // txtTaiKhoan
             // 
-            this.textBox1.Location = new System.Drawing.Point(171, 21);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(170, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtTaiKhoan.Location = new System.Drawing.Point(171, 21);
+            this.txtTaiKhoan.Name = "txtTaiKhoan";
+            this.txtTaiKhoan.Size = new System.Drawing.Size(170, 20);
+            this.txtTaiKhoan.TabIndex = 1;
             // 
             // label2
             // 
@@ -61,41 +61,44 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Mật khẩu";
             // 
-            // textBox2
+            // txtMatKhau
             // 
-            this.textBox2.Location = new System.Drawing.Point(171, 66);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(170, 20);
-            this.textBox2.TabIndex = 1;
+            this.txtMatKhau.Location = new System.Drawing.Point(171, 66);
+            this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.PasswordChar = '*';
+            this.txtMatKhau.Size = new System.Drawing.Size(170, 20);
+            this.txtMatKhau.TabIndex = 1;
             // 
-            // button1
+            // btnDangNhap
             // 
-            this.button1.Location = new System.Drawing.Point(28, 107);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(76, 36);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Đăng nhập";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnDangNhap.Location = new System.Drawing.Point(28, 107);
+            this.btnDangNhap.Name = "btnDangNhap";
+            this.btnDangNhap.Size = new System.Drawing.Size(76, 36);
+            this.btnDangNhap.TabIndex = 2;
+            this.btnDangNhap.Text = "Đăng nhập";
+            this.btnDangNhap.UseVisualStyleBackColor = true;
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
-            // button2
+            // btnThoat
             // 
-            this.button2.Location = new System.Drawing.Point(265, 107);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(76, 36);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Thoát";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnThoat.Location = new System.Drawing.Point(265, 107);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(76, 36);
+            this.btnThoat.TabIndex = 2;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // frmDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(357, 161);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.btnThoat);
+            this.Controls.Add(this.btnDangNhap);
+            this.Controls.Add(this.txtMatKhau);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtTaiKhoan);
             this.Controls.Add(this.label1);
             this.Name = "frmDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -108,10 +111,10 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTaiKhoan;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txtMatKhau;
+        private System.Windows.Forms.Button btnDangNhap;
+        private System.Windows.Forms.Button btnThoat;
     }
 }
