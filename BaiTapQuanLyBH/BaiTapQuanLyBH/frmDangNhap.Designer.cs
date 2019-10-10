@@ -100,9 +100,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtTaiKhoan);
             this.Controls.Add(this.label1);
+            this.KeyPreview = true;
             this.Name = "frmDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Nhập";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmDangNhap_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

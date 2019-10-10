@@ -21,6 +21,7 @@ namespace BaiTapQuanLyBH
         string connStr = @"Data Source=.;Initial Catalog=QLBH;Integrated Security=True";
         DataSet ds;
         bool isSubmit = false;
+        bool checkLoaded = false;
 
         private void frmPhieu_Thu_Load(object sender, EventArgs e)
         {
@@ -47,6 +48,7 @@ namespace BaiTapQuanLyBH
             adapter.Fill(ds, "PHIEU_XUAT");
             cbPhieuXuat.DataSource = ds.Tables["PHIEU_XUAT"];
             cbPhieuXuat.DisplayMember = "SoPX";
+            checkLoaded = true;
 
             if (previousItem != null) 
             {
@@ -92,11 +94,11 @@ namespace BaiTapQuanLyBH
                 string selectedText = cbPhieuXuat.Text;
                 loadPhieuXuat(selectedText);
                 isSubmit = true;
-                MessageBox.Show("Them thanh cong");
+                MessageBox.Show("Lưu thành công");
             }
             else 
             {
-                MessageBox.Show("Thao tac that bai");
+                MessageBox.Show("Thao tác thất bại");
             }
         }
 
@@ -134,16 +136,41 @@ namespace BaiTapQuanLyBH
 
         private void txtSoTienTra_TextChanged(object sender, EventArgs e)
         {
+            
+            int soTienTra;
+            DataRowView r = cbPhieuXuat.SelectedItem as DataRowView;
             if (txtSoTienTra.Text == "" || txtSoTienTra.Text == "")
-                return;
-
-            int soTienTra = Convert.ToInt32( txtSoTienTra.Text );
-            int soTienConLai = Convert.ToInt32(txtConNo.Text);
-
-            if (soTienTra > soTienConLai) 
             {
-                txtSoTienTra.Text = txtConNo.Text;
-                txtSoTienTra.Select(txtSoTienTra.TextLength, 0);
+                soTienTra = 0;
+                if (r != null) 
+                {
+                    txtDaTra.Text = r.Row["SoTienDaTra"].ToString();
+                    txtConNo.Text = r.Row["SoTienConLai"].ToString();
+                }
+                
+                    
+                 
+            }
+            else 
+            {
+                 soTienTra = Convert.ToInt32(txtSoTienTra.Text);
+                 
+                 int daTra = Convert.ToInt32(r.Row["SoTienDaTra"]);
+                 int conNo = Convert.ToInt32(r.Row["SoTienConLai"]);
+
+
+
+                 if (soTienTra > conNo)
+                 {
+                     txtSoTienTra.Text = txtConNo.Text;
+                     txtSoTienTra.Select(txtSoTienTra.TextLength, 0);
+                 }
+
+                 int updateDaTra = daTra + soTienTra;
+                 int updateConNo = conNo - updateDaTra;
+
+                 txtDaTra.Text = updateDaTra.ToString();
+                 txtConNo.Text = updateConNo.ToString();
             }
             
         }
@@ -158,7 +185,10 @@ namespace BaiTapQuanLyBH
 
         private void cbPhieuXuat_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtSoTienTra.Text = "";
+            if (checkLoaded == false)
+                return;
+            txtSoTienTra.Text = "";            
+             
         }
     }
 }

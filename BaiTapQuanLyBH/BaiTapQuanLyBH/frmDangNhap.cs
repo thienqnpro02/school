@@ -55,5 +55,13 @@ namespace BaiTapQuanLyBH
         {
             this.Close();
         }
+
+        private void frmDangNhap_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) 
+            {
+                btnDangNhap.PerformClick();
+            }
+        }
     }
 }
