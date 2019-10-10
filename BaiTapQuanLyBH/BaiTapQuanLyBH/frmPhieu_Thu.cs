@@ -19,8 +19,8 @@ namespace BaiTapQuanLyBH
         }
 
         string connStr = @"Data Source=.;Initial Catalog=QLBH;Integrated Security=True";
-
         DataSet ds;
+        bool isSubmit = false;
 
         private void frmPhieu_Thu_Load(object sender, EventArgs e)
         {
@@ -28,10 +28,10 @@ namespace BaiTapQuanLyBH
             loadSoCT();
         }
 
-        void loadPhieuXuat() 
+        void loadPhieuXuat(string previousItem = null) 
         {
            
-            string cmdText = "select * from PHIEU_XUAT";
+            string cmdText = "select * from PHIEU_XUAT where SoTienConLai <> 0";
             SqlConnection conn = new SqlConnection(connStr);
 
             SqlDataAdapter adapter = new SqlDataAdapter(cmdText, conn);
@@ -47,6 +47,12 @@ namespace BaiTapQuanLyBH
             adapter.Fill(ds, "PHIEU_XUAT");
             cbPhieuXuat.DataSource = ds.Tables["PHIEU_XUAT"];
             cbPhieuXuat.DisplayMember = "SoPX";
+
+            if (previousItem != null) 
+            {
+                int previousItemIdx = cbPhieuXuat.FindString(previousItem);
+                cbPhieuXuat.SelectedIndex = (previousItemIdx != -1) ? previousItemIdx : 0;
+            }
 
             txtPhaiTra.DataBindings.Add("Text", ds.Tables["PHIEU_XUAT"], "SoTienPhaiTra");
             txtDaTra.DataBindings.Add("Text", ds.Tables["PHIEU_XUAT"], "SoTienDaTra");
@@ -67,9 +73,25 @@ namespace BaiTapQuanLyBH
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-           
+            if (isSubmit == true) 
+            {
+                MessageBox.Show("Bấm tạo mới trước khi lưu");
+                return;
+            }
+
+            if (txtSoTienTra.Text == "" || txtSoTienTra.Text == "0") 
+            {
+                MessageBox.Show("Số tiền trả không hợp lệ");
+                return;
+            }
+            
+
             if (ThemPhieuThu() > 0 && SuaPhieuXuat() > 0)
             {
+                
+                string selectedText = cbPhieuXuat.Text;
+                loadPhieuXuat(selectedText);
+                isSubmit = true;
                 MessageBox.Show("Them thanh cong");
             }
             else 
@@ -121,17 +143,22 @@ namespace BaiTapQuanLyBH
             if (soTienTra > soTienConLai) 
             {
                 txtSoTienTra.Text = txtConNo.Text;
-                txtSoTienTra.SelectionStart = txtSoTienTra.TextLength;                
+                txtSoTienTra.Select(txtSoTienTra.TextLength, 0);
             }
             
         }
 
         private void btnTaoMoi_Click(object sender, EventArgs e)
         {
-            loadSoCT();
-            loadPhieuXuat();
+            loadSoCT();            
             txtSoTienTra.Text = "";
             txtDienGiai.Text = "";
+            isSubmit = false;
+        }
+
+        private void cbPhieuXuat_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtSoTienTra.Text = "";
         }
     }
 }

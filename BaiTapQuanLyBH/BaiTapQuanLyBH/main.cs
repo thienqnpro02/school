@@ -47,9 +47,7 @@ namespace BaiTapQuanLyBH
             isLogin = res;
             if (res)
             {
-                menuStripFormMain.Items["nhapHangToolStripMenuItem"].Enabled = true;
-                menuStripFormMain.Items["xuatHangToolStripMenuItem"].Enabled = true;
-                menuStripFormMain.Items["thuTienToolStripMenuItem"].Enabled = true;
+                toggleMenuStrip();
 
                 dangNhapToolStripMenuItem.Visible = false;
                 dangXuatToolStripMenuItem.Visible = true;
@@ -70,9 +68,7 @@ namespace BaiTapQuanLyBH
 
         private void dangXuatToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            menuStripFormMain.Items["nhapHangToolStripMenuItem"].Enabled = false;
-            menuStripFormMain.Items["xuatHangToolStripMenuItem"].Enabled = false;
-            menuStripFormMain.Items["thuTienToolStripMenuItem"].Enabled = false;
+            toggleMenuStrip();
 
             dangNhapToolStripMenuItem.Visible = true;
             dangXuatToolStripMenuItem.Visible = false;
@@ -83,6 +79,15 @@ namespace BaiTapQuanLyBH
             this.Close();
         }
 
-       
+        void toggleMenuStrip() 
+        {
+            menuStripFormMain.Items["nhapHangToolStripMenuItem"].Visible = !menuStripFormMain.Items["nhapHangToolStripMenuItem"].Visible;
+            menuStripFormMain.Items["xuatHangToolStripMenuItem"].Visible = !menuStripFormMain.Items["xuatHangToolStripMenuItem"].Visible;
+            menuStripFormMain.Items["thuTienToolStripMenuItem"].Visible =  !menuStripFormMain.Items["thuTienToolStripMenuItem"].Visible;
+
+            
+            //dangNhapToolStripMenuItem.Visible = !dangNhapToolStripMenuItem.Visible;
+            //dangXuatToolStripMenuItem.Visible = !dangXuatToolStripMenuItem.Visible;
+        }
     }
 }

@@ -172,6 +172,7 @@
             this.cbPhieuXuat.Name = "cbPhieuXuat";
             this.cbPhieuXuat.Size = new System.Drawing.Size(127, 21);
             this.cbPhieuXuat.TabIndex = 3;
+            this.cbPhieuXuat.SelectedIndexChanged += new System.EventHandler(this.cbPhieuXuat_SelectedIndexChanged);
             // 
             // btnLuu
             // 
@@ -179,7 +180,7 @@
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(84, 29);
             this.btnLuu.TabIndex = 2;
-            this.btnLuu.Text = "Luu";
+            this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
@@ -204,6 +205,7 @@
             // 
             // txtConNo
             // 
+            this.txtConNo.Enabled = false;
             this.txtConNo.Location = new System.Drawing.Point(87, 150);
             this.txtConNo.Name = "txtConNo";
             this.txtConNo.Size = new System.Drawing.Size(127, 20);
@@ -220,6 +222,7 @@
             // 
             // txtDaTra
             // 
+            this.txtDaTra.Enabled = false;
             this.txtDaTra.Location = new System.Drawing.Point(87, 110);
             this.txtDaTra.Name = "txtDaTra";
             this.txtDaTra.Size = new System.Drawing.Size(127, 20);
@@ -236,6 +239,7 @@
             // 
             // txtPhaiTra
             // 
+            this.txtPhaiTra.Enabled = false;
             this.txtPhaiTra.Location = new System.Drawing.Point(87, 72);
             this.txtPhaiTra.Name = "txtPhaiTra";
             this.txtPhaiTra.Size = new System.Drawing.Size(127, 20);
