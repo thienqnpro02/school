@@ -162,12 +162,13 @@ namespace BaiTapQuanLyBH
 
                  if (soTienTra > conNo)
                  {
-                     txtSoTienTra.Text = txtConNo.Text;
+                     txtSoTienTra.Text = r.Row["SoTienConLai"].ToString();
                      txtSoTienTra.Select(txtSoTienTra.TextLength, 0);
-                 }
+                     soTienTra = Convert.ToInt32(txtSoTienTra.Text);
+                }
 
                  int updateDaTra = daTra + soTienTra;
-                 int updateConNo = conNo - updateDaTra;
+                 int updateConNo = conNo - soTienTra;
 
                  txtDaTra.Text = updateDaTra.ToString();
                  txtConNo.Text = updateConNo.ToString();
