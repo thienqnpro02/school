@@ -1,0 +1,7 @@
+>> hey this is the first line
+
+<<<<<<< HEAD
+>> hell no, i will :)
+=======
+>> be sure you're not gonna change me :)
+>>>>>>> Thien/master
