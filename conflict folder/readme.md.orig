@@ -1,7 +1,9 @@
 >> hey this is the first line
 
 <<<<<<< HEAD
->> hell no, i will :)
+>> hell no
+
+>> i will delete all your things
 =======
->> be sure you're not gonna change me :)
->>>>>>> Thien/master
+>> hell no, i will :) (update from github)
+>>>>>>> master
