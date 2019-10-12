@@ -1,3 +1,3 @@
 >> hey this is the first line
 
->> hell no, i will :) (update from github)
+>> here is my awesome feature :) (update from feature1)
