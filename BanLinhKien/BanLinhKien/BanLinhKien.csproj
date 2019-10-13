@@ -44,29 +44,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin.cs">
+    <Compile Include="frm_ChiTietPhieuNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin.Designer.cs">
-      <DependentUpon>Admin.cs</DependentUpon>
+    <Compile Include="frm_ChiTietPhieuNhap.Designer.cs">
+      <DependentUpon>frm_ChiTietPhieuNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChiTietHang.cs">
+    <Compile Include="frm_NhapHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChiTietHang.Designer.cs">
-      <DependentUpon>ChiTietHang.cs</DependentUpon>
+    <Compile Include="frm_NhapHang.Designer.cs">
+      <DependentUpon>frm_NhapHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="GioHang.cs">
+    <Compile Include="frm_QuanLyDuLieu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GioHang.Designer.cs">
-      <DependentUpon>GioHang.cs</DependentUpon>
+    <Compile Include="frm_QuanLyDuLieu.Designer.cs">
+      <DependentUpon>frm_QuanLyDuLieu.cs</DependentUpon>
     </Compile>
-    <Compile Include="LichSuBan.cs">
+    <Compile Include="frm_ChiTietHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LichSuBan.Designer.cs">
-      <DependentUpon>LichSuBan.cs</DependentUpon>
+    <Compile Include="frm_ChiTietHang.Designer.cs">
+      <DependentUpon>frm_ChiTietHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_GioHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_GioHang.Designer.cs">
+      <DependentUpon>frm_GioHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ThongKe.Designer.cs">
+      <DependentUpon>frm_ThongKe.cs</DependentUpon>
     </Compile>
     <Compile Include="main.cs">
       <SubType>Form</SubType>
@@ -76,17 +88,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Admin.resx">
-      <DependentUpon>Admin.cs</DependentUpon>
+    <EmbeddedResource Include="frm_ChiTietPhieuNhap.resx">
+      <DependentUpon>frm_ChiTietPhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChiTietHang.resx">
-      <DependentUpon>ChiTietHang.cs</DependentUpon>
+    <EmbeddedResource Include="frm_NhapHang.resx">
+      <DependentUpon>frm_NhapHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GioHang.resx">
-      <DependentUpon>GioHang.cs</DependentUpon>
+    <EmbeddedResource Include="frm_QuanLyDuLieu.resx">
+      <DependentUpon>frm_QuanLyDuLieu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LichSuBan.resx">
-      <DependentUpon>LichSuBan.cs</DependentUpon>
+    <EmbeddedResource Include="frm_ChiTietHang.resx">
+      <DependentUpon>frm_ChiTietHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_GioHang.resx">
+      <DependentUpon>frm_GioHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ThongKe.resx">
+      <DependentUpon>frm_ThongKe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>

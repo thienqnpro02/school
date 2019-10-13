@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BanLinhKien
 {
-    public partial class LichSuBan : Form
+    public partial class frm_GioHang : Form
     {
-        public LichSuBan()
+        public frm_GioHang()
         {
             InitializeComponent();
         }

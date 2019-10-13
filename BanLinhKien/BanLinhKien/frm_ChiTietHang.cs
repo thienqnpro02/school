@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BanLinhKien
 {
-    public partial class Admin : Form
+    public partial class frm_ChiTietHang : Form
     {
-        public Admin()
+        public frm_ChiTietHang()
         {
             InitializeComponent();
         }

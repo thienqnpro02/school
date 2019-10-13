@@ -1,6 +1,6 @@
 ﻿namespace BanLinhKien
 {
-    partial class ChiTietHang
+    partial class frm_ChiTietHang
     {
         /// <summary>
         /// Required designer variable.
@@ -100,7 +100,7 @@
             this.label6.TabIndex = 2;
             this.label6.Text = "Giá";
             // 
-            // ChiTietHang
+            // frm_ChiTietHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -112,8 +112,8 @@
             this.Controls.Add(this.lblThongSo);
             this.Controls.Add(this.lblTenHang);
             this.Controls.Add(this.picHang);
-            this.Name = "ChiTietHang";
-            this.Text = "ChiTietHang";
+            this.Name = "frm_ChiTietHang";
+            this.Text = "Chi tiết hàng";
             ((System.ComponentModel.ISupportInitialize)(this.picHang)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
