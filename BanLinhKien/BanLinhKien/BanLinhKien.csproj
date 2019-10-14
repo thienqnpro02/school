@@ -50,6 +50,12 @@
     <Compile Include="frm_ChiTietPhieuNhap.Designer.cs">
       <DependentUpon>frm_ChiTietPhieuNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_DangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_DangNhap.Designer.cs">
+      <DependentUpon>frm_DangNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_NhapHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frm_ChiTietPhieuNhap.resx">
       <DependentUpon>frm_ChiTietPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_DangNhap.resx">
+      <DependentUpon>frm_DangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_NhapHang.resx">
       <DependentUpon>frm_NhapHang.cs</DependentUpon>

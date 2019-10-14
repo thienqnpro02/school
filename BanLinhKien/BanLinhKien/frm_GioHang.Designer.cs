@@ -40,7 +40,7 @@
             this.lblTongTien = new System.Windows.Forms.Label();
             this.btnThanhToan = new System.Windows.Forms.Button();
             this.btnTimKhachCu = new System.Windows.Forms.Button();
-            this.btnLamSachGio = new System.Windows.Forms.Button();
+            this.btnClearGio = new System.Windows.Forms.Button();
             this.cbInBienLai = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgtvDanhSachHang)).BeginInit();
             this.SuspendLayout();
@@ -146,14 +146,14 @@
             this.btnTimKhachCu.Text = "Tìm khách cũ";
             this.btnTimKhachCu.UseVisualStyleBackColor = true;
             // 
-            // btnLamSachGio
+            // btnClearGio
             // 
-            this.btnLamSachGio.Location = new System.Drawing.Point(493, 215);
-            this.btnLamSachGio.Name = "btnLamSachGio";
-            this.btnLamSachGio.Size = new System.Drawing.Size(200, 23);
-            this.btnLamSachGio.TabIndex = 4;
-            this.btnLamSachGio.Text = "Làm sạch giỏ";
-            this.btnLamSachGio.UseVisualStyleBackColor = true;
+            this.btnClearGio.Location = new System.Drawing.Point(493, 215);
+            this.btnClearGio.Name = "btnClearGio";
+            this.btnClearGio.Size = new System.Drawing.Size(200, 23);
+            this.btnClearGio.TabIndex = 4;
+            this.btnClearGio.Text = "Làm sạch giỏ";
+            this.btnClearGio.UseVisualStyleBackColor = true;
             // 
             // cbInBienLai
             // 
@@ -171,7 +171,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(705, 388);
             this.Controls.Add(this.cbInBienLai);
-            this.Controls.Add(this.btnLamSachGio);
+            this.Controls.Add(this.btnClearGio);
             this.Controls.Add(this.btnTimKhachCu);
             this.Controls.Add(this.btnThanhToan);
             this.Controls.Add(this.dtpkNamSinhKhachHang);
@@ -206,7 +206,7 @@
         private System.Windows.Forms.Label lblTongTien;
         private System.Windows.Forms.Button btnThanhToan;
         private System.Windows.Forms.Button btnTimKhachCu;
-        private System.Windows.Forms.Button btnLamSachGio;
+        private System.Windows.Forms.Button btnClearGio;
         private System.Windows.Forms.CheckBox cbInBienLai;
     }
 }

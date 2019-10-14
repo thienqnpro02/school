@@ -139,17 +139,11 @@ namespace BaiTapQuanLyBH
             
             int soTienTra;
             DataRowView r = cbPhieuXuat.SelectedItem as DataRowView;
-            if (txtSoTienTra.Text == "" || txtSoTienTra.Text == "")
-            {
-                soTienTra = 0;
-                if (r != null) 
-                {
-                    txtDaTra.Text = r.Row["SoTienDaTra"].ToString();
-                    txtConNo.Text = r.Row["SoTienConLai"].ToString();
-                }
+            if (txtSoTienTra.Text == "" && r != null)
+            {               
                 
-                    
-                 
+                txtDaTra.Text = r.Row["SoTienDaTra"].ToString();
+                txtConNo.Text = r.Row["SoTienConLai"].ToString();                 
             }
             else 
             {
@@ -158,20 +152,15 @@ namespace BaiTapQuanLyBH
                  int daTra = Convert.ToInt32(r.Row["SoTienDaTra"]);
                  int conNo = Convert.ToInt32(r.Row["SoTienConLai"]);
 
-
-
                  if (soTienTra > conNo)
                  {
                      txtSoTienTra.Text = r.Row["SoTienConLai"].ToString();
                      txtSoTienTra.Select(txtSoTienTra.TextLength, 0);
                      soTienTra = Convert.ToInt32(txtSoTienTra.Text);
-                }
+                 }                 
 
-                 int updateDaTra = daTra + soTienTra;
-                 int updateConNo = conNo - soTienTra;
-
-                 txtDaTra.Text = updateDaTra.ToString();
-                 txtConNo.Text = updateConNo.ToString();
+                 txtDaTra.Text = (daTra + soTienTra).ToString();
+                 txtConNo.Text = (conNo - soTienTra).ToString();
             }
             
         }
