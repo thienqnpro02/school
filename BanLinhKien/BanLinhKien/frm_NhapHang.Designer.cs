@@ -32,18 +32,18 @@
             this.txtTrang = new System.Windows.Forms.TextBox();
             this.btnNext = new System.Windows.Forms.Button();
             this.btnPrev = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbLocHang = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cbLocDanhMuc = new System.Windows.Forms.ComboBox();
             this.cbSapXep = new System.Windows.Forms.ComboBox();
             this.numSoLuong = new System.Windows.Forms.NumericUpDown();
-            this.btnThemVaoGio = new System.Windows.Forms.Button();
-            this.btnGioHang = new System.Windows.Forms.Button();
+            this.btnThemVaoGioNhapHang = new System.Windows.Forms.Button();
+            this.btnGioNhapHang = new System.Windows.Forms.Button();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.dgvDanhSachHang = new System.Windows.Forms.DataGridView();
-            this.groupBox1.SuspendLayout();
+            this.gbLocHang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numSoLuong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachHang)).BeginInit();
             this.SuspendLayout();
@@ -82,18 +82,18 @@
             this.btnPrev.Text = "<";
             this.btnPrev.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
+            // gbLocHang
             // 
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.cbLocDanhMuc);
-            this.groupBox1.Controls.Add(this.cbSapXep);
-            this.groupBox1.Location = new System.Drawing.Point(19, 23);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(368, 102);
-            this.groupBox1.TabIndex = 19;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Lọc Hàng:";
+            this.gbLocHang.Controls.Add(this.label2);
+            this.gbLocHang.Controls.Add(this.label1);
+            this.gbLocHang.Controls.Add(this.cbLocDanhMuc);
+            this.gbLocHang.Controls.Add(this.cbSapXep);
+            this.gbLocHang.Location = new System.Drawing.Point(19, 23);
+            this.gbLocHang.Name = "gbLocHang";
+            this.gbLocHang.Size = new System.Drawing.Size(368, 102);
+            this.gbLocHang.TabIndex = 19;
+            this.gbLocHang.TabStop = false;
+            this.gbLocHang.Text = "Lọc Hàng:";
             // 
             // label2
             // 
@@ -136,24 +136,24 @@
             this.numSoLuong.Size = new System.Drawing.Size(81, 20);
             this.numSoLuong.TabIndex = 18;
             // 
-            // btnThemVaoGio
+            // btnThemVaoGioNhapHang
             // 
-            this.btnThemVaoGio.Location = new System.Drawing.Point(585, 141);
-            this.btnThemVaoGio.Name = "btnThemVaoGio";
-            this.btnThemVaoGio.Size = new System.Drawing.Size(98, 23);
-            this.btnThemVaoGio.TabIndex = 17;
-            this.btnThemVaoGio.Text = "Thêm vào phiếu";
-            this.btnThemVaoGio.UseVisualStyleBackColor = true;
+            this.btnThemVaoGioNhapHang.Location = new System.Drawing.Point(585, 141);
+            this.btnThemVaoGioNhapHang.Name = "btnThemVaoGioNhapHang";
+            this.btnThemVaoGioNhapHang.Size = new System.Drawing.Size(98, 23);
+            this.btnThemVaoGioNhapHang.TabIndex = 17;
+            this.btnThemVaoGioNhapHang.Text = "Thêm vào phiếu";
+            this.btnThemVaoGioNhapHang.UseVisualStyleBackColor = true;
             // 
-            // btnGioHang
+            // btnGioNhapHang
             // 
-            this.btnGioHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGioHang.Location = new System.Drawing.Point(489, 32);
-            this.btnGioHang.Name = "btnGioHang";
-            this.btnGioHang.Size = new System.Drawing.Size(194, 66);
-            this.btnGioHang.TabIndex = 16;
-            this.btnGioHang.Text = "Phiếu nhập (0)";
-            this.btnGioHang.UseVisualStyleBackColor = true;
+            this.btnGioNhapHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGioNhapHang.Location = new System.Drawing.Point(489, 32);
+            this.btnGioNhapHang.Name = "btnGioNhapHang";
+            this.btnGioNhapHang.Size = new System.Drawing.Size(194, 66);
+            this.btnGioNhapHang.TabIndex = 16;
+            this.btnGioNhapHang.Text = "Phiếu nhập (0)";
+            this.btnGioNhapHang.UseVisualStyleBackColor = true;
             // 
             // btnTimKiem
             // 
@@ -188,17 +188,17 @@
             this.Controls.Add(this.txtTrang);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnPrev);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gbLocHang);
             this.Controls.Add(this.numSoLuong);
-            this.Controls.Add(this.btnThemVaoGio);
-            this.Controls.Add(this.btnGioHang);
+            this.Controls.Add(this.btnThemVaoGioNhapHang);
+            this.Controls.Add(this.btnGioNhapHang);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.dgvDanhSachHang);
             this.Name = "frm_NhapHang";
             this.Text = "frm_NhapHang";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbLocHang.ResumeLayout(false);
+            this.gbLocHang.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numSoLuong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachHang)).EndInit();
             this.ResumeLayout(false);
@@ -212,14 +212,14 @@
         private System.Windows.Forms.TextBox txtTrang;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Button btnPrev;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbLocHang;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbLocDanhMuc;
         private System.Windows.Forms.ComboBox cbSapXep;
         private System.Windows.Forms.NumericUpDown numSoLuong;
-        private System.Windows.Forms.Button btnThemVaoGio;
-        private System.Windows.Forms.Button btnGioHang;
+        private System.Windows.Forms.Button btnThemVaoGioNhapHang;
+        private System.Windows.Forms.Button btnGioNhapHang;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.DataGridView dgvDanhSachHang;
