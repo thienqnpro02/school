@@ -22,7 +22,7 @@ INSERT INTO NHACUNGCAP(TENNCC,DIACHI,FAX,EMAIL) VALUES
 ('Dream Viet Trading',N'Quận Sơn Trà - TP.Đà Nẵng','0987654326','DreamViet@gmail.com'),
 ('Fast Trading',N'Quận 1 - TP.Ho Chi Minh','0987654330','FastTrading@gmail.com')
 
-INSERT INTO HANG(TENHANG,THONGSO,BAOHANH,SOLUONG,GIA,NHASANXUAT,MANCC,MADANHMUC) VALUES 
+INSERT INTO HANG(TENHANG,THONGSO,BAOHANH,SOLUONG,GIA,NHASANXUAT,MADANHMUC) VALUES 
 -- MAINBOARD
 ('Mainboard ASUS WS C621E SAGE (Dual CPU Workstations)',
 N'Mainboard Asus WS C621E SAGE, 
@@ -651,7 +651,7 @@ Chất lượng tổng thể cứng cáp, chắc chắn
 Switch sử dụng 100% Cherry MX from Germany
 Anti-Ghosting 100% và NKRO qua cổng USB'
 
- ,24,838,2499000,'Durgod',11),
+ ,24,838,2499000,'Durgod',11)
 
 
 

@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace BanLinhKien
 {
-    public partial class frm_DangNhap : Form
+    public partial class frm_CaNhan : Form
     {
-        public frm_DangNhap()
+        public frm_CaNhan()
         {
             InitializeComponent();
-        }
-
-        private void Frm_DangNhap_Load(object sender, EventArgs e)
-        {
-
-            
         }
     }
 }

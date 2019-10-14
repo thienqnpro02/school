@@ -47,7 +47,7 @@
             // 
             // btnClearGio
             // 
-            this.btnClearGio.Location = new System.Drawing.Point(493, 214);
+            this.btnClearGio.Location = new System.Drawing.Point(493, 221);
             this.btnClearGio.Name = "btnClearGio";
             this.btnClearGio.Size = new System.Drawing.Size(200, 23);
             this.btnClearGio.TabIndex = 15;
@@ -66,7 +66,7 @@
             // txtDiaChi
             // 
             this.txtDiaChi.Enabled = false;
-            this.txtDiaChi.Location = new System.Drawing.Point(565, 88);
+            this.txtDiaChi.Location = new System.Drawing.Point(565, 90);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(128, 20);
             this.txtDiaChi.TabIndex = 13;
@@ -74,7 +74,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(490, 49);
+            this.label3.Location = new System.Drawing.Point(490, 48);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 13);
             this.label3.TabIndex = 6;
@@ -101,7 +101,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(490, 91);
+            this.label4.Location = new System.Drawing.Point(490, 90);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 13);
             this.label4.TabIndex = 9;
@@ -119,7 +119,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(490, 130);
+            this.label1.Location = new System.Drawing.Point(490, 136);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(24, 13);
             this.label1.TabIndex = 11;
@@ -136,7 +136,7 @@
             // txtFax
             // 
             this.txtFax.Enabled = false;
-            this.txtFax.Location = new System.Drawing.Point(565, 130);
+            this.txtFax.Location = new System.Drawing.Point(565, 136);
             this.txtFax.Name = "txtFax";
             this.txtFax.Size = new System.Drawing.Size(128, 20);
             this.txtFax.TabIndex = 13;
@@ -144,7 +144,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(490, 172);
+            this.label7.Location = new System.Drawing.Point(490, 179);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(32, 13);
             this.label7.TabIndex = 11;
@@ -153,7 +153,7 @@
             // txtEmail
             // 
             this.txtEmail.Enabled = false;
-            this.txtEmail.Location = new System.Drawing.Point(565, 172);
+            this.txtEmail.Location = new System.Drawing.Point(565, 179);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(128, 20);
             this.txtEmail.TabIndex = 13;
@@ -161,7 +161,7 @@
             // cbNhaCungCap
             // 
             this.cbNhaCungCap.FormattingEnabled = true;
-            this.cbNhaCungCap.Location = new System.Drawing.Point(565, 46);
+            this.cbNhaCungCap.Location = new System.Drawing.Point(565, 48);
             this.cbNhaCungCap.Name = "cbNhaCungCap";
             this.cbNhaCungCap.Size = new System.Drawing.Size(128, 21);
             this.cbNhaCungCap.TabIndex = 18;
