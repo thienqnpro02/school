@@ -99,6 +99,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frm_DangNhap";
             this.Text = "Đăng nhập";
+            this.Load += new System.EventHandler(this.Frm_DangNhap_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -16,5 +16,11 @@ namespace BanLinhKien
         {
             InitializeComponent();
         }
+
+        private void Frm_DangNhap_Load(object sender, EventArgs e)
+        {
+
+            this.reportViewer1.RefreshReport();
+        }
     }
 }
