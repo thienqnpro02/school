@@ -139,11 +139,15 @@ namespace BaiTapQuanLyBH
             
             int soTienTra;
             DataRowView r = cbPhieuXuat.SelectedItem as DataRowView;
-            if (txtSoTienTra.Text == "" && r != null)
+            if (txtSoTienTra.Text == "" || txtConNo.Text == "") 
             {               
+                if(r != null)
+                {
+                    txtDaTra.Text = r.Row["SoTienDaTra"].ToString();
+                    txtConNo.Text = r.Row["SoTienConLai"].ToString();  
+                }
                 
-                txtDaTra.Text = r.Row["SoTienDaTra"].ToString();
-                txtConNo.Text = r.Row["SoTienConLai"].ToString();                 
+                               
             }
             else 
             {
