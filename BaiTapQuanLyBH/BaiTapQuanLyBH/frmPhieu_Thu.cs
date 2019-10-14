@@ -52,8 +52,18 @@ namespace BaiTapQuanLyBH
 
             if (previousItem != null) 
             {
-                int previousItemIdx = cbPhieuXuat.FindString(previousItem);
-                cbPhieuXuat.SelectedIndex = (previousItemIdx != -1) ? previousItemIdx : 0;
+                if(cbPhieuXuat.Items.Count > 0)
+                {
+                    int previousItemIdx = cbPhieuXuat.FindString(previousItem);
+                    cbPhieuXuat.SelectedIndex = (previousItemIdx != -1) ? previousItemIdx : 0;
+                }
+                else
+                {
+                    txtPhaiTra.Text = "";
+                    txtDaTra.Text = "";
+                    txtConNo.Text = "";
+                }
+                
             }
 
             txtPhaiTra.DataBindings.Add("Text", ds.Tables["PHIEU_XUAT"], "SoTienPhaiTra");
