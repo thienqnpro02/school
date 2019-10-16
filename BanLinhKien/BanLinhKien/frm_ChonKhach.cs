@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace BanLinhKien
 {
-    public partial class frm_GioHang : Form
+    public partial class frm_ChonKhach : Form
     {
-        public frm_GioHang()
+        public frm_ChonKhach()
         {
             InitializeComponent();
-        }
-
-        private void BtnChonKhachCu_Click(object sender, EventArgs e)
-        {
-            frm_ChonKhach form_ChonKhach = new frm_ChonKhach();
-            form_ChonKhach.ShowDialog();
         }
     }
 }

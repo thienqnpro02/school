@@ -154,6 +154,7 @@
             this.btnGioNhapHang.TabIndex = 16;
             this.btnGioNhapHang.Text = "Phiếu nhập (0)";
             this.btnGioNhapHang.UseVisualStyleBackColor = true;
+            this.btnGioNhapHang.Click += new System.EventHandler(this.BtnGioNhapHang_Click);
             // 
             // btnTimKiem
             // 
@@ -196,6 +197,7 @@
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.dgvDanhSachHang);
             this.Name = "frm_NhapHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frm_NhapHang";
             this.gbLocHang.ResumeLayout(false);
             this.gbLocHang.PerformLayout();

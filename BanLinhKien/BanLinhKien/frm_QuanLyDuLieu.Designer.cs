@@ -141,6 +141,8 @@
             this.btnSuaNCC = new System.Windows.Forms.Button();
             this.btnThemNCC = new System.Windows.Forms.Button();
             this.dgvNhaCungCap = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.tabNhanVien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).BeginInit();
             this.tabHang.SuspendLayout();
@@ -443,6 +445,7 @@
             // 
             // tabHang
             // 
+            this.tabHang.Controls.Add(this.txtSoLuong);
             this.tabHang.Controls.Add(this.btnSuaHang);
             this.tabHang.Controls.Add(this.btnThemHang);
             this.tabHang.Controls.Add(this.btnXoaHang);
@@ -463,6 +466,7 @@
             this.tabHang.Controls.Add(this.txtIDHang);
             this.tabHang.Controls.Add(this.btnDoiHinh);
             this.tabHang.Controls.Add(this.label7);
+            this.tabHang.Controls.Add(this.label1);
             this.tabHang.Controls.Add(this.label23);
             this.tabHang.Controls.Add(this.label19);
             this.tabHang.Controls.Add(this.label33);
@@ -566,9 +570,9 @@
             // 
             // picHang
             // 
-            this.picHang.Location = new System.Drawing.Point(391, 286);
+            this.picHang.Location = new System.Drawing.Point(391, 319);
             this.picHang.Name = "picHang";
-            this.picHang.Size = new System.Drawing.Size(144, 133);
+            this.picHang.Size = new System.Drawing.Size(144, 100);
             this.picHang.TabIndex = 25;
             this.picHang.TabStop = false;
             // 
@@ -585,6 +589,7 @@
             this.txtThongSo.Location = new System.Drawing.Point(493, 81);
             this.txtThongSo.Multiline = true;
             this.txtThongSo.Name = "txtThongSo";
+            this.txtThongSo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtThongSo.Size = new System.Drawing.Size(177, 40);
             this.txtThongSo.TabIndex = 11;
             // 
@@ -1229,6 +1234,22 @@
             this.dgvNhaCungCap.Size = new System.Drawing.Size(345, 387);
             this.dgvNhaCungCap.TabIndex = 25;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(388, 286);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Số lượng";
+            // 
+            // txtSoLuong
+            // 
+            this.txtSoLuong.Location = new System.Drawing.Point(493, 286);
+            this.txtSoLuong.Name = "txtSoLuong";
+            this.txtSoLuong.Size = new System.Drawing.Size(177, 20);
+            this.txtSoLuong.TabIndex = 36;
+            // 
             // frm_QuanLyDuLieu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1236,6 +1257,7 @@
             this.ClientSize = new System.Drawing.Size(708, 539);
             this.Controls.Add(this.tabControlQL_DuLieu);
             this.Name = "frm_QuanLyDuLieu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Quản lý";
             this.tabNhanVien.ResumeLayout(false);
             this.tabNhanVien.PerformLayout();
@@ -1373,5 +1395,7 @@
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Button btnSuaHang;
         private System.Windows.Forms.Button btnThemHang;
+        private System.Windows.Forms.TextBox txtSoLuong;
+        private System.Windows.Forms.Label label1;
     }
 }

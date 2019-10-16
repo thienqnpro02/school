@@ -19,8 +19,7 @@ namespace BanLinhKien
 
         private void Frm_ThongKe_Load(object sender, EventArgs e)
         {
-
-            this.rpPhieuNhap.RefreshReport();
+            
         }
     }
 }

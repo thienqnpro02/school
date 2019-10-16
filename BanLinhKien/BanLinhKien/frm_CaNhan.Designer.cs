@@ -129,6 +129,7 @@
             this.Controls.Add(this.txtMatKhauMoi);
             this.Controls.Add(this.txtMatKhauCu);
             this.Name = "frm_CaNhan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Cá nhân";
             this.ResumeLayout(false);
             this.PerformLayout();
