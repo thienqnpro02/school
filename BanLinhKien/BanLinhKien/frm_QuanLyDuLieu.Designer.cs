@@ -59,6 +59,7 @@
             this.btnThemNV = new System.Windows.Forms.Button();
             this.dgvNhanVien = new System.Windows.Forms.DataGridView();
             this.tabHang = new System.Windows.Forms.TabPage();
+            this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.btnSuaHang = new System.Windows.Forms.Button();
             this.btnThemHang = new System.Windows.Forms.Button();
             this.btnXoaHang = new System.Windows.Forms.Button();
@@ -75,10 +76,11 @@
             this.txtNhaSanXuat = new System.Windows.Forms.TextBox();
             this.txtBaoHanh = new System.Windows.Forms.TextBox();
             this.txtGia = new System.Windows.Forms.TextBox();
-            this.txtIDTenHang = new System.Windows.Forms.TextBox();
+            this.txtTenHang = new System.Windows.Forms.TextBox();
             this.txtIDHang = new System.Windows.Forms.TextBox();
             this.btnDoiHinh = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
@@ -141,8 +143,6 @@
             this.btnSuaNCC = new System.Windows.Forms.Button();
             this.btnThemNCC = new System.Windows.Forms.Button();
             this.dgvNhaCungCap = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.tabNhanVien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).BeginInit();
             this.tabHang.SuspendLayout();
@@ -462,7 +462,7 @@
             this.tabHang.Controls.Add(this.txtNhaSanXuat);
             this.tabHang.Controls.Add(this.txtBaoHanh);
             this.tabHang.Controls.Add(this.txtGia);
-            this.tabHang.Controls.Add(this.txtIDTenHang);
+            this.tabHang.Controls.Add(this.txtTenHang);
             this.tabHang.Controls.Add(this.txtIDHang);
             this.tabHang.Controls.Add(this.btnDoiHinh);
             this.tabHang.Controls.Add(this.label7);
@@ -479,6 +479,13 @@
             this.tabHang.TabIndex = 2;
             this.tabHang.Text = "Hàng";
             this.tabHang.UseVisualStyleBackColor = true;
+            // 
+            // txtSoLuong
+            // 
+            this.txtSoLuong.Location = new System.Drawing.Point(493, 286);
+            this.txtSoLuong.Name = "txtSoLuong";
+            this.txtSoLuong.Size = new System.Drawing.Size(177, 20);
+            this.txtSoLuong.TabIndex = 36;
             // 
             // btnSuaHang
             // 
@@ -567,6 +574,7 @@
             this.dgvHang.Name = "dgvHang";
             this.dgvHang.Size = new System.Drawing.Size(345, 387);
             this.dgvHang.TabIndex = 26;
+            this.dgvHang.SelectionChanged += new System.EventHandler(this.DgvHang_SelectionChanged);
             // 
             // picHang
             // 
@@ -614,12 +622,12 @@
             this.txtGia.Size = new System.Drawing.Size(177, 20);
             this.txtGia.TabIndex = 11;
             // 
-            // txtIDTenHang
+            // txtTenHang
             // 
-            this.txtIDTenHang.Location = new System.Drawing.Point(493, 44);
-            this.txtIDTenHang.Name = "txtIDTenHang";
-            this.txtIDTenHang.Size = new System.Drawing.Size(177, 20);
-            this.txtIDTenHang.TabIndex = 11;
+            this.txtTenHang.Location = new System.Drawing.Point(493, 44);
+            this.txtTenHang.Name = "txtTenHang";
+            this.txtTenHang.Size = new System.Drawing.Size(177, 20);
+            this.txtTenHang.TabIndex = 11;
             // 
             // txtIDHang
             // 
@@ -645,6 +653,15 @@
             this.label7.Size = new System.Drawing.Size(54, 13);
             this.label7.TabIndex = 13;
             this.label7.Text = "Thông Số";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(388, 286);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Số lượng";
             // 
             // label23
             // 
@@ -856,6 +873,7 @@
             this.tabControlQL_DuLieu.SelectedIndex = 0;
             this.tabControlQL_DuLieu.Size = new System.Drawing.Size(684, 515);
             this.tabControlQL_DuLieu.TabIndex = 0;
+            this.tabControlQL_DuLieu.SelectedIndexChanged += new System.EventHandler(this.TabControlQL_DuLieu_SelectedIndexChanged);
             // 
             // tabKhachHang
             // 
@@ -1234,22 +1252,6 @@
             this.dgvNhaCungCap.Size = new System.Drawing.Size(345, 387);
             this.dgvNhaCungCap.TabIndex = 25;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(388, 286);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Số lượng";
-            // 
-            // txtSoLuong
-            // 
-            this.txtSoLuong.Location = new System.Drawing.Point(493, 286);
-            this.txtSoLuong.Name = "txtSoLuong";
-            this.txtSoLuong.Size = new System.Drawing.Size(177, 20);
-            this.txtSoLuong.TabIndex = 36;
-            // 
             // frm_QuanLyDuLieu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1317,7 +1319,7 @@
         private System.Windows.Forms.TextBox txtThongSo;
         private System.Windows.Forms.TextBox txtBaoHanh;
         private System.Windows.Forms.TextBox txtGia;
-        private System.Windows.Forms.TextBox txtIDTenHang;
+        private System.Windows.Forms.TextBox txtTenHang;
         private System.Windows.Forms.TextBox txtIDHang;
         private System.Windows.Forms.Button btnDoiHinh;
         private System.Windows.Forms.Label label7;
