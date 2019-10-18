@@ -30,7 +30,7 @@ namespace BanLinhKien
                 case "tabDanhMuc":
                     break;
                 case "tabHang":
-                    dgvHang = configDGVHang(dgvHang);
+                    configDGVHang(ref dgvHang);
                     
                     break;
                 case "tabNhanVien":
@@ -42,7 +42,7 @@ namespace BanLinhKien
             }
         }
 
-        private DataGridView configDGVHang(DataGridView data)
+        private void configDGVHang(ref DataGridView data)
         {
             
             dgvHangLoaded = false;
@@ -72,6 +72,12 @@ namespace BanLinhKien
 
             // clear binding
             txtIDHang.DataBindings.Clear();
+            txtTenHang.DataBindings.Clear();
+            txtThongSo.DataBindings.Clear();
+            txtNhaSanXuat.DataBindings.Clear();
+            txtBaoHanh.DataBindings.Clear();
+            txtGia.DataBindings.Clear();
+            txtSoLuong.DataBindings.Clear();
 
             // binding
             txtIDHang.DataBindings.Add("Text", data.DataSource, "MAHANG");
@@ -83,7 +89,7 @@ namespace BanLinhKien
             //cbdanhmuc
             txtSoLuong.DataBindings.Add("Text", data.DataSource, "SOLUONG");
 
-            return data;
+            //return data;
         }
 
         
