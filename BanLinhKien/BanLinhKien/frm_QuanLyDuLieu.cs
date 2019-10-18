@@ -22,6 +22,7 @@ namespace BanLinhKien
         // variables for dgvHang
         private bool dgvHangLoaded = false;
         private int dgvHangPreviousRow = -1;
+       
 
         private void TabControlQL_DuLieu_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -30,7 +31,7 @@ namespace BanLinhKien
                 case "tabDanhMuc":
                     break;
                 case "tabHang":
-                    configDGVHang(ref dgvHang);
+                    configDGVHang();
                     
                     break;
                 case "tabNhanVien":
@@ -42,34 +43,43 @@ namespace BanLinhKien
             }
         }
 
-        private void configDGVHang(ref DataGridView data)
+        private void configDGVHang()
         {
             
             dgvHangLoaded = false;
-            DataTable tblHang = HangBUS.Instance.select();
-            data.DataSource = HangBUS.Instance.select(); 
+
+            dgvHang.DataSource = HangBUS.Instance.pagingHang();
 
             // Ẩn cột            
-            data.Columns["THONGSO"].Visible = false;
-            data.Columns["BAOHANH"].Visible = false;
-            data.Columns["SOLUONG"].Visible = false;
-            data.Columns["GIA"].Visible = false;
-            data.Columns["HINH"].Visible = false;
-            data.Columns["NHASANXUAT"].Visible = false;
-            data.Columns["NGAYTAO"].Visible = false;
-            data.Columns["MADANHMUC"].Visible = false;
+            dgvHang.Columns["THONGSO"].Visible = false;
+            dgvHang.Columns["BAOHANH"].Visible = false;
+            dgvHang.Columns["SOLUONG"].Visible = false;
+            dgvHang.Columns["GIA"].Visible = false;
+            dgvHang.Columns["HINH"].Visible = false;
+            dgvHang.Columns["NHASANXUAT"].Visible = false;
+            dgvHang.Columns["NGAYTAO"].Visible = false;
+            dgvHang.Columns["MADANHMUC"].Visible = false;
 
             // chỉnh kích thước cột
-            data.Columns["MAHANG"].Width = 75;
-            data.Columns["TENHANG"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dgvHang.Columns["MAHANG"].Width = 75;
+            dgvHang.Columns["TENHANG"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
             // chỉnh header text
-            data.Columns["MAHANG"].HeaderText = "Mã Hàng";
-            data.Columns["TENHANG"].HeaderText = "Tên Hàng";
+            dgvHang.Columns["MAHANG"].HeaderText = "Mã Hàng";
+            dgvHang.Columns["TENHANG"].HeaderText = "Tên Hàng";
 
-            if (data.Rows.Count > 0) dgvHangPreviousRow = 0;
-            dgvHangLoaded = true;
+            if (dgvHang.Rows.Count > 0) dgvHangPreviousRow = 0;
+            dgvHangLoaded = true;           
 
+            // paging
+
+            txtTongTrangHang.Text = "/" + HangBUS.Instance.totalRow;
+            txtTrangHang.Text = HangBUS.Instance.currentPageHang.ToString();
+            bindingHang();
+        }
+
+        private void bindingHang()
+        {
             // clear binding
             txtIDHang.DataBindings.Clear();
             txtTenHang.DataBindings.Clear();
@@ -80,18 +90,15 @@ namespace BanLinhKien
             txtSoLuong.DataBindings.Clear();
 
             // binding
-            txtIDHang.DataBindings.Add("Text", data.DataSource, "MAHANG");
-            txtTenHang.DataBindings.Add("Text", data.DataSource, "TENHANG");
-            txtThongSo.DataBindings.Add("Text", data.DataSource, "THONGSO");
-            txtNhaSanXuat.DataBindings.Add("Text", data.DataSource, "NHASANXUAT");
-            txtBaoHanh.DataBindings.Add("Text", data.DataSource, "BAOHANH");
-            txtGia.DataBindings.Add("Text", data.DataSource, "GIA");
+            txtIDHang.DataBindings.Add("Text", dgvHang.DataSource, "MAHANG");
+            txtTenHang.DataBindings.Add("Text", dgvHang.DataSource, "TENHANG");
+            txtThongSo.DataBindings.Add("Text", dgvHang.DataSource, "THONGSO");
+            txtNhaSanXuat.DataBindings.Add("Text", dgvHang.DataSource, "NHASANXUAT");
+            txtBaoHanh.DataBindings.Add("Text", dgvHang.DataSource, "BAOHANH");
+            txtGia.DataBindings.Add("Text", dgvHang.DataSource, "GIA");
             //cbdanhmuc
-            txtSoLuong.DataBindings.Add("Text", data.DataSource, "SOLUONG");
-
-            //return data;
+            txtSoLuong.DataBindings.Add("Text", dgvHang.DataSource, "SOLUONG");
         }
-
         
 
         private void DgvHang_SelectionChanged(object sender, EventArgs e)
@@ -109,6 +116,40 @@ namespace BanLinhKien
             
         }
 
-       
+        private void BtnPrevDM_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void BtnNextDM_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void BtnNextHang_Click(object sender, EventArgs e)
+        {
+            if (HangBUS.Instance.currentPageHang + 1 > HangBUS.Instance.totalRow)
+                return;
+            else
+            {
+                HangBUS.Instance.currentPageHang++;                
+                dgvHang.DataSource = HangBUS.Instance.pagingHang();
+                txtTrangHang.Text = HangBUS.Instance.currentPageHang.ToString();
+                bindingHang();
+            }
+        }
+
+        private void BtnPrevHang_Click(object sender, EventArgs e)
+        {
+            if (HangBUS.Instance.currentPageHang - 1 <= 0)
+                return;
+            else
+            {
+                HangBUS.Instance.currentPageHang--;               
+                dgvHang.DataSource = HangBUS.Instance.pagingHang();
+                txtTrangHang.Text = HangBUS.Instance.currentPageHang.ToString();
+                bindingHang();
+            }
+        }
     }
 }

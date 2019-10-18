@@ -23,11 +23,26 @@ namespace BUS
             }
         }
 
-        private HangBUS() { }
+        public int totalRow = 0;
+        public int currentPageHang = 1;
+        public int pageSize = 10;
+
+        private HangBUS() {  }
 
         public DataTable select()
         {
             return HangDAO.Instance.select();
+        }
+
+        public DataTable pagingHang()
+        {
+            this.rowCount();
+            return HangDAO.Instance.pagingHang(this.currentPageHang,this.pageSize);
+        }
+
+        public void rowCount()
+        {
+            HangBUS.Instance.totalRow = (int)Math.Ceiling( (double)HangDAO.Instance.rowCount() / this.pageSize );
         }
     }
 }

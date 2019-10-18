@@ -557,6 +557,7 @@
             this.btnNextHang.TabIndex = 29;
             this.btnNextHang.Text = ">";
             this.btnNextHang.UseVisualStyleBackColor = true;
+            this.btnNextHang.Click += new System.EventHandler(this.BtnNextHang_Click);
             // 
             // btnPrevHang
             // 
@@ -566,6 +567,7 @@
             this.btnPrevHang.TabIndex = 27;
             this.btnPrevHang.Text = "<";
             this.btnPrevHang.UseVisualStyleBackColor = true;
+            this.btnPrevHang.Click += new System.EventHandler(this.BtnPrevHang_Click);
             // 
             // dgvHang
             // 
@@ -795,6 +797,7 @@
             this.btnNextDM.TabIndex = 6;
             this.btnNextDM.Text = ">";
             this.btnNextDM.UseVisualStyleBackColor = true;
+            this.btnNextDM.Click += new System.EventHandler(this.BtnNextDM_Click);
             // 
             // btnPrevDM
             // 
@@ -804,6 +807,7 @@
             this.btnPrevDM.TabIndex = 4;
             this.btnPrevDM.Text = "<";
             this.btnPrevDM.UseVisualStyleBackColor = true;
+            this.btnPrevDM.Click += new System.EventHandler(this.BtnPrevDM_Click);
             // 
             // lblTenDanhMuc
             // 
