@@ -76,7 +76,7 @@
             this.txtNhaSanXuat = new System.Windows.Forms.TextBox();
             this.txtBaoHanh = new System.Windows.Forms.TextBox();
             this.txtGia = new System.Windows.Forms.TextBox();
-            this.txtIDTenHang = new System.Windows.Forms.TextBox();
+            this.txtTenHang = new System.Windows.Forms.TextBox();
             this.txtIDHang = new System.Windows.Forms.TextBox();
             this.btnDoiHinh = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -495,7 +495,7 @@
             this.tabHang.Controls.Add(this.txtNhaSanXuat);
             this.tabHang.Controls.Add(this.txtBaoHanh);
             this.tabHang.Controls.Add(this.txtGia);
-            this.tabHang.Controls.Add(this.txtIDTenHang);
+            this.tabHang.Controls.Add(this.txtTenHang);
             this.tabHang.Controls.Add(this.txtIDHang);
             this.tabHang.Controls.Add(this.btnDoiHinh);
             this.tabHang.Controls.Add(this.label7);
@@ -516,10 +516,9 @@
             // 
             // txtSoLuong
             // 
-            this.txtSoLuong.Location = new System.Drawing.Point(740, 440);
-            this.txtSoLuong.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtSoLuong.Location = new System.Drawing.Point(493, 286);
             this.txtSoLuong.Name = "txtSoLuong";
-            this.txtSoLuong.Size = new System.Drawing.Size(264, 26);
+            this.txtSoLuong.Size = new System.Drawing.Size(177, 20);
             this.txtSoLuong.TabIndex = 36;
             // 
             // btnSuaHang
@@ -600,6 +599,7 @@
             this.btnNextHang.TabIndex = 29;
             this.btnNextHang.Text = ">";
             this.btnNextHang.UseVisualStyleBackColor = true;
+            this.btnNextHang.Click += new System.EventHandler(this.BtnNextHang_Click);
             // 
             // btnPrevHang
             // 
@@ -610,6 +610,7 @@
             this.btnPrevHang.TabIndex = 27;
             this.btnPrevHang.Text = "<";
             this.btnPrevHang.UseVisualStyleBackColor = true;
+            this.btnPrevHang.Click += new System.EventHandler(this.BtnPrevHang_Click);
             // 
             // dgvHang
             // 
@@ -619,6 +620,7 @@
             this.dgvHang.Name = "dgvHang";
             this.dgvHang.Size = new System.Drawing.Size(518, 595);
             this.dgvHang.TabIndex = 26;
+            this.dgvHang.SelectionChanged += new System.EventHandler(this.DgvHang_SelectionChanged);
             // 
             // picHang
             // 
@@ -672,13 +674,12 @@
             this.txtGia.Size = new System.Drawing.Size(264, 26);
             this.txtGia.TabIndex = 11;
             // 
-            // txtIDTenHang
+            // txtTenHang
             // 
-            this.txtIDTenHang.Location = new System.Drawing.Point(740, 68);
-            this.txtIDTenHang.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtIDTenHang.Name = "txtIDTenHang";
-            this.txtIDTenHang.Size = new System.Drawing.Size(264, 26);
-            this.txtIDTenHang.TabIndex = 11;
+            this.txtTenHang.Location = new System.Drawing.Point(493, 44);
+            this.txtTenHang.Name = "txtTenHang";
+            this.txtTenHang.Size = new System.Drawing.Size(177, 20);
+            this.txtTenHang.TabIndex = 11;
             // 
             // txtIDHang
             // 
@@ -711,10 +712,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(582, 440);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(388, 286);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 20);
+            this.label1.Size = new System.Drawing.Size(49, 13);
             this.label1.TabIndex = 13;
             this.label1.Text = "Số lượng";
             // 
@@ -982,6 +982,7 @@
             this.tabControlQL_DuLieu.SelectedIndex = 0;
             this.tabControlQL_DuLieu.Size = new System.Drawing.Size(1026, 792);
             this.tabControlQL_DuLieu.TabIndex = 0;
+            this.tabControlQL_DuLieu.SelectedIndexChanged += new System.EventHandler(this.TabControlQL_DuLieu_SelectedIndexChanged);
             // 
             // tabKhachHang
             // 
@@ -1469,7 +1470,7 @@
         private System.Windows.Forms.TextBox txtThongSo;
         private System.Windows.Forms.TextBox txtBaoHanh;
         private System.Windows.Forms.TextBox txtGia;
-        private System.Windows.Forms.TextBox txtIDTenHang;
+        private System.Windows.Forms.TextBox txtTenHang;
         private System.Windows.Forms.TextBox txtIDHang;
         private System.Windows.Forms.Button btnDoiHinh;
         private System.Windows.Forms.Label label7;

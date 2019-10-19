@@ -39,7 +39,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChiTietPhieuNhap.cs" />
+    <Compile Include="ChiTietPhieuXuat.cs" />
     <Compile Include="DanhMuc.cs" />
+    <Compile Include="Hang.cs" />
+    <Compile Include="KhachHang.cs" />
+    <Compile Include="NhaCungCap.cs" />
+    <Compile Include="NhanVien.cs" />
+    <Compile Include="PhieuNhap.cs" />
+    <Compile Include="PhieuXuat.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
