@@ -24,7 +24,9 @@ namespace DAO
             }
         }
 
+
         private string STRconnection = "Data Source=.;Initial Catalog=QL_LinhKien;Integrated Security=True";
+
 
         private DataProvider() { }
 
@@ -98,8 +100,6 @@ namespace DAO
                         }
                     }
                 }
-
-
                 data = command.ExecuteNonQuery();
 
                 command.Connection.Close();
