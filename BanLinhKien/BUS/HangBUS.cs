@@ -11,6 +11,7 @@ namespace BUS
 {
     public class HangBUS
     {
+        HangDAO dao_hang = HangDAO.Instance;
         private static HangBUS instance;
         
         public static HangBUS Instance
@@ -43,6 +44,47 @@ namespace BUS
         public void rowCount()
         {
             HangBUS.Instance.totalRow = (int)Math.Ceiling( (double)HangDAO.Instance.rowCount() / this.pageSize );
+        }
+
+        public int Tongsohang()
+        {
+            return HangDAO.Instance.rowCount();
+        }
+
+        public String LuuBangHang(Hang hang)
+        {
+            int effect=dao_hang.LuuBangHang(hang);
+            if (effect > 0)
+            {
+                return "Luu du lieu thanh cong";
+            }else
+            {
+                return "Luu du lieu khong thanh cong";
+            }
+        }
+
+        public String SuaBangHang(Hang hang)
+        {
+            int effect = dao_hang.SuaBangHang(hang);
+            if (effect>0)
+            {
+                return "Sua du lieu thanh cong";
+            }else
+            {
+                return "Sua du lieu khong thanh cong";
+            }
+        }
+
+        public String XoaDLBangHang(int mahang)
+        {
+            int effect = dao_hang.XoaDLBangHang(mahang);
+            if(effect >0)
+            {
+                return "Xoa du lieu thanh cong";
+            }else
+            {
+                return "Xoa du lieu khong thanh cong";
+            }
         }
     }
 }

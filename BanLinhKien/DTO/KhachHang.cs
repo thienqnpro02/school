@@ -11,22 +11,23 @@ namespace DTO
         private int maKH;
         private string hoTen;
         private string sdt;
-        private DateTime namSinh;
-        private DateTime ngayTao;
+        private String namSinh;
+        private String ngayTao;
 
 
         public int MaKH { get => maKH; set => maKH = value; }
         public string HoTen { get => hoTen; set => hoTen = value; }
         public string Sdt { get => sdt; set => sdt = value; }
-        public DateTime NamSinh { get => namSinh; set => namSinh = value; }
-        public DateTime NgayTao { get => ngayTao; set => ngayTao = value; }
+        public String NamSinh { get => namSinh; set => namSinh = value; }
+        public String NgayTao { get => ngayTao; set => ngayTao = value; }
 
         public KhachHang() { }
 
-        public KhachHang(int makh, string hoten, string sdt, DateTime namsinh, DateTime ngaytao)
+        public KhachHang(int makh, string hoten, string sdt, String namsinh,String ngaytao)
         {
             this.MaKH = makh;
             this.HoTen = hoten;
+            this.Sdt = sdt;
             this.NamSinh = namsinh;
             this.NgayTao = ngaytao;
         }

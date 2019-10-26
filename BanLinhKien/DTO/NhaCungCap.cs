@@ -13,7 +13,7 @@ namespace DTO
         private string diaChi;
         private string fax;
         private string email;
-        private DateTime ngayTao;
+        private String ngayTao;
 
 
         public int MaNCC { get => maNCC; set => maNCC = value; }
@@ -21,11 +21,11 @@ namespace DTO
         public string DiaChi { get => diaChi; set => diaChi = value; }
         public string Fax { get => fax; set => fax = value; }
         public string Email { get => email; set => email = value; }
-        public DateTime NgayTao { get => ngayTao; set => ngayTao = value; }
+        public String NgayTao { get => ngayTao; set => ngayTao = value; }
 
         public NhaCungCap() { }
 
-        public NhaCungCap(int mancc, string tenncc, string diachi, string fax, string email, DateTime ngaytao)
+        public NhaCungCap(int mancc, string tenncc, string diachi, string fax, string email,String ngaytao)
         {
             this.MaNCC = mancc;
             this.TenNCC = tenncc;

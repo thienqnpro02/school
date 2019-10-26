@@ -16,7 +16,7 @@ namespace DTO
         private int gia;
         private string hinh;
         private string nhaSanXuat;
-        private DateTime ngayTao;
+        private string ngayTao;
         private int maDanhMuc;
 
         public int MaHang { get => maHang; set => maHang = value; }
@@ -27,12 +27,12 @@ namespace DTO
         public int Gia { get => gia; set => gia = value; }
         public string Hinh { get => hinh; set => hinh = value; }
         public string NhaSanXuat { get => nhaSanXuat; set => nhaSanXuat = value; }
-        public DateTime NgayTao { get => ngayTao; set => ngayTao = value; }
+        public string NgayTao { get => ngayTao; set => ngayTao = value; }
         public int MaDanhMuc { get => maDanhMuc; set => maDanhMuc = value; }
 
         public Hang() { }
 
-        public Hang(int mahang, string tenhang, string thongso, int baohanh, int soluong, int gia, string hinh, string nhasanxuat, DateTime ngaytao, int madanhmuc)
+        public Hang(int mahang, string tenhang, string thongso, int baohanh, int soluong, int gia, string nhasanxuat, String ngaytao, int madanhmuc)
         {
             this.MaHang = mahang;
             this.TenHang = tenhang;

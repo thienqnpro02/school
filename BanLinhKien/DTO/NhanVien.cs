@@ -14,10 +14,10 @@ namespace DTO
         private string hoTen;
         private string sdt;
         private string diaChi;
-        private DateTime namSinh;
+        private String namSinh;
         private int loaiNhanVien;
-        private bool gioiTinh;
-        private DateTime ngayTao;
+        private int gioiTinh;
+        private String ngayTao;
 
 
         public int MaNV { get => maNV; set => maNV = value; }
@@ -26,14 +26,14 @@ namespace DTO
         public string HoTen { get => hoTen; set => hoTen = value; }
         public string Sdt { get => sdt; set => sdt = value; }
         public string DiaChi { get => diaChi; set => diaChi = value; }
-        public DateTime NamSinh { get => namSinh; set => namSinh = value; }
+        public String NamSinh { get => namSinh; set => namSinh = value; }
         public int LoaiNhanVien { get => loaiNhanVien; set => loaiNhanVien = value; }
-        public bool GioiTinh { get => gioiTinh; set => gioiTinh = value; }
-        public DateTime NgayTao { get => ngayTao; set => ngayTao = value; }
+        public int GioiTinh { get => gioiTinh; set => gioiTinh = value; }
+        public String NgayTao { get => ngayTao; set => ngayTao = value; }
 
         public NhanVien() { }
 
-        public NhanVien(int manv, string username, string password, string hoten, string sdt, string diachi, DateTime namsinh, int loainhanvien, bool gioitinh, DateTime ngaytao)
+        public NhanVien(int manv, string username, string password, string hoten, string sdt, string diachi, String namsinh, int loainhanvien, int gioitinh, String ngaytao)
         {
             this.MaNV = manv;
             this.Username = username;
