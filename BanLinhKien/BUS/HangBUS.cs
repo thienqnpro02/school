@@ -27,6 +27,7 @@ namespace BUS
         public int totalRow = 0;
         public int currentPageHang = 1;
         public int pageSize = 10;
+        public string pathImage = @"D:\Ex-on-school\school\BanLinhKien\BanLinhKien\images\";
 
         private HangBUS() {  }
 
@@ -63,16 +64,10 @@ namespace BUS
             }
         }
 
-        public String SuaBangHang(Hang hang)
+        public int SuaBangHang(Hang hang)
         {
-            int effect = dao_hang.SuaBangHang(hang);
-            if (effect>0)
-            {
-                return "Sua du lieu thanh cong";
-            }else
-            {
-                return "Sua du lieu khong thanh cong";
-            }
+            return dao_hang.SuaBangHang(hang);
+            
         }
 
         public String XoaDLBangHang(int mahang)
@@ -85,6 +80,11 @@ namespace BUS
             {
                 return "Xoa du lieu khong thanh cong";
             }
+        }
+
+        public bool isExistsImage(string fileName)
+        {
+            return HangDAO.Instance.isExistsImage(fileName);
         }
     }
 }

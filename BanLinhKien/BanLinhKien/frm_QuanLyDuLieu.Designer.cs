@@ -58,16 +58,6 @@
             this.btnSuaNV = new System.Windows.Forms.Button();
             this.btnThemNV = new System.Windows.Forms.Button();
             this.dgvNhanVien = new System.Windows.Forms.DataGridView();
-            this.manv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.username = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.password = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diachi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namsinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.loainhanvien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gioitinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngaytao_nv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tennv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabHang = new System.Windows.Forms.TabPage();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.btnSuaHang = new System.Windows.Forms.Button();
@@ -167,6 +157,16 @@
             this.fax = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email_ncc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngaytao_ncc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.manv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.username = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diachi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namsinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loainhanvien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gioitinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngaytao_nv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tennv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabNhanVien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).BeginInit();
             this.tabHang.SuspendLayout();
@@ -230,11 +230,13 @@
             // 
             // cbLoaiNhanVIen
             // 
+            this.cbLoaiNhanVIen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbLoaiNhanVIen.FormattingEnabled = true;
             this.cbLoaiNhanVIen.Location = new System.Drawing.Point(493, 266);
             this.cbLoaiNhanVIen.Name = "cbLoaiNhanVIen";
             this.cbLoaiNhanVIen.Size = new System.Drawing.Size(177, 21);
             this.cbLoaiNhanVIen.TabIndex = 22;
+            this.cbLoaiNhanVIen.SelectedValueChanged += new System.EventHandler(this.CbLoaiNhanVIen_SelectedValueChanged);
             this.cbLoaiNhanVIen.Click += new System.EventHandler(this.cbLoaiNhanVIen_Click);
             // 
             // btnTimKiemNV
@@ -486,75 +488,7 @@
             this.dgvNhanVien.Size = new System.Drawing.Size(345, 387);
             this.dgvNhanVien.TabIndex = 7;
             this.dgvNhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhanVien_CellClick);
-            // 
-            // manv
-            // 
-            this.manv.DataPropertyName = "manv";
-            this.manv.HeaderText = "MANV";
-            this.manv.Name = "manv";
-            // 
-            // username
-            // 
-            this.username.DataPropertyName = "username";
-            this.username.HeaderText = "USERNAME";
-            this.username.Name = "username";
-            this.username.Visible = false;
-            // 
-            // password
-            // 
-            this.password.DataPropertyName = "password";
-            this.password.HeaderText = "PASSWORD";
-            this.password.Name = "password";
-            this.password.Visible = false;
-            // 
-            // sdt
-            // 
-            this.sdt.DataPropertyName = "sdt";
-            this.sdt.HeaderText = "SDT";
-            this.sdt.Name = "sdt";
-            this.sdt.Visible = false;
-            // 
-            // diachi
-            // 
-            this.diachi.DataPropertyName = "diachi";
-            this.diachi.HeaderText = "DIA CHI";
-            this.diachi.Name = "diachi";
-            this.diachi.Visible = false;
-            // 
-            // namsinh
-            // 
-            this.namsinh.DataPropertyName = "namsinh";
-            this.namsinh.HeaderText = "NAM SINH";
-            this.namsinh.Name = "namsinh";
-            this.namsinh.Visible = false;
-            // 
-            // loainhanvien
-            // 
-            this.loainhanvien.DataPropertyName = "loainhanvien";
-            this.loainhanvien.HeaderText = "LOAI NHAN VIEN";
-            this.loainhanvien.Name = "loainhanvien";
-            this.loainhanvien.Visible = false;
-            // 
-            // gioitinh
-            // 
-            this.gioitinh.DataPropertyName = "gioitinh";
-            this.gioitinh.HeaderText = "GIOI TINH";
-            this.gioitinh.Name = "gioitinh";
-            this.gioitinh.Visible = false;
-            // 
-            // ngaytao_nv
-            // 
-            this.ngaytao_nv.DataPropertyName = "ngaytao";
-            this.ngaytao_nv.HeaderText = "NGAY TAO";
-            this.ngaytao_nv.Name = "ngaytao_nv";
-            this.ngaytao_nv.Visible = false;
-            // 
-            // tennv
-            // 
-            this.tennv.DataPropertyName = "hoten";
-            this.tennv.HeaderText = "TEN NHAN VIEN";
-            this.tennv.Name = "tennv";
-            this.tennv.Width = 150;
+            this.dgvNhanVien.SelectionChanged += new System.EventHandler(this.DgvNhanVien_SelectionChanged);
             // 
             // tabHang
             // 
@@ -702,7 +636,8 @@
             // 
             this.picHang.Location = new System.Drawing.Point(391, 319);
             this.picHang.Name = "picHang";
-            this.picHang.Size = new System.Drawing.Size(144, 100);
+            this.picHang.Size = new System.Drawing.Size(190, 100);
+            this.picHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picHang.TabIndex = 25;
             this.picHang.TabStop = false;
             // 
@@ -714,7 +649,6 @@
             this.cbDanhMuc.Name = "cbDanhMuc";
             this.cbDanhMuc.Size = new System.Drawing.Size(177, 21);
             this.cbDanhMuc.TabIndex = 24;
-            this.cbDanhMuc.Click += new System.EventHandler(this.cbDanhMuc_Click);
             // 
             // txtThongSo
             // 
@@ -763,12 +697,13 @@
             // 
             // btnDoiHinh
             // 
-            this.btnDoiHinh.Location = new System.Drawing.Point(541, 364);
+            this.btnDoiHinh.Location = new System.Drawing.Point(587, 364);
             this.btnDoiHinh.Name = "btnDoiHinh";
-            this.btnDoiHinh.Size = new System.Drawing.Size(126, 23);
+            this.btnDoiHinh.Size = new System.Drawing.Size(80, 23);
             this.btnDoiHinh.TabIndex = 18;
             this.btnDoiHinh.Text = "Đổi hình";
             this.btnDoiHinh.UseVisualStyleBackColor = true;
+            this.btnDoiHinh.Click += new System.EventHandler(this.BtnDoiHinh_Click);
             // 
             // label7
             // 
@@ -1513,6 +1448,75 @@
             this.ngaytao_ncc.Name = "ngaytao_ncc";
             this.ngaytao_ncc.Visible = false;
             // 
+            // manv
+            // 
+            this.manv.DataPropertyName = "manv";
+            this.manv.HeaderText = "MANV";
+            this.manv.Name = "manv";
+            // 
+            // username
+            // 
+            this.username.DataPropertyName = "username";
+            this.username.HeaderText = "USERNAME";
+            this.username.Name = "username";
+            this.username.Visible = false;
+            // 
+            // password
+            // 
+            this.password.DataPropertyName = "password";
+            this.password.HeaderText = "PASSWORD";
+            this.password.Name = "password";
+            this.password.Visible = false;
+            // 
+            // sdt
+            // 
+            this.sdt.DataPropertyName = "sdt";
+            this.sdt.HeaderText = "SDT";
+            this.sdt.Name = "sdt";
+            this.sdt.Visible = false;
+            // 
+            // diachi
+            // 
+            this.diachi.DataPropertyName = "diachi";
+            this.diachi.HeaderText = "DIA CHI";
+            this.diachi.Name = "diachi";
+            this.diachi.Visible = false;
+            // 
+            // namsinh
+            // 
+            this.namsinh.DataPropertyName = "namsinh";
+            this.namsinh.HeaderText = "NAM SINH";
+            this.namsinh.Name = "namsinh";
+            this.namsinh.Visible = false;
+            // 
+            // loainhanvien
+            // 
+            this.loainhanvien.DataPropertyName = "loainhanvien";
+            this.loainhanvien.HeaderText = "LOAI NHAN VIEN";
+            this.loainhanvien.Name = "loainhanvien";
+            this.loainhanvien.Visible = false;
+            // 
+            // gioitinh
+            // 
+            this.gioitinh.DataPropertyName = "gioitinh";
+            this.gioitinh.HeaderText = "GIOI TINH";
+            this.gioitinh.Name = "gioitinh";
+            this.gioitinh.Visible = false;
+            // 
+            // ngaytao_nv
+            // 
+            this.ngaytao_nv.DataPropertyName = "ngaytao";
+            this.ngaytao_nv.HeaderText = "NGAY TAO";
+            this.ngaytao_nv.Name = "ngaytao_nv";
+            this.ngaytao_nv.Visible = false;
+            // 
+            // tennv
+            // 
+            this.tennv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tennv.DataPropertyName = "hoten";
+            this.tennv.HeaderText = "TEN NHAN VIEN";
+            this.tennv.Name = "tennv";
+            // 
             // frm_QuanLyDuLieu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1664,16 +1668,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn madm;
         private System.Windows.Forms.DataGridViewTextBoxColumn tendm;
         private System.Windows.Forms.DataGridViewTextBoxColumn ngaytao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn manv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn username;
-        private System.Windows.Forms.DataGridViewTextBoxColumn password;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sdt;
-        private System.Windows.Forms.DataGridViewTextBoxColumn diachi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn namsinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn loainhanvien;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gioitinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ngaytao_nv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tennv;
         private System.Windows.Forms.DataGridViewTextBoxColumn makh;
         private System.Windows.Forms.DataGridViewTextBoxColumn hoten;
         private System.Windows.Forms.DataGridViewTextBoxColumn sodt;
@@ -1685,5 +1679,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fax;
         private System.Windows.Forms.DataGridViewTextBoxColumn email_ncc;
         private System.Windows.Forms.DataGridViewTextBoxColumn ngaytao_ncc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn manv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn username;
+        private System.Windows.Forms.DataGridViewTextBoxColumn password;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sdt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diachi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn namsinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn loainhanvien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gioitinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ngaytao_nv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tennv;
     }
 }

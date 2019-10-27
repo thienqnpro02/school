@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,6 +19,12 @@ namespace DTO
         private int loaiNhanVien;
         private int gioiTinh;
         private String ngayTao;
+        public static Hashtable List_LoaiNhanVien = new Hashtable()
+            {
+                {"0", "Quản lý"},
+                {"1", "Nhân viên bán hàng" },
+                {"2", "Nhân viên tin học" }
+            };
 
 
         public int MaNV { get => maNV; set => maNV = value; }

@@ -39,8 +39,7 @@ namespace DTO
             this.ThongSo = thongso;
             this.BaoHanh = baohanh;
             this.SoLuong = soluong;
-            this.Gia = gia;
-            this.Hinh = hinh;
+            this.Gia = gia;            
             this.NhaSanXuat = nhasanxuat;
             this.NgayTao = ngaytao;
             this.MaDanhMuc = madanhmuc;

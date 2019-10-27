@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
-
+using System.Collections;
 using DTO;
 namespace BanLinhKien
 {
@@ -18,9 +19,15 @@ namespace BanLinhKien
         DataTable datatable_Danhmuc = new DataTable();
         int danhmucdaxoa = 0;
         
-        // variables for dgvHang
+        // variables for tab Hang
         private bool dgvHangLoaded = false;
-        private int dgvHangPreviousRow = -1;
+        private bool isUpdateImage = false;
+
+        // variables for tab Nhan vien
+
+        private bool cbLoaiNhanVienLoaded = false;
+
+
         public frm_QuanLyDuLieu()
         {
             InitializeComponent();
@@ -220,7 +227,7 @@ namespace BanLinhKien
             dgvHang.Columns["MAHANG"].HeaderText = "Mã Hàng";
             dgvHang.Columns["TENHANG"].HeaderText = "Tên Hàng";
 
-            if (dgvHang.Rows.Count > 0) dgvHangPreviousRow = 0;
+            
             dgvHangLoaded = true;           
 
             // paging
@@ -229,13 +236,18 @@ namespace BanLinhKien
             txtTrangHang.Text = HangBUS.Instance.currentPageHang.ToString();
             BuocVaoComboBoxDanhMuc();
             bindingHang();
+            
         }
 
         private void bindingCBDanhMuc()
         {            
             DataGridViewRow row = dgvHang.CurrentRow as DataGridViewRow;
-            cbDanhMuc.SelectedValue = row.Cells["MADANHMUC"].Value.ToString();
+            string selectValue = row.Cells["MADANHMUC"].Value.ToString();
 
+            if (selectValue == "") return;
+
+            cbDanhMuc.SelectedValue = selectValue;
+            picHang.ImageLocation = HangBUS.Instance.pathImage + row.Cells["HINH"].Value.ToString();
         }
         private void bindingHang()
         {
@@ -255,9 +267,10 @@ namespace BanLinhKien
             txtThongSo.DataBindings.Add("Text", dgvHang.DataSource, "THONGSO");
             txtNhaSanXuat.DataBindings.Add("Text", dgvHang.DataSource, "NHASANXUAT");
             txtBaoHanh.DataBindings.Add("Text", dgvHang.DataSource, "BAOHANH");
-            txtGia.DataBindings.Add("Text", dgvHang.DataSource, "GIA");          
-            bindingCBDanhMuc();
+            txtGia.DataBindings.Add("Text", dgvHang.DataSource, "GIA");
             txtSoLuong.DataBindings.Add("Text", dgvHang.DataSource, "SOLUONG");
+            bindingCBDanhMuc();
+            
         }
 
         
@@ -376,6 +389,22 @@ namespace BanLinhKien
             }
         }
 
+        private string RandomString(int length)
+        {
+            Random random = new Random();
+            const string pool = "abcdefghijklmnopqrstuvwxyz0123456789";
+            string rdString = "";
+
+            for (int i = 0; i < length; i++)
+            {
+               rdString += pool[random.Next(0, pool.Length)];
+                
+            }
+
+            return rdString;
+        }
+
+
         private void btnSuaHang_Click(object sender, EventArgs e)
         {
             int mahang = Int32.Parse(txtIDHang.Text);
@@ -387,10 +416,48 @@ namespace BanLinhKien
             String ngaytao = DateTime.Now.ToString("yyyy-MM-dd");
             String nhasanxuat = txtNhaSanXuat.Text;
             int madm = (Int32)cbDanhMuc.SelectedValue;
+
+            string hinh = "";            
+
+            if (isUpdateImage)
+            {
+                do
+                {
+                    hinh = RandomString(10) + Path.GetExtension(picHang.ImageLocation);
+                } while (HangBUS.Instance.isExistsImage(hinh));
+            }          
             
             Hang hang = new Hang(mahang,tenhang_, thongso, baohanh, soluong, gia, nhasanxuat, ngaytao, madm);
-            MessageBox.Show(bus_hang.SuaBangHang(hang));
-            dgvHang.Refresh();
+            hang.Hinh = hinh;
+            int res = bus_hang.SuaBangHang(hang);
+            if(res > 0)
+            {
+                string oldFileName = dgvHang.CurrentRow.Cells["HINH"].Value.ToString();
+                if (oldFileName != hang.Hinh)
+                {              
+                    
+
+                    if (isUpdateImage)
+                    {
+                        if (File.Exists(HangBUS.Instance.pathImage + oldFileName) && oldFileName != "default.png")
+                        {
+                            File.Delete(HangBUS.Instance.pathImage + oldFileName);
+                        }
+                        File.Copy(picHang.ImageLocation, HangBUS.Instance.pathImage + hang.Hinh);
+                    }
+                    
+                    configDGVHang();
+                }
+
+                
+                MessageBox.Show("Sửa thành công");
+            }
+            else
+            {
+                
+                MessageBox.Show("Sửa thất bại");
+            }
+            isUpdateImage = false;
         }
 
         private void btnXoaHang_Click(object sender, EventArgs e)
@@ -399,11 +466,7 @@ namespace BanLinhKien
             MessageBox.Show(bus_hang.XoaDLBangHang(mahang));
         }
 
-        private void cbDanhMuc_Click(object sender, EventArgs e)
-        {
-            //BuocVaoComboBoxDanhMuc();
-            //cbDanhMuc.DataBindings.Clear();
-        }
+       
 
         //nhanvien
         int nhanviendaxoa = 0;
@@ -413,7 +476,7 @@ namespace BanLinhKien
         {
             dgvNhanVien.DataSource = bus_nhanvien.DlTrenMotTrang_NhanVien();
             BuocDLVaoCacDieuKhien_NhanVien();
-
+            BuocVaoComboBox_LoaiNhanVien();
             txtTrangNV.Text =bus_nhanvien.currentPage.ToString();
             lblTongTrangNV.Text ="/"+ bus_nhanvien.pageNumber.ToString();
         }
@@ -436,7 +499,7 @@ namespace BanLinhKien
             txtSDTNhanVien.DataBindings.Add("Text", dgvNhanVien.DataSource, "sdt");
             txtDiaChiNhanVien.DataBindings.Add("Text", dgvNhanVien.DataSource, "diachi");
             dtpkNamSinhNhanVien.DataBindings.Add("Text", dgvNhanVien.DataSource, "namsinh");
-            cbLoaiNhanVIen.DataBindings.Add("Text", dgvNhanVien.DataSource, "loainhanvien");
+            
 
             rdNu.Checked = (bool)dgvNhanVien.CurrentRow.Cells[8].Value;
             rdNam.Checked = !(bool)dgvNhanVien.CurrentRow.Cells[8].Value;
@@ -501,19 +564,21 @@ namespace BanLinhKien
 
         private void BuocVaoComboBox_LoaiNhanVien()
         {
-            for(int i = 0; i < dgvNhanVien.RowCount-1; i++)
-            {
-                String loainhanvien = dgvNhanVien.Rows[i].Cells[7].Value.ToString();
-                if (!cbLoaiNhanVIen.Items.Contains(loainhanvien))
-                {
-                    cbLoaiNhanVIen.Items.Add(loainhanvien);
-                }
-            }
+            
+            cbLoaiNhanVIen.DataSource = new BindingSource( NhanVien.List_LoaiNhanVien,null);
+            cbLoaiNhanVIen.DisplayMember = "Value";
+            cbLoaiNhanVIen.ValueMember = "Key";
+            cbLoaiNhanVienLoaded = true;
+        }
+
+        private void bindingCBLoaiNhanVien()
+        {
+            cbLoaiNhanVIen.SelectedValue = dgvNhanVien.CurrentRow.Cells["LoaiNhanVien"].Value.ToString();
         }
 
         private void cbLoaiNhanVIen_Click(object sender, EventArgs e)
         {
-            BuocVaoComboBox_LoaiNhanVien();
+            //BuocVaoComboBox_LoaiNhanVien();
         }
 
         private void btnThemNV_Click(object sender, EventArgs e)
@@ -582,7 +647,7 @@ namespace BanLinhKien
             String sdt = txtSDTNhanVien.Text;
             String diachi = txtDiaChiNhanVien.Text;
             String namsinh = dtpkNamSinhNhanVien.Value.ToString("yyyy-MM-dd");
-            int loainhanvien = Convert.ToInt32(cbLoaiNhanVIen.Text);
+            int loainhanvien = Convert.ToInt32(cbLoaiNhanVIen.SelectedValue);
             int gioitinh = (rdNam.Checked) ? 0 : 1;
             String ngaytao = DateTime.Now.ToString("yyy-MM-dd");
 
@@ -866,6 +931,32 @@ namespace BanLinhKien
             MessageBox.Show(bus_ncc.XoaDLBangNhaCungCap(mancc));
             DLTrenTungTrang_BangNCC();
             nccdaxoa += 1;
+        }
+
+        private void BtnDoiHinh_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "JPG files(.jpg)|*.jpg|PNG file(.png)|*.png|ALl files(*.*)|*.*";
+            if(dialog.ShowDialog() == DialogResult.OK)
+            {
+                
+                picHang.ImageLocation = dialog.FileName;
+                isUpdateImage = true;
+            }
+        }
+
+        private void CbLoaiNhanVIen_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (cbLoaiNhanVienLoaded == false) return;
+            //MessageBox.Show(cbLoaiNhanVIen.SelectedValue.ToString());
+        }
+
+        private void DgvNhanVien_SelectionChanged(object sender, EventArgs e)
+        {
+            if(dgvNhanVien.CurrentRow != null)
+            {
+                bindingCBLoaiNhanVien();
+            }
         }
     }
 

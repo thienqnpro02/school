@@ -57,10 +57,21 @@ namespace DAO
 
         public int SuaBangHang(Hang hang)
         {
-            String sql = String.Format("update hang set tenhang='{0}', thongso='{1}', baohanh={2}, soluong={3}," +
-                " gia={4},nhasanxuat='{5}',madanhmuc={6} where mahang={7}",hang.TenHang,hang.ThongSo,hang.BaoHanh,hang.SoLuong,
-                hang.Gia,hang.NhaSanXuat,hang.MaDanhMuc,hang.MaHang);
-            int effect = dataProvider.ExecuteNonQuery(sql);
+            String sql = "";
+            if (hang.Hinh != "")
+            {
+                sql = String.Format("update hang set tenhang=N'{0}', thongso=N'{1}', baohanh={2}, soluong={3}," +
+                " gia={4},nhasanxuat='{5}',madanhmuc={6}, hinh='{8}' where mahang={7}", hang.TenHang, hang.ThongSo, hang.BaoHanh, hang.SoLuong,
+                hang.Gia, hang.NhaSanXuat, hang.MaDanhMuc, hang.MaHang, hang.Hinh);
+            }
+            else
+            {
+                sql = String.Format("update hang set tenhang=N'{0}', thongso=N'{1}', baohanh={2}, soluong={3}," +
+               " gia={4},nhasanxuat='{5}',madanhmuc={6} where mahang={7}", hang.TenHang, hang.ThongSo, hang.BaoHanh, hang.SoLuong,
+               hang.Gia, hang.NhaSanXuat, hang.MaDanhMuc, hang.MaHang);
+            }
+            
+            int effect = (int)dataProvider.ExecuteNonQuery(sql);
             return effect;
         }
 
@@ -69,6 +80,15 @@ namespace DAO
             String sql = String.Format("delete from hang where mahang = {0}", mahang);
             int effect = dataProvider.ExecuteNonQuery(sql);
             return effect;
+        }
+
+        public bool isExistsImage(string fileName)
+        {
+            string sql = string.Format("select count(*) from hang where hinh like '{0}'",fileName);
+            int res = Convert.ToInt32(DataProvider.Instance.ExecuteScalar(sql));
+            if (res > 0)
+                return true;
+            return false;
         }
     }
 }

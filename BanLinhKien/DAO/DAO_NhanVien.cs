@@ -52,8 +52,8 @@ namespace DAO
 
         public int CapNhapBangNhanVien(NhanVien nhanvien)
         {
-            String sql = String.Format("update nhanvien set hoten='{0}',username='{1}',password='{2}',sdt='{3}'," +
-                "diachi='{4}',namsinh='{5}',loainhanvien={6},gioitinh={7},ngaytao='{8}' where manv ={9}",
+            String sql = String.Format("update nhanvien set hoten=N'{0}',username='{1}',password='{2}',sdt='{3}'," +
+                "diachi=N'{4}',namsinh='{5}',loainhanvien={6},gioitinh={7},ngaytao='{8}' where manv ={9}",
                 nhanvien.HoTen, nhanvien.Username, nhanvien.Password, nhanvien.Sdt, nhanvien.DiaChi, nhanvien.NamSinh,
                nhanvien.LoaiNhanVien, nhanvien.GioiTinh, nhanvien.NgayTao, nhanvien.MaNV);
             int effect = dataProvider.ExecuteNonQuery(sql);
