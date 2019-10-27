@@ -15,14 +15,14 @@ namespace DAO
         DataProvider dataProvider = DataProvider.Instance;
         public DataTable BangKhachHang()
         {
-            String sql = "Select *from khachhang_test";
+            String sql = "Select *from khachhang";
             DataTable bangkhachhang = dataProvider.ExecuteQuery(sql);
             return bangkhachhang;
         }
 
         public int RowCount()
         {
-            String sql = "Select count(*) from khachhang_test;";
+            String sql = "Select count(*) from khachhang;";
             int row = Convert.ToInt32(dataProvider.ExecuteScalar(sql));
             return row;
         }
@@ -37,7 +37,7 @@ namespace DAO
 
         public int LuuBangKhachHang(KhachHang khachhang)
         {
-            String sql =String.Format("Insert into khachhang_test(hoten,sdt,namsinh,ngaytao) values(N'{0}','{1}','{2}','{3}')",
+            String sql =String.Format("Insert into khachhang(hoten,sdt,namsinh,ngaytao) values(N'{0}','{1}','{2}','{3}')",
                 khachhang.HoTen,khachhang.Sdt,khachhang.NamSinh,khachhang.NgayTao);
             int effect = dataProvider.ExecuteNonQuery(sql);
             return effect;
@@ -45,7 +45,7 @@ namespace DAO
 
         public int SuaBangKhachHang(KhachHang khachhang)
         {
-            String sql = String.Format("update khachhang_test set hoten='{0}',sdt='{1}',namsinh='{2}' where makh={3}",
+            String sql = String.Format("update khachhang set hoten='{0}',sdt='{1}',namsinh='{2}' where makh={3}",
                 khachhang.HoTen, khachhang.Sdt, khachhang.NamSinh, khachhang.MaKH);
             int effect = dataProvider.ExecuteNonQuery(sql);
             return effect;
@@ -53,7 +53,7 @@ namespace DAO
 
         public int XoaBangKhachHang(int makh)
         {
-            String sql = String.Format("delete from khachhang_test where makh = {0}", makh);
+            String sql = String.Format("delete from khachhang where makh = {0}", makh);
             int effect = dataProvider.ExecuteNonQuery(sql);
             return effect;
         }

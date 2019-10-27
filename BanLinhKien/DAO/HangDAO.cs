@@ -26,7 +26,7 @@ namespace DAO
 
         public DataTable select()
         {
-            string sql = "select * from Hang_test";
+            string sql = "select * from Hang";
             DataTable res = DataProvider.Instance.ExecuteQuery(sql);
 
             return res;
@@ -41,14 +41,14 @@ namespace DAO
 
         public int rowCount()
         {
-            string sql = "select count(*) from Hang_test";
+            string sql = "select count(*) from Hang";
             int row = Convert.ToInt32( DataProvider.Instance.ExecuteScalar(sql) );
             return row;
         }
 
         public int LuuBangHang(Hang hang)
         {
-            String sql = String.Format("insert into hang_test(tenhang,thongso,baohanh,soluong,gia,nhasanxuat,ngaytao,madanhmuc) " +
+            String sql = String.Format("insert into hang(tenhang,thongso,baohanh,soluong,gia,nhasanxuat,ngaytao,madanhmuc) " +
                 "values ('{0}','{1}',{2},{3},{4},'{5}','{6}',{7})",
             hang.TenHang,hang.ThongSo,hang.BaoHanh,hang.SoLuong,hang.Gia,hang.NhaSanXuat,hang.NgayTao,hang.MaDanhMuc);
             int effect = dataProvider.ExecuteNonQuery(sql);
@@ -57,7 +57,7 @@ namespace DAO
 
         public int SuaBangHang(Hang hang)
         {
-            String sql = String.Format("update hang_test set tenhang='{0}', thongso='{1}', baohanh={2}, soluong={3}," +
+            String sql = String.Format("update hang set tenhang='{0}', thongso='{1}', baohanh={2}, soluong={3}," +
                 " gia={4},nhasanxuat='{5}',madanhmuc={6} where mahang={7}",hang.TenHang,hang.ThongSo,hang.BaoHanh,hang.SoLuong,
                 hang.Gia,hang.NhaSanXuat,hang.MaDanhMuc,hang.MaHang);
             int effect = dataProvider.ExecuteNonQuery(sql);
@@ -66,7 +66,7 @@ namespace DAO
 
         public int XoaDLBangHang(int mahang)
         {
-            String sql = String.Format("delete from hang_test where mahang = {0}", mahang);
+            String sql = String.Format("delete from hang where mahang = {0}", mahang);
             int effect = dataProvider.ExecuteNonQuery(sql);
             return effect;
         }

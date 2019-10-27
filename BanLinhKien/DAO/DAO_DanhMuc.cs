@@ -29,28 +29,28 @@ namespace DAO
 
         public DataTable BangDanhMuc()
         {
-            String sql = "select *from danhmuc_test";
+            String sql = "select *from danhmuc";
             DataTable datatable=dataProvider.ExecuteQuery(sql);
             return datatable;
         }
 
         public int LuuBangDanhMuc(String tendanhmuc,String ngaytao)
         {
-            String sql = String.Format("insert into danhmuc_test(tendanhmuc,ngaytao) values ('{0}','{1}')", tendanhmuc,ngaytao);
+            String sql = String.Format("insert into danhmuc(tendanhmuc,ngaytao) values ('{0}','{1}')", tendanhmuc,ngaytao);
             int effect = dataProvider.ExecuteNonQuery(sql);
             return effect;
         }
 
         public int SuaBangDanhMuc(int madm, String tendanhmuc)
         {
-            String sql = String.Format("update danhmuc_test set tendanhmuc = '{0}' where madm = {1}", tendanhmuc, madm);
+            String sql = String.Format("update danhmuc set tendanhmuc = '{0}' where madm = {1}", tendanhmuc, madm);
             int effect = dataProvider.ExecuteNonQuery(sql);
             return effect;
         }
 
         public int XoaDLBangDanhMuc(int madm)
         {
-            String sql = String.Format("delete from danhmuc_test where madm = {0}", madm);
+            String sql = String.Format("delete from danhmuc where madm = {0}", madm);
             int effect = dataProvider.ExecuteNonQuery(sql);
             return effect; 
         }
@@ -65,7 +65,7 @@ namespace DAO
 
         public int rowCount()
         {
-            String sql = "Select count(*) from danhmuc_test";
+            String sql = "Select count(*) from danhmuc";
             int numberRow = Convert.ToInt32(dataProvider.ExecuteScalar(sql));
             return numberRow;
         }

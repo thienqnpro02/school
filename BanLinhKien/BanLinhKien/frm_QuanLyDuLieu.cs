@@ -210,6 +210,7 @@ namespace BanLinhKien
             dgvHang.Columns["NHASANXUAT"].Visible = false;
             dgvHang.Columns["NGAYTAO"].Visible = false;
             dgvHang.Columns["MADANHMUC"].Visible = false;
+            dgvHang.Columns["TENDANHMUC"].Visible = false;
 
             // chỉnh kích thước cột
             dgvHang.Columns["MAHANG"].Width = 75;
@@ -226,9 +227,16 @@ namespace BanLinhKien
 
             txtTongTrangHang.Text = "/" + HangBUS.Instance.totalRow;
             txtTrangHang.Text = HangBUS.Instance.currentPageHang.ToString();
+            BuocVaoComboBoxDanhMuc();
             bindingHang();
         }
 
+        private void bindingCBDanhMuc()
+        {            
+            DataGridViewRow row = dgvHang.CurrentRow as DataGridViewRow;
+            cbDanhMuc.SelectedValue = row.Cells["MADANHMUC"].Value.ToString();
+
+        }
         private void bindingHang()
         {
             // clear binding
@@ -247,25 +255,24 @@ namespace BanLinhKien
             txtThongSo.DataBindings.Add("Text", dgvHang.DataSource, "THONGSO");
             txtNhaSanXuat.DataBindings.Add("Text", dgvHang.DataSource, "NHASANXUAT");
             txtBaoHanh.DataBindings.Add("Text", dgvHang.DataSource, "BAOHANH");
-            txtGia.DataBindings.Add("Text", dgvHang.DataSource, "GIA");
-            //cbdanhmuc
-            cbDanhMuc.DataBindings.Add("Text", dgvHang.DataSource, "MADANHMUC");
+            txtGia.DataBindings.Add("Text", dgvHang.DataSource, "GIA");          
+            bindingCBDanhMuc();
             txtSoLuong.DataBindings.Add("Text", dgvHang.DataSource, "SOLUONG");
         }
+
         
 
         private void DgvHang_SelectionChanged(object sender, EventArgs e)
         {
             if (dgvHangLoaded == false) return;
-            
 
-            if(dgvHang.CurrentRow != null && dgvHangPreviousRow != dgvHang.CurrentCell.RowIndex)
-            {
-                //DataGridViewRow row = dgvHang.CurrentRow as DataGridViewRow;
-                //string tabName = tabControlQL_DuLieu.SelectedTab.Name;
-                //int idx = dgvHang.CurrentCell.RowIndex;
-                //bindingData(idx);
+            
+            if(dgvHang.CurrentRow != null)
+            {               
+                
+                bindingCBDanhMuc();    
             }
+            
         }
 
         private void BtnNextHang_Click(object sender, EventArgs e)
@@ -380,10 +387,10 @@ namespace BanLinhKien
             String ngaytao = DateTime.Now.ToString("yyyy-MM-dd");
             String nhasanxuat = txtNhaSanXuat.Text;
             int madm = (Int32)cbDanhMuc.SelectedValue;
-            MessageBox.Show(madm.ToString());
-
+            
             Hang hang = new Hang(mahang,tenhang_, thongso, baohanh, soluong, gia, nhasanxuat, ngaytao, madm);
             MessageBox.Show(bus_hang.SuaBangHang(hang));
+            dgvHang.Refresh();
         }
 
         private void btnXoaHang_Click(object sender, EventArgs e)
@@ -394,8 +401,8 @@ namespace BanLinhKien
 
         private void cbDanhMuc_Click(object sender, EventArgs e)
         {
-            BuocVaoComboBoxDanhMuc();
-            cbDanhMuc.DataBindings.Clear();
+            //BuocVaoComboBoxDanhMuc();
+            //cbDanhMuc.DataBindings.Clear();
         }
 
         //nhanvien

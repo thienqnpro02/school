@@ -14,7 +14,7 @@ namespace DAO
         DataProvider dataProvider = DataProvider.Instance;
         public DataTable BangNCC()
         {
-            String sql = "Select *from nhacungcap_test";
+            String sql = "Select *from nhacungcap";
             DataTable ncc = dataProvider.ExecuteQuery(sql);
             return ncc;
         }
@@ -28,14 +28,14 @@ namespace DAO
 
         public int RowCount()
         {
-            String sql = "Select count(*) from nhacungcap_test";
+            String sql = "Select count(*) from nhacungcap";
             int effect = Convert.ToInt32(dataProvider.ExecuteScalar(sql));
             return effect;
         }
 
         public int LuuBangNhaCungCap(NhaCungCap ncc)
         {
-            String sql = String.Format("insert into nhacungcap_test(tenncc,diachi,fax,email,ngaytao) values(N'{0}',N'{1}',N'{2}',N'{3}','{4}')",
+            String sql = String.Format("insert into nhacungcap(tenncc,diachi,fax,email,ngaytao) values(N'{0}',N'{1}',N'{2}',N'{3}','{4}')",
                 ncc.TenNCC, ncc.DiaChi, ncc.Fax, ncc.Email, ncc.NgayTao);
             int effect = dataProvider.ExecuteNonQuery(sql);
             return effect;
@@ -43,7 +43,7 @@ namespace DAO
 
         public int SuuBangNhaCungCap(NhaCungCap ncc)
         {
-            String sql =String.Format("update nhacungcap_test set tenncc='{0}',diachi='{1}',fax='{2}',email='{3}' where mancc = {4}",
+            String sql =String.Format("update nhacungcap set tenncc='{0}',diachi='{1}',fax='{2}',email='{3}' where mancc = {4}",
                 ncc.TenNCC,ncc.DiaChi,ncc.Fax,ncc.Email,ncc.MaNCC);
             int effect = dataProvider.ExecuteNonQuery(sql);
             return effect;
@@ -51,7 +51,7 @@ namespace DAO
 
         public int XoaDLBangNhaCungCap(int mancc)
         {
-            String sql = String.Format("delete from nhacungcap_test where mancc={0}", mancc);
+            String sql = String.Format("delete from nhacungcap where mancc={0}", mancc);
             int effect = dataProvider.ExecuteNonQuery(sql);
             return effect;
         }
