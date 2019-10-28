@@ -52,16 +52,10 @@ namespace BUS
             return HangDAO.Instance.rowCount();
         }
 
-        public String LuuBangHang(Hang hang)
+        public int LuuBangHang(Hang hang)
         {
-            int effect=dao_hang.LuuBangHang(hang);
-            if (effect > 0)
-            {
-                return "Luu du lieu thanh cong";
-            }else
-            {
-                return "Luu du lieu khong thanh cong";
-            }
+            return dao_hang.LuuBangHang(hang);
+            
         }
 
         public int SuaBangHang(Hang hang)

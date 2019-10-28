@@ -48,9 +48,19 @@ namespace DAO
 
         public int LuuBangHang(Hang hang)
         {
-            String sql = String.Format("insert into hang(tenhang,thongso,baohanh,soluong,gia,nhasanxuat,ngaytao,madanhmuc) " +
+            String sql = "";
+            if (hang.Hinh != "")
+            {
+                sql = String.Format("insert into hang(tenhang,thongso,baohanh,soluong,gia,nhasanxuat,ngaytao,madanhmuc,hinh) " +
+                "values ('{0}','{1}',{2},{3},{4},'{5}','{6}',{7},'{8}')",
+            hang.TenHang, hang.ThongSo, hang.BaoHanh, hang.SoLuong, hang.Gia, hang.NhaSanXuat, hang.NgayTao, hang.MaDanhMuc, hang.Hinh);
+            }
+            else
+            {
+                sql = String.Format("insert into hang(tenhang,thongso,baohanh,soluong,gia,nhasanxuat,ngaytao,madanhmuc) " +
                 "values ('{0}','{1}',{2},{3},{4},'{5}','{6}',{7})",
-            hang.TenHang,hang.ThongSo,hang.BaoHanh,hang.SoLuong,hang.Gia,hang.NhaSanXuat,hang.NgayTao,hang.MaDanhMuc);
+            hang.TenHang, hang.ThongSo, hang.BaoHanh, hang.SoLuong, hang.Gia, hang.NhaSanXuat, hang.NgayTao, hang.MaDanhMuc);
+            }
             int effect = dataProvider.ExecuteNonQuery(sql);
             return effect;
         }

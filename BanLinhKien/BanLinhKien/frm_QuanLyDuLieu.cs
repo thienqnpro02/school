@@ -91,22 +91,22 @@ namespace BanLinhKien
         {
             if (btnThemDM.Text.Contains("Th"))
             {
-                btnThemDM.Text = "Luu";
-                txtIDDanhMuc.Text = (busDanhmuc.rowCount() + danhmucdaxoa).ToString();
+                btnThemDM.Text = "Lưu";
+                txtIDDanhMuc.Text = "";
                 txtTenDanhMuc.Text = "";
             }
 
             if (txtTenDanhMuc.Text != "")
             {
-                MessageBox.Show("khac null");
-                int madm = Int32.Parse(txtIDDanhMuc.Text);
+                
+                
                 String tendanhmuc = txtTenDanhMuc.Text;
                 DataView View = new DataView(datatable_Danhmuc);
-                View.RowFilter = String.Format("madm = {0} or tendanhmuc like '%{1}%'", madm, tendanhmuc);
+                View.RowFilter = String.Format("tendanhmuc like '%{0}%'", tendanhmuc);
 
                 if (View.Count > 0)
                 {
-                    MessageBox.Show("Danh muc da ton tai");
+                    MessageBox.Show("Danh mục đã tồn tại");
                 }
                 else
                 {
@@ -242,10 +242,8 @@ namespace BanLinhKien
         private void bindingCBDanhMuc()
         {            
             DataGridViewRow row = dgvHang.CurrentRow as DataGridViewRow;
-            string selectValue = row.Cells["MADANHMUC"].Value.ToString();
-
-            if (selectValue == "") return;
-
+            if (row == null) return;
+            string selectValue = row.Cells["MADANHMUC"].Value.ToString();            
             cbDanhMuc.SelectedValue = selectValue;
             picHang.ImageLocation = HangBUS.Instance.pathImage + row.Cells["HINH"].Value.ToString();
         }
@@ -345,8 +343,8 @@ namespace BanLinhKien
             DataTable datatable_hang=bus_hang.select();
             if (btnThemHang.Text.Contains("Th"))
             {
-                btnThemDM.Text = "Luu";
-                txtIDHang.Text = (bus_hang.Tongsohang() +hangdaxoa).ToString();
+                btnThemHang.Text = "Lưu";
+                txtIDHang.Text = "";
                 txtTenHang.Text = " ";
                 txtBaoHanh.Text = "";
                 txtGia.Text = "";
@@ -356,20 +354,21 @@ namespace BanLinhKien
                 txtSoLuong.Text = "";
                 cbDanhMuc.DataBindings.Clear();
                 cbDanhMuc.Text = "";
+                picHang.ImageLocation = HangBUS.Instance.pathImage + "default.png";
                 
             }
 
             if (txtTenHang.Text != " ")
             {
-                int mahang = Int32.Parse(txtIDHang.Text);
+                
                 String tenhang = txtTenHang.Text;
                 DataView View = new DataView(datatable_hang);
-                MessageBox.Show(tenhang + mahang);
-                View.RowFilter = String.Format("mahang = {0} or tenhang like '%{1}%'", mahang, tenhang);
+                
+                View.RowFilter = String.Format("tenhang like '%{0}%'", tenhang);
 
                 if (View.Count > 0)
                 {
-                    MessageBox.Show("Hang da ton tai");
+                    MessageBox.Show("Hàng đã tồn tại");
                 }
                 else
                 {
@@ -382,9 +381,35 @@ namespace BanLinhKien
                     String nhasanxuat = txtNhaSanXuat.Text;
                     int madm = (Int32)cbDanhMuc.SelectedValue;
 
-                    Hang hang = new Hang(mahang,tenhang, thongso, baohanh, soluong, gia, nhasanxuat, ngaytao, madm);
-                    MessageBox.Show(bus_hang.LuuBangHang(hang));
-                    btnThemDM.Text = "Thêm";
+                    string hinh = "";
+                    if (isUpdateImage)
+                    {
+                        do
+                        {
+                            hinh = RandomString(10) + Path.GetExtension(picHang.ImageLocation);
+                        } while (HangBUS.Instance.isExistsImage(hinh));
+                    }
+
+                    Hang hang = new Hang(-1,tenhang, thongso, baohanh, soluong, gia, hinh, nhasanxuat, ngaytao, madm);
+                    
+                    int res = bus_hang.LuuBangHang(hang);
+                    if(res > 0)
+                    {
+                        if (isUpdateImage)
+                        {
+                            File.Copy(picHang.ImageLocation, HangBUS.Instance.pathImage + hang.Hinh);
+                            isUpdateImage = false;
+                        }
+
+                        MessageBox.Show("Thêm thành công");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thêm thất bại");
+                    }
+
+                    btnThemHang.Text = "Thêm";
+                    configDGVHang();
                 }
             }
         }
@@ -427,8 +452,8 @@ namespace BanLinhKien
                 } while (HangBUS.Instance.isExistsImage(hinh));
             }          
             
-            Hang hang = new Hang(mahang,tenhang_, thongso, baohanh, soluong, gia, nhasanxuat, ngaytao, madm);
-            hang.Hinh = hinh;
+            Hang hang = new Hang(mahang,tenhang_, thongso, baohanh, soluong, gia,hinh, nhasanxuat, ngaytao, madm);
+            
             int res = bus_hang.SuaBangHang(hang);
             if(res > 0)
             {
@@ -444,6 +469,7 @@ namespace BanLinhKien
                             File.Delete(HangBUS.Instance.pathImage + oldFileName);
                         }
                         File.Copy(picHang.ImageLocation, HangBUS.Instance.pathImage + hang.Hinh);
+                        isUpdateImage = false;
                     }
                     
                     configDGVHang();
@@ -457,13 +483,14 @@ namespace BanLinhKien
                 
                 MessageBox.Show("Sửa thất bại");
             }
-            isUpdateImage = false;
+            
         }
 
         private void btnXoaHang_Click(object sender, EventArgs e)
         {
             int mahang = Int32.Parse(txtIDHang.Text);
             MessageBox.Show(bus_hang.XoaDLBangHang(mahang));
+            configDGVHang();
         }
 
        

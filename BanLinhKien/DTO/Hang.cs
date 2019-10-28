@@ -32,7 +32,7 @@ namespace DTO
 
         public Hang() { }
 
-        public Hang(int mahang, string tenhang, string thongso, int baohanh, int soluong, int gia, string nhasanxuat, String ngaytao, int madanhmuc)
+        public Hang(int mahang, string tenhang, string thongso, int baohanh, int soluong, int gia, string hinh, string nhasanxuat, String ngaytao, int madanhmuc)
         {
             this.MaHang = mahang;
             this.TenHang = tenhang;
@@ -40,6 +40,7 @@ namespace DTO
             this.BaoHanh = baohanh;
             this.SoLuong = soluong;
             this.Gia = gia;            
+            this.Hinh = hinh;
             this.NhaSanXuat = nhasanxuat;
             this.NgayTao = ngaytao;
             this.MaDanhMuc = madanhmuc;

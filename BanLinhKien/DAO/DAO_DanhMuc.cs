@@ -36,7 +36,7 @@ namespace DAO
 
         public int LuuBangDanhMuc(String tendanhmuc,String ngaytao)
         {
-            String sql = String.Format("insert into danhmuc(tendanhmuc,ngaytao) values ('{0}','{1}')", tendanhmuc,ngaytao);
+            String sql = String.Format("insert into danhmuc(tendanhmuc,ngaytao) values (N'{0}','{1}')", tendanhmuc,ngaytao);
             int effect = dataProvider.ExecuteNonQuery(sql);
             return effect;
         }
