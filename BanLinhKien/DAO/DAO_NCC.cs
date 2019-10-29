@@ -59,7 +59,7 @@ namespace DAO
 
         public int SuuBangNhaCungCap(NhaCungCap ncc)
         {
-            String sql =String.Format("update nhacungcap set tenncc='{0}',diachi='{1}',fax='{2}',email='{3}' where mancc = {4}",
+            String sql =String.Format("update nhacungcap set tenncc=N'{0}',diachi=N'{1}',fax='{2}',email='{3}' where mancc = {4}",
                 ncc.TenNCC,ncc.DiaChi,ncc.Fax,ncc.Email,ncc.MaNCC);
             int effect = dataProvider.ExecuteNonQuery(sql);
             return effect;

@@ -60,7 +60,7 @@ namespace DAO
 
         public int SuaBangKhachHang(KhachHang khachhang)
         {
-            String sql = String.Format("update khachhang set hoten='{0}',sdt='{1}',namsinh='{2}' where makh={3}",
+            String sql = String.Format("update khachhang set hoten=N'{0}',sdt='{1}',namsinh='{2}' where makh={3}",
                 khachhang.HoTen, khachhang.Sdt, khachhang.NamSinh, khachhang.MaKH);
             int effect = dataProvider.ExecuteNonQuery(sql);
             return effect;

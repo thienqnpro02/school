@@ -52,13 +52,13 @@ namespace DAO
             if (hang.Hinh != "")
             {
                 sql = String.Format("insert into hang(tenhang,thongso,baohanh,soluong,gia,nhasanxuat,ngaytao,madanhmuc,hinh) " +
-                "values ('{0}','{1}',{2},{3},{4},'{5}','{6}',{7},'{8}')",
+                "values (N'{0}',N'{1}',{2},{3},{4},N'{5}','{6}',{7},'{8}')",
             hang.TenHang, hang.ThongSo, hang.BaoHanh, hang.SoLuong, hang.Gia, hang.NhaSanXuat, hang.NgayTao, hang.MaDanhMuc, hang.Hinh);
             }
             else
             {
                 sql = String.Format("insert into hang(tenhang,thongso,baohanh,soluong,gia,nhasanxuat,ngaytao,madanhmuc) " +
-                "values ('{0}','{1}',{2},{3},{4},'{5}','{6}',{7})",
+                "values (N'{0}',N'{1}',{2},{3},{4},N'{5}','{6}',{7})",
             hang.TenHang, hang.ThongSo, hang.BaoHanh, hang.SoLuong, hang.Gia, hang.NhaSanXuat, hang.NgayTao, hang.MaDanhMuc);
             }
             int effect = dataProvider.ExecuteNonQuery(sql);
@@ -71,13 +71,13 @@ namespace DAO
             if (hang.Hinh != "")
             {
                 sql = String.Format("update hang set tenhang=N'{0}', thongso=N'{1}', baohanh={2}, soluong={3}," +
-                " gia={4},nhasanxuat='{5}',madanhmuc={6}, hinh='{8}' where mahang={7}", hang.TenHang, hang.ThongSo, hang.BaoHanh, hang.SoLuong,
+                " gia={4},nhasanxuat=N'{5}',madanhmuc={6}, hinh='{8}' where mahang={7}", hang.TenHang, hang.ThongSo, hang.BaoHanh, hang.SoLuong,
                 hang.Gia, hang.NhaSanXuat, hang.MaDanhMuc, hang.MaHang, hang.Hinh);
             }
             else
             {
                 sql = String.Format("update hang set tenhang=N'{0}', thongso=N'{1}', baohanh={2}, soluong={3}," +
-               " gia={4},nhasanxuat='{5}',madanhmuc={6} where mahang={7}", hang.TenHang, hang.ThongSo, hang.BaoHanh, hang.SoLuong,
+               " gia={4},nhasanxuat=N'{5}',madanhmuc={6} where mahang={7}", hang.TenHang, hang.ThongSo, hang.BaoHanh, hang.SoLuong,
                hang.Gia, hang.NhaSanXuat, hang.MaDanhMuc, hang.MaHang);
             }
             

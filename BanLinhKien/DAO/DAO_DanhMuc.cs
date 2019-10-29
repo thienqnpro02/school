@@ -44,7 +44,7 @@ namespace DAO
 
         public int SuaBangDanhMuc(int madm, String tendanhmuc)
         {
-            String sql = String.Format("update danhmuc set tendanhmuc = '{0}' where madm = {1}", tendanhmuc, madm);
+            String sql = String.Format("update danhmuc set tendanhmuc = N'{0}' where madm = {1}", tendanhmuc, madm);
             int effect = dataProvider.ExecuteNonQuery(sql);
             return effect;
         }

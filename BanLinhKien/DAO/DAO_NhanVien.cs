@@ -51,7 +51,7 @@ namespace DAO
         public int LuuBangNhanVien(NhanVien nhanvien)
         {
             String sql = String.Format("insert into nhanvien(username,password,hoten,sdt,diachi,namsinh,loainhanvien,gioitinh,ngaytao)" +
-                " values('{0}','{1}','{2}','{3}','{4}','{5}',{6},{7},'{8}')",
+                " values('{0}','{1}',N'{2}','{3}','{4}','{5}',{6},{7},'{8}')",
                 nhanvien.Username, nhanvien.Password, nhanvien.HoTen, nhanvien.Sdt, nhanvien.DiaChi, nhanvien.NamSinh,
                 nhanvien.LoaiNhanVien, nhanvien.GioiTinh, nhanvien.NgayTao);
             int effect = dataProvider.ExecuteNonQuery(sql);
