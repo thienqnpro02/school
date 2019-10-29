@@ -13,6 +13,21 @@ namespace DAO
     public class DAO_KhachHang
     {
         DataProvider dataProvider = DataProvider.Instance;
+        private static DAO_KhachHang instance;
+        public static DAO_KhachHang Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new DAO_KhachHang();
+                }
+                return instance;
+            }
+        }
+
+        private DAO_KhachHang() { }
+
         public DataTable BangKhachHang()
         {
             String sql = "Select *from khachhang";

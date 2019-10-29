@@ -12,6 +12,21 @@ namespace DAO
     public class DAO_NhanVien
     {
         DataProvider dataProvider = DataProvider.Instance;
+
+        private static DAO_NhanVien instance;
+        public static DAO_NhanVien Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new DAO_NhanVien();
+                }
+                return instance;
+            }
+        }
+
+        private DAO_NhanVien() { }
         public DataTable BangNhanVien()
         {
             String sql = "select *from nhanvien";

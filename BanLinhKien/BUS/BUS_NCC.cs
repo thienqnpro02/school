@@ -12,10 +12,26 @@ namespace BUS
 {
     public class BUS_NCC
     {
-        DAO_NCC dao_ncc = new DAO_NCC();
-        public int pageNumber = 0;
+        DAO_NCC dao_ncc = DAO_NCC.Instance;
+
+        private static BUS_NCC instance;
+        public static BUS_NCC Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new BUS_NCC();
+                }
+                return instance;
+            }
+        }
+
+        private BUS_NCC() { }
+
+        public int totalPage = 0;
         public int pageSize = 10;
-        public int currentPage = 1;
+        
 
         public DataTable BangNCC()
         {
@@ -23,16 +39,16 @@ namespace BUS
             return ncc;
         }
 
-        public DataTable DLTrenTungTrang_NCC()
+        public DataTable DLTrenTungTrang_NCC(int currentPageNCC)
         {
             PageNumber();
-            DataTable ncc = dao_ncc.DLTrenTungTrang_NCC(this.currentPage,this.pageSize);
+            DataTable ncc = dao_ncc.DLTrenTungTrang_NCC(currentPageNCC, this.pageSize);
             return ncc;
         }
 
         public void PageNumber()
         {
-            pageNumber = (int)Math.Ceiling((double)dao_ncc.RowCount() / this.pageSize);
+            totalPage = (int)Math.Ceiling((double)dao_ncc.RowCount() / this.pageSize);
         }
 
         public int RowCount()

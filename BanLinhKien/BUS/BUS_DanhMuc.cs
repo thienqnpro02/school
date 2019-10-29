@@ -14,9 +14,24 @@ namespace BUS
     {
         DAO_DanhMuc dao_danhmuc = DAO_DanhMuc.Instance;
 
-        public int pageNumber = 0;
-        public int pageSize = 11;
-        public int currentPage = 1;
+        private static BUS_DanhMuc instance;
+        public static BUS_DanhMuc Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new BUS_DanhMuc();
+                }
+                return instance;
+            }
+        }
+
+        private BUS_DanhMuc() { }
+
+        public int totalPage = 0;
+        public int pageSize = 10;
+        
 
         public DataTable BangDanhMuc()
         {
@@ -54,16 +69,16 @@ namespace BUS
             return "Xoa du lieu khong thanh cong";
         }
 
-        public DataTable pagingHang()
+        public DataTable pagingDanhMuc(int currentPageDanhMuc)
         {
-            PageNumber();
-            DataTable datatable = dao_danhmuc.pagingDangMuc(this.currentPage, this.pageSize);
+            pageCount();
+            DataTable datatable = dao_danhmuc.pagingDangMuc(currentPageDanhMuc, this.pageSize);
             return datatable;
         }
 
-        public void PageNumber()
+        public void pageCount()
         {
-            pageNumber = (int)Math.Ceiling((double)(rowCount() / this.pageSize));
+            totalPage = (int)Math.Ceiling((double)(rowCount() / this.pageSize));
         }
 
         public int rowCount()

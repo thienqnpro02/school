@@ -12,6 +12,22 @@ namespace DAO
     public class DAO_NCC
     {
         DataProvider dataProvider = DataProvider.Instance;
+
+        private static DAO_NCC instance;
+        public static DAO_NCC Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new DAO_NCC();
+                }
+                return instance;
+            }
+        }
+
+        private DAO_NCC() { }
+
         public DataTable BangNCC()
         {
             String sql = "Select *from nhacungcap";

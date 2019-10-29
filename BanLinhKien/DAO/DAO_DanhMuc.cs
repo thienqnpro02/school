@@ -11,10 +11,9 @@ namespace DAO
 {
     public class DAO_DanhMuc
     {
-        private static DAO_DanhMuc instance;
-
         DataProvider dataProvider = DataProvider.Instance;
 
+        private static DAO_DanhMuc instance;       
         public static DAO_DanhMuc Instance
         {
             get
@@ -26,6 +25,8 @@ namespace DAO
                 return instance;
             }
         }
+
+        private DAO_DanhMuc() { }
 
         public DataTable BangDanhMuc()
         {

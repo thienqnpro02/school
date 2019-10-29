@@ -15,17 +15,28 @@ namespace BanLinhKien
 {
     public partial class frm_QuanLyDuLieu : Form
     {
-        BUS_DanhMuc busDanhmuc = new BUS_DanhMuc();
+        // variables for tab Danh Muc
+        BUS_DanhMuc busDanhmuc = BUS_DanhMuc.Instance;
         DataTable datatable_Danhmuc = new DataTable();
-        
-        
+        private int currentPageDanhMuc = 1;
+
         // variables for tab Hang
         private bool dgvHangLoaded = false;
         private bool isUpdateImage = false;
         private int currentPageHang = 1;
 
-        // variables for tab Nhan vien
+        // variables for tab Nhan Vien      
+        BUS_NhanVien bus_nhanvien = BUS_NhanVien.Instance;
         private bool cbLoaiNhanVienLoaded = false;
+        private int currentPageNhanVien = 1;
+
+        // variables for tab Khach Hang      
+        BUS_KhachHang bus_khachhang = BUS_KhachHang.Instance;
+        private int currentPageKhachHang = 1;
+
+        // variables for tab Nha Cung Cap
+        BUS_NCC bus_ncc = BUS_NCC.Instance;
+        private int currentPageNCC = 1;
 
 
         public frm_QuanLyDuLieu()
@@ -42,7 +53,7 @@ namespace BanLinhKien
         }
         private void CapNhapLaiDLTrenForm()
         {
-            datatable_Danhmuc = busDanhmuc.pagingHang();
+            datatable_Danhmuc = busDanhmuc.pagingDanhMuc(currentPageDanhMuc);
             Load_BangDanhMuc();
         }
 
@@ -51,8 +62,8 @@ namespace BanLinhKien
             dgvDanhMuc.DataSource = datatable_Danhmuc;
             BuocDlVaoCacDieuKhien();
 
-            txtTrangDM.Text = busDanhmuc.currentPage.ToString();
-            lblTongTrangDM.Text = "/" + busDanhmuc.pageNumber.ToString();
+            txtTrangDM.Text = currentPageDanhMuc.ToString();
+            lblTongTrangDM.Text = "/" + busDanhmuc.totalPage.ToString();
         }
 
         private void btnTimDM_Click(object sender, EventArgs e)
@@ -120,13 +131,13 @@ namespace BanLinhKien
 
         private void btnNextDM_Click(object sender, EventArgs e)
         {
-            if(busDanhmuc.currentPage+1> busDanhmuc.pageNumber)
+            if(currentPageDanhMuc + 1> busDanhmuc.totalPage)
             {
                 return;
             }else
             {
-                busDanhmuc.currentPage++;
-                dgvDanhMuc.DataSource = busDanhmuc.pagingHang();
+                currentPageDanhMuc++;
+                dgvDanhMuc.DataSource = busDanhmuc.pagingDanhMuc(currentPageDanhMuc);
                 CapNhapLaiDLTrenForm();
 
             }
@@ -134,14 +145,14 @@ namespace BanLinhKien
 
         private void btnPrevDM_Click(object sender, EventArgs e)
         {
-            if (busDanhmuc.currentPage -1 <=0)
+            if (currentPageDanhMuc - 1 <=0)
             {
                 return;
             }
             else
             {
-                busDanhmuc.currentPage--;
-                dgvDanhMuc.DataSource = busDanhmuc.pagingHang();
+                currentPageDanhMuc--;
+                dgvDanhMuc.DataSource = busDanhmuc.pagingDanhMuc(currentPageDanhMuc);
                 CapNhapLaiDLTrenForm();
             }
         }
@@ -492,21 +503,25 @@ namespace BanLinhKien
             int mahang = Int32.Parse(txtIDHang.Text);
             MessageBox.Show(bus_hang.XoaDLBangHang(mahang));
             configDGVHang();
+            if (currentPageHang > HangBUS.Instance.totalPage)
+            {
+                currentPageHang = HangBUS.Instance.totalPage;
+                txtTrangHang.Text = currentPageHang.ToString();
+            }
+                
         }
 
        
 
-        //nhanvien
-        int nhanviendaxoa = 0;
-        BUS_NhanVien bus_nhanvien = new BUS_NhanVien();
+        
 
         private void DLTrenTungTrang_BangNhanVien()
         {
-            dgvNhanVien.DataSource = bus_nhanvien.DlTrenMotTrang_NhanVien();
+            dgvNhanVien.DataSource = bus_nhanvien.DlTrenMotTrang_NhanVien(currentPageNhanVien);
             BuocDLVaoCacDieuKhien_NhanVien();
             BuocVaoComboBox_LoaiNhanVien();
-            txtTrangNV.Text =bus_nhanvien.currentPage.ToString();
-            lblTongTrangNV.Text ="/"+ bus_nhanvien.pageNumber.ToString();
+            txtTrangNV.Text = currentPageNhanVien.ToString();
+            lblTongTrangNV.Text ="/"+ bus_nhanvien.totalPage.ToString();
         }
 
         private void BuocDLVaoCacDieuKhien_NhanVien()
@@ -561,25 +576,25 @@ namespace BanLinhKien
 
         private void btnNextNV_Click(object sender, EventArgs e)
         {
-            if (bus_nhanvien.currentPage + 1 > bus_nhanvien.pageNumber)
+            if (currentPageNhanVien + 1 > bus_nhanvien.totalPage)
             {
                 return;
             }else
             {
-                bus_nhanvien.currentPage++;
+                currentPageNhanVien++;
                 DLTrenTungTrang_BangNhanVien();
             }
         }
 
         private void btnPrevNV_Click(object sender, EventArgs e)
         {
-            if (bus_nhanvien.currentPage - 1 <=0)
+            if (currentPageNhanVien - 1 <=0)
             {
                 return;
             }
             else
             {
-                bus_nhanvien.currentPage--;
+                currentPageNhanVien--;
                 DLTrenTungTrang_BangNhanVien();
             }
         }
@@ -614,7 +629,7 @@ namespace BanLinhKien
             DataTable datatable_nhanvien = bus_nhanvien.BangNhanVien();
             if (btnThemNV.Text.Contains("Th"))
             {
-                txtIDNhanVien.Text =(bus_nhanvien.RowCount()+nhanviendaxoa).ToString();
+                txtIDNhanVien.Text = "";
                 txtHoTenNhanVien.Text = "";
                 txtUsername.Text = "";
                 txtPassword.Text = "";
@@ -629,10 +644,10 @@ namespace BanLinhKien
 
             if (txtHoTenNhanVien.Text != "")
             {
-                int manv = Int32.Parse(txtIDNhanVien.Text);
+                
                 String tennv = txtHoTenNhanVien.Text;
                 DataView View = new DataView(datatable_nhanvien);
-                View.RowFilter = String.Format("manv = {0} or hoten like '%{1}%'", manv, tennv);
+                View.RowFilter = String.Format("hoten like '%{0}%'", tennv);
 
                 if (View.Count > 0)
                 {
@@ -645,11 +660,11 @@ namespace BanLinhKien
                     String sdt = txtSDTNhanVien.Text;
                     String diachi = txtDiaChiNhanVien.Text;
                     String namsinh = dtpkNamSinhNhanVien.Value.ToString("yyyy-MM-dd");
-                    int loainhanvien = Convert.ToInt32(cbLoaiNhanVIen.Text);
+                    int loainhanvien = Convert.ToInt32(cbLoaiNhanVIen.SelectedValue);
                     int gioitinh = (rdNam.Checked) ? 0 : 1;
                     String ngaytao = DateTime.Now.ToString("yyy-MM-dd");
 
-                    NhanVien nhanvien_ = new NhanVien(manv,username,password,tennv,sdt,diachi,namsinh,loainhanvien,gioitinh,ngaytao);
+                    NhanVien nhanvien_ = new NhanVien(-1,username,password,tennv,sdt,diachi,namsinh,loainhanvien,gioitinh,ngaytao);
                     MessageBox.Show(bus_nhanvien.LuuBangNhanVien(nhanvien_));
                     DLTrenTungTrang_BangNhanVien();
                     btnThemNV.Text = "Thêm";
@@ -662,7 +677,7 @@ namespace BanLinhKien
             int manv = Int32.Parse(txtIDNhanVien.Text);
             MessageBox.Show(bus_nhanvien.XoaDLBangNhanVien(manv));
             DLTrenTungTrang_BangNhanVien();
-            nhanviendaxoa += 1;
+            
             
         }
 
@@ -686,16 +701,14 @@ namespace BanLinhKien
             DLTrenTungTrang_BangNhanVien();
         }
 
-        // khach hang
-        int khachhangdaxoa = 0;
-        BUS_KhachHang bus_khachhang = new BUS_KhachHang();
+        
         public void DLTrenTungTrang_KhachHang()
         {
-            dgvKhachHang.DataSource = bus_khachhang.PhanTrang_KhachHang();
+            dgvKhachHang.DataSource = bus_khachhang.PhanTrang_KhachHang(currentPageKhachHang);
             BuocDlVaoCacDieuKhien_KhachHang();
 
-            txtTrangKH.Text = bus_khachhang.currentPage.ToString();
-            lblTongTrangKH.Text = "/" + bus_khachhang.pageNumber;
+            txtTrangKH.Text = currentPageKhachHang.ToString();
+            lblTongTrangKH.Text = "/" + bus_khachhang.totalPage;
         }
 
         public void BuocDlVaoCacDieuKhien_KhachHang()
@@ -739,25 +752,25 @@ namespace BanLinhKien
 
         private void btnNextKH_Click(object sender, EventArgs e)
         {
-            if (bus_khachhang.currentPage +1 >bus_khachhang.pageNumber)
+            if (currentPageKhachHang + 1 >bus_khachhang.totalPage)
             {
                 return;
             }else
             {
-                bus_khachhang.currentPage++;
+                currentPageKhachHang++;
                 DLTrenTungTrang_KhachHang();
             }
         }
 
         private void btnPrevKH_Click(object sender, EventArgs e)
         {
-            if (bus_khachhang.currentPage -1 <=0)
+            if (currentPageKhachHang - 1 <=0)
             {
                 return;
             }
             else
             {
-                bus_khachhang.currentPage--;
+                currentPageKhachHang--;
                 DLTrenTungTrang_KhachHang();
             }
         }
@@ -767,7 +780,7 @@ namespace BanLinhKien
             DataTable datatable_khachhang = bus_khachhang.BangKhachHang();
             if (btnThemKH.Text.Contains("Th"))
             {
-                txtIDKhachHang.Text = (bus_khachhang.RowCount() + khachhangdaxoa).ToString();
+                txtIDKhachHang.Text = "";
                 txtHoTenKhachHang.Text = "";
                 txtSDTKhachHang.Text = "";
                 dtpkNamSinhKhachHang.DataBindings.Clear();
@@ -777,10 +790,10 @@ namespace BanLinhKien
 
             if (txtHoTenKhachHang.Text != "")
             {
-                int makh = Int32.Parse(txtIDKhachHang.Text);
+                
                 String tenkh = txtHoTenKhachHang.Text;
                 DataView View = new DataView(datatable_khachhang);
-                View.RowFilter = String.Format("makh = {0} or hoten like '%{1}%'", makh, tenkh);
+                View.RowFilter = String.Format("hoten like '%{0}%'",tenkh);
 
                 if (View.Count > 0)
                 {
@@ -792,7 +805,7 @@ namespace BanLinhKien
                     String namsinh = dtpkNamSinhKhachHang.Value.ToString("yyyy-MM-dd");
                     String ngaytao = DateTime.Now.ToString("yyyy-MM-dd");
                     
-                    KhachHang khachhang = new KhachHang(makh,tenkh,sdtkh,namsinh,ngaytao);
+                    KhachHang khachhang = new KhachHang(-1,tenkh,sdtkh,namsinh,ngaytao);
                     MessageBox.Show(bus_khachhang.LuuBangKhachHang(khachhang));
                     DLTrenTungTrang_KhachHang();
                     btnThemKH.Text = "Thêm";
@@ -818,19 +831,16 @@ namespace BanLinhKien
             int makh = Int32.Parse(txtIDKhachHang.Text);
             MessageBox.Show(bus_khachhang.XoaDlBangKhachHang(makh));
             DLTrenTungTrang_KhachHang();
-            khachhangdaxoa += 1;
+           
         }
 
-        // nha cung cap
-
-        BUS_NCC bus_ncc = new BUS_NCC();
-        int nccdaxoa = 0;
+        
         public void DLTrenTungTrang_BangNCC()
         {
-            dgvNhaCungCap.DataSource = bus_ncc.DLTrenTungTrang_NCC();
+            dgvNhaCungCap.DataSource = bus_ncc.DLTrenTungTrang_NCC(currentPageNCC);
             BuocDLVaoCacDieuKhien_NCC();
-            txtTrangNCC.Text = bus_ncc.currentPage.ToString();
-            lblTongTrangNCC.Text = "/"+bus_ncc.pageNumber.ToString();
+            txtTrangNCC.Text = currentPageNCC.ToString();
+            lblTongTrangNCC.Text = "/"+bus_ncc.totalPage.ToString();
         }
 
         private void BuocDLVaoCacDieuKhien_NCC()
@@ -876,25 +886,25 @@ namespace BanLinhKien
 
         private void btnPrevNCC_Click(object sender, EventArgs e)
         {
-            if(bus_ncc.currentPage -1 <=0)
+            if(currentPageNCC - 1 <=0)
             {
                 return;
             }else
             {
-                bus_ncc.currentPage--;
+                currentPageNCC--;
                 DLTrenTungTrang_BangNCC();
             }
         }
 
         private void btnNextNCC_Click(object sender, EventArgs e)
         {
-            if (bus_ncc.currentPage +1 >bus_ncc.pageNumber)
+            if (currentPageNCC + 1 >bus_ncc.totalPage)
             {
                 return;
             }
             else
             {
-                bus_ncc.currentPage++;
+                currentPageNCC++;
                 DLTrenTungTrang_BangNCC();
             }
         }
@@ -904,7 +914,7 @@ namespace BanLinhKien
             DataTable datatable_ncc = bus_ncc.BangNCC();
             if (btnThemNCC.Text.Contains("Th"))
             {
-                txtIDNCC.Text = (bus_ncc.RowCount() +1+ nccdaxoa).ToString();
+                txtIDNCC.Text = "";
                 txtTenNCC.Text = "";
                 txtDiaChiNCC.Text = "";
                 txtFaxNCC.Text = "";
@@ -914,10 +924,10 @@ namespace BanLinhKien
 
             if (txtTenNCC.Text != "")
             {
-                int mancc = Int32.Parse(txtIDNCC.Text);
+                
                 String tenncc = txtTenNCC.Text;
                 DataView View = new DataView(datatable_ncc);
-                View.RowFilter = String.Format("mancc = {0} or tenncc like '%{1}%'", mancc, tenncc);
+                View.RowFilter = String.Format("tenncc like '%{0}%'", tenncc);
 
                 if (View.Count > 0)
                 {
@@ -930,7 +940,7 @@ namespace BanLinhKien
                     String email = txtEmailNCC.Text;
                     String ngaytao = DateTime.Now.ToString("yyyy-MM-dd");
 
-                    NhaCungCap nhacungcap = new NhaCungCap(mancc,tenncc,diachi,fax,email,ngaytao);
+                    NhaCungCap nhacungcap = new NhaCungCap(-1,tenncc,diachi,fax,email,ngaytao);
                     MessageBox.Show(bus_ncc.LuuBangNhaCungCap(nhacungcap));
                     DLTrenTungTrang_BangNCC();
                     btnThemNCC.Text = "Thêm";
@@ -958,7 +968,7 @@ namespace BanLinhKien
             int mancc = Int32.Parse(txtIDNCC.Text);
             MessageBox.Show(bus_ncc.XoaDLBangNhaCungCap(mancc));
             DLTrenTungTrang_BangNCC();
-            nccdaxoa += 1;
+           
         }
 
         private void BtnDoiHinh_Click(object sender, EventArgs e)

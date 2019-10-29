@@ -67,7 +67,7 @@ namespace BUS
         {
             int effect = dao_hang.XoaDLBangHang(mahang);
             if(effect >0)
-            {
+            {                
                 return "Xoa du lieu thanh cong";
             }else
             {

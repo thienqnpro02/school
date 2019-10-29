@@ -12,7 +12,20 @@ namespace BUS
 {
     public class BUS_NhanVien
     {
-        DAO_NhanVien dao_nhanvien = new DAO_NhanVien();
+        DAO_NhanVien dao_nhanvien = DAO_NhanVien.Instance;
+        private static BUS_NhanVien instance;
+        public static BUS_NhanVien Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new BUS_NhanVien();
+                }
+                return instance;
+            }
+        }
+        private BUS_NhanVien() { }
 
         public DataTable BangNhanVien()
         {
@@ -20,13 +33,13 @@ namespace BUS
             return nhanvien;
         }
 
-        public int pageNumber = 0;
+        public int totalPage = 0;
         public int pageSize = 10;
-        public int currentPage = 1;
+        
 
         private void PageNumber()
         {
-            pageNumber = (int)Math.Ceiling((double)dao_nhanvien.RowCount() / this.pageSize);
+            totalPage = (int)Math.Ceiling((double)dao_nhanvien.RowCount() / this.pageSize);
         }
 
         public int RowCount()
@@ -34,10 +47,10 @@ namespace BUS
             return dao_nhanvien.RowCount();
         }
 
-        public DataTable DlTrenMotTrang_NhanVien()
+        public DataTable DlTrenMotTrang_NhanVien(int currentPageNhanVien)
         {
             PageNumber();
-            DataTable dltrenmottrang_nhanvien = dao_nhanvien.DLTrenMotTrang_NhanVien(currentPage, pageSize);
+            DataTable dltrenmottrang_nhanvien = dao_nhanvien.DLTrenMotTrang_NhanVien(currentPageNhanVien, pageSize);
             return dltrenmottrang_nhanvien;
         }
 

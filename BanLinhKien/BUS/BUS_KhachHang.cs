@@ -12,10 +12,26 @@ namespace BUS
 {
     public class BUS_KhachHang
     {
-        DAO_KhachHang dao_khachhang = new DAO_KhachHang();
+        private DAO_KhachHang dao_khachhang = DAO_KhachHang.Instance;
+        private static BUS_KhachHang instance;
+
+        public static BUS_KhachHang Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new BUS_KhachHang();
+                }
+                return instance;
+            }
+        }
+
+        private BUS_KhachHang() { }
+
         public int pageSize = 10;
-        public int pageNumber = 0;
-        public int currentPage = 1;
+        public int totalPage = 0;
+        
 
         public DataTable BangKhachHang()
         {
@@ -23,16 +39,16 @@ namespace BUS
             return datatable_khachhang;
         }
 
-        public DataTable PhanTrang_KhachHang()
+        public DataTable PhanTrang_KhachHang(int currentPageKhachHang)
         {
-            PageNumber();
-            DataTable dlmottrang_khachhang = dao_khachhang.DLTrenMotTrang_KhachHang(currentPage, pageSize);
+            pageTotal();
+            DataTable dlmottrang_khachhang = dao_khachhang.DLTrenMotTrang_KhachHang(currentPageKhachHang, pageSize);
             return dlmottrang_khachhang;
         }
 
-        private void PageNumber()
+        private void pageTotal()
         {
-            pageNumber = (int)Math.Ceiling((double)dao_khachhang.RowCount() / this.pageSize);
+            totalPage = (int)Math.Ceiling((double)dao_khachhang.RowCount() / this.pageSize);
         }
 
         public int RowCount()
