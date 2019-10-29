@@ -17,14 +17,14 @@ namespace BanLinhKien
     {
         BUS_DanhMuc busDanhmuc = new BUS_DanhMuc();
         DataTable datatable_Danhmuc = new DataTable();
-        int danhmucdaxoa = 0;
+        
         
         // variables for tab Hang
         private bool dgvHangLoaded = false;
         private bool isUpdateImage = false;
+        private int currentPageHang = 1;
 
         // variables for tab Nhan vien
-
         private bool cbLoaiNhanVienLoaded = false;
 
 
@@ -159,7 +159,7 @@ namespace BanLinhKien
             int madm = Int32.Parse(txtIDDanhMuc.Text);
             MessageBox.Show(busDanhmuc.XoaDLBangDanhMuc(madm));
             CapNhapLaiDLTrenForm();
-            danhmucdaxoa += 1;
+            
         }
        
         private void dgvDanhMuc_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -190,7 +190,7 @@ namespace BanLinhKien
         }
         //hang
         HangBUS bus_hang = HangBUS.Instance;
-        int hangdaxoa = 0;
+        
         DataTable datatable_hang = new DataTable();
 
         private void BuocVaoComboBoxDanhMuc()
@@ -205,7 +205,7 @@ namespace BanLinhKien
          
             dgvHangLoaded = false;
 
-            datatable_hang = HangBUS.Instance.pagingHang();
+            datatable_hang = HangBUS.Instance.pagingHang(currentPageHang);
             dgvHang.DataSource = datatable_hang;
 
             // Ẩn cột            
@@ -231,9 +231,10 @@ namespace BanLinhKien
             dgvHangLoaded = true;           
 
             // paging
+            txtTongTrangHang.Text = "/" + HangBUS.Instance.totalPage;
+            txtTrangHang.Text = currentPageHang.ToString();
 
-            txtTongTrangHang.Text = "/" + HangBUS.Instance.totalRow;
-            txtTrangHang.Text = HangBUS.Instance.currentPageHang.ToString();
+            // binding
             BuocVaoComboBoxDanhMuc();
             bindingHang();
             
@@ -288,28 +289,28 @@ namespace BanLinhKien
 
         private void BtnNextHang_Click(object sender, EventArgs e)
         {
-            if (HangBUS.Instance.currentPageHang + 1 > HangBUS.Instance.totalRow)
+            if (currentPageHang + 1 > HangBUS.Instance.totalPage)
                 return;
             else
             {
-                HangBUS.Instance.currentPageHang++;                
-                dgvHang.DataSource = HangBUS.Instance.pagingHang();
-                txtTrangHang.Text = HangBUS.Instance.currentPageHang.ToString();
-                txtTongTrangHang.Text ="/" +bus_hang.totalRow;
+                currentPageHang++;                
+                dgvHang.DataSource = HangBUS.Instance.pagingHang(currentPageHang);
+                txtTrangHang.Text = currentPageHang.ToString();
+                txtTongTrangHang.Text ="/" +bus_hang.totalPage;
                 bindingHang();
             }
         }
 
         private void BtnPrevHang_Click(object sender, EventArgs e)
         {
-            if (HangBUS.Instance.currentPageHang - 1 <= 0)
+            if (currentPageHang - 1 <= 0)
                 return;
             else
             {
-                HangBUS.Instance.currentPageHang--;               
-                dgvHang.DataSource = HangBUS.Instance.pagingHang();
-                txtTrangHang.Text = HangBUS.Instance.currentPageHang.ToString();
-                txtTongTrangHang.Text = "/" + bus_hang.totalRow;
+                currentPageHang--;               
+                dgvHang.DataSource = HangBUS.Instance.pagingHang(currentPageHang);
+                txtTrangHang.Text = currentPageHang.ToString();
+                txtTongTrangHang.Text = "/" + bus_hang.totalPage;
                 bindingHang();
             }
         }

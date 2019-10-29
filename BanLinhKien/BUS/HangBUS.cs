@@ -24,8 +24,7 @@ namespace BUS
             }
         }
 
-        public int totalRow = 0;
-        public int currentPageHang = 1;
+        public int totalPage = 0;        
         public int pageSize = 10;
         public string pathImage = @"D:\Ex-on-school\school\BanLinhKien\BanLinhKien\images\";
 
@@ -36,15 +35,15 @@ namespace BUS
             return HangDAO.Instance.select();
         }
 
-        public DataTable pagingHang()
+        public DataTable pagingHang(int currentPageHang)
         {
-            this.rowCount();
-            return HangDAO.Instance.pagingHang(this.currentPageHang,this.pageSize);
+            this.pageCount();
+            return HangDAO.Instance.pagingHang(currentPageHang,this.pageSize);
         }
 
-        public void rowCount()
+        public void pageCount()
         {
-            HangBUS.Instance.totalRow = (int)Math.Ceiling( (double)HangDAO.Instance.rowCount() / this.pageSize );
+            HangBUS.Instance.totalPage = (int)Math.Ceiling( (double)HangDAO.Instance.rowCount() / this.pageSize );
         }
 
         public int Tongsohang()
