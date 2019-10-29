@@ -7,22 +7,22 @@ using System.Data;
 using DTO;
 namespace DAO
 {
-    public class HangDAO
+    public class DAO_Hang
     {
         DataProvider dataProvider = DataProvider.Instance;
-        private static HangDAO instance;
+        private static DAO_Hang instance;
 
-        public static HangDAO Instance
+        public static DAO_Hang Instance
         {
             get
             {
                 if (instance == null)
-                     instance = new HangDAO();
+                     instance = new DAO_Hang();
                 return instance;
             }
         }
 
-        private HangDAO() { }
+        private DAO_Hang() { }
 
         public DataTable select()
         {

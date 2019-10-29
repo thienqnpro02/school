@@ -200,7 +200,7 @@ namespace BanLinhKien
             }
         }
         //hang
-        HangBUS bus_hang = HangBUS.Instance;
+        BUS_Hang bus_hang = BUS_Hang.Instance;
         
         DataTable datatable_hang = new DataTable();
 
@@ -216,7 +216,7 @@ namespace BanLinhKien
          
             dgvHangLoaded = false;
 
-            datatable_hang = HangBUS.Instance.pagingHang(currentPageHang);
+            datatable_hang = BUS_Hang.Instance.pagingHang(currentPageHang);
             dgvHang.DataSource = datatable_hang;
 
             // Ẩn cột            
@@ -242,7 +242,7 @@ namespace BanLinhKien
             dgvHangLoaded = true;           
 
             // paging
-            txtTongTrangHang.Text = "/" + HangBUS.Instance.totalPage;
+            txtTongTrangHang.Text = "/" + BUS_Hang.Instance.totalPage;
             txtTrangHang.Text = currentPageHang.ToString();
 
             // binding
@@ -257,7 +257,7 @@ namespace BanLinhKien
             if (row == null) return;
             string selectValue = row.Cells["MADANHMUC"].Value.ToString();            
             cbDanhMuc.SelectedValue = selectValue;
-            picHang.ImageLocation = HangBUS.Instance.pathImage + row.Cells["HINH"].Value.ToString();
+            picHang.ImageLocation = BUS_Hang.Instance.pathImage + row.Cells["HINH"].Value.ToString();
         }
         private void bindingHang()
         {
@@ -300,12 +300,12 @@ namespace BanLinhKien
 
         private void BtnNextHang_Click(object sender, EventArgs e)
         {
-            if (currentPageHang + 1 > HangBUS.Instance.totalPage)
+            if (currentPageHang + 1 > BUS_Hang.Instance.totalPage)
                 return;
             else
             {
                 currentPageHang++;                
-                dgvHang.DataSource = HangBUS.Instance.pagingHang(currentPageHang);
+                dgvHang.DataSource = BUS_Hang.Instance.pagingHang(currentPageHang);
                 txtTrangHang.Text = currentPageHang.ToString();
                 txtTongTrangHang.Text ="/" +bus_hang.totalPage;
                 bindingHang();
@@ -319,7 +319,7 @@ namespace BanLinhKien
             else
             {
                 currentPageHang--;               
-                dgvHang.DataSource = HangBUS.Instance.pagingHang(currentPageHang);
+                dgvHang.DataSource = BUS_Hang.Instance.pagingHang(currentPageHang);
                 txtTrangHang.Text = currentPageHang.ToString();
                 txtTongTrangHang.Text = "/" + bus_hang.totalPage;
                 bindingHang();
@@ -366,7 +366,7 @@ namespace BanLinhKien
                 txtSoLuong.Text = "";
                 cbDanhMuc.DataBindings.Clear();
                 cbDanhMuc.Text = "";
-                picHang.ImageLocation = HangBUS.Instance.pathImage + "default.png";
+                picHang.ImageLocation = BUS_Hang.Instance.pathImage + "default.png";
                 
             }
 
@@ -399,7 +399,7 @@ namespace BanLinhKien
                         do
                         {
                             hinh = RandomString(10) + Path.GetExtension(picHang.ImageLocation);
-                        } while (HangBUS.Instance.isExistsImage(hinh));
+                        } while (BUS_Hang.Instance.isExistsImage(hinh));
                     }
 
                     Hang hang = new Hang(-1,tenhang, thongso, baohanh, soluong, gia, hinh, nhasanxuat, ngaytao, madm);
@@ -409,7 +409,7 @@ namespace BanLinhKien
                     {
                         if (isUpdateImage)
                         {
-                            File.Copy(picHang.ImageLocation, HangBUS.Instance.pathImage + hang.Hinh);
+                            File.Copy(picHang.ImageLocation, BUS_Hang.Instance.pathImage + hang.Hinh);
                             isUpdateImage = false;
                         }
 
@@ -461,7 +461,7 @@ namespace BanLinhKien
                 do
                 {
                     hinh = RandomString(10) + Path.GetExtension(picHang.ImageLocation);
-                } while (HangBUS.Instance.isExistsImage(hinh));
+                } while (BUS_Hang.Instance.isExistsImage(hinh));
             }          
             
             Hang hang = new Hang(mahang,tenhang_, thongso, baohanh, soluong, gia,hinh, nhasanxuat, ngaytao, madm);
@@ -476,11 +476,11 @@ namespace BanLinhKien
 
                     if (isUpdateImage)
                     {
-                        if (File.Exists(HangBUS.Instance.pathImage + oldFileName) && oldFileName != "default.png")
+                        if (File.Exists(BUS_Hang.Instance.pathImage + oldFileName) && oldFileName != "default.png")
                         {
-                            File.Delete(HangBUS.Instance.pathImage + oldFileName);
+                            File.Delete(BUS_Hang.Instance.pathImage + oldFileName);
                         }
-                        File.Copy(picHang.ImageLocation, HangBUS.Instance.pathImage + hang.Hinh);
+                        File.Copy(picHang.ImageLocation, BUS_Hang.Instance.pathImage + hang.Hinh);
                         isUpdateImage = false;
                     }
                     
@@ -503,9 +503,9 @@ namespace BanLinhKien
             int mahang = Int32.Parse(txtIDHang.Text);
             MessageBox.Show(bus_hang.XoaDLBangHang(mahang));
             configDGVHang();
-            if (currentPageHang > HangBUS.Instance.totalPage)
+            if (currentPageHang > BUS_Hang.Instance.totalPage)
             {
-                currentPageHang = HangBUS.Instance.totalPage;
+                currentPageHang = BUS_Hang.Instance.totalPage;
                 txtTrangHang.Text = currentPageHang.ToString();
             }
                 

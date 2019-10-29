@@ -11,6 +11,7 @@ namespace BUS
 {
     public class BUS_Hang
     {
+        DAO_Hang dao_hang = DAO_Hang.Instance;
         private static BUS_Hang instance;
         
         public static BUS_Hang Instance
@@ -23,8 +24,9 @@ namespace BUS
             }
         }
 
-        public int totalRow = 0;
+        public int totalPage = 0;        
         public int pageSize = 10;
+        public string pathImage = @"D:\Ex-on-school\school\BanLinhKien\BanLinhKien\images\";
 
         private BUS_Hang() {  }
 
@@ -33,56 +35,49 @@ namespace BUS
             return DAO_Hang.Instance.select();
         }
 
-        public DataTable pagingHang(int currentPage)
+        public DataTable pagingHang(int currentPageHang)
         {
-            this.rowCount();
-            return DAO_Hang.Instance.pagingHang(currentPage, this.pageSize);
+            this.pageCount();
+            return DAO_Hang.Instance.pagingHang(currentPageHang,this.pageSize);
         }
 
-        public void rowCount()
+        public void pageCount()
         {
-            BUS_Hang.Instance.totalRow = (int)Math.Ceiling( (double)DAO_Hang.Instance.rowCount() / this.pageSize );
+            BUS_Hang.Instance.totalPage = (int)Math.Ceiling( (double)DAO_Hang.Instance.rowCount() / this.pageSize );
         }
 
         public int Tongsohang()
         {
-            return HangDAO.Instance.rowCount();
+            return DAO_Hang.Instance.rowCount();
         }
 
-        public String LuuBangHang(Hang hang)
+        public int LuuBangHang(Hang hang)
         {
-            int effect=dao_hang.LuuBangHang(hang);
-            if (effect > 0)
-            {
-                return "Luu du lieu thanh cong";
-            }else
-            {
-                return "Luu du lieu khong thanh cong";
-            }
+            return dao_hang.LuuBangHang(hang);
+            
         }
 
-        public String SuaBangHang(Hang hang)
+        public int SuaBangHang(Hang hang)
         {
-            int effect = dao_hang.SuaBangHang(hang);
-            if (effect>0)
-            {
-                return "Sua du lieu thanh cong";
-            }else
-            {
-                return "Sua du lieu khong thanh cong";
-            }
+            return dao_hang.SuaBangHang(hang);
+            
         }
 
         public String XoaDLBangHang(int mahang)
         {
             int effect = dao_hang.XoaDLBangHang(mahang);
             if(effect >0)
-            {
+            {                
                 return "Xoa du lieu thanh cong";
             }else
             {
                 return "Xoa du lieu khong thanh cong";
             }
+        }
+
+        public bool isExistsImage(string fileName)
+        {
+            return DAO_Hang.Instance.isExistsImage(fileName);
         }
     }
 }
