@@ -45,6 +45,7 @@
     <Compile Include="DAO_KhachHang.cs" />
     <Compile Include="DAO_NCC.cs" />
     <Compile Include="DAO_NhanVien.cs" />
+    <Compile Include="DAO_PhieuXuat.cs" />
     <Compile Include="DataProvider.cs" />
     <Compile Include="DAO_Hang.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -70,6 +70,7 @@
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(270, 20);
             this.txtTimKiem.TabIndex = 2;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.TxtTimKiem_TextChanged);
             // 
             // btnTimKiem
             // 
@@ -79,6 +80,7 @@
             this.btnTimKiem.TabIndex = 3;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.BtnTimKiem_Click);
             // 
             // btnGioHang
             // 
@@ -138,14 +140,14 @@
             // đổiMậtKhẩuToolStripMenuItem
             // 
             this.đổiMậtKhẩuToolStripMenuItem.Name = "đổiMậtKhẩuToolStripMenuItem";
-            this.đổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.đổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.đổiMậtKhẩuToolStripMenuItem.Text = "Đổi Mật Khẩu";
             this.đổiMậtKhẩuToolStripMenuItem.Click += new System.EventHandler(this.ĐổiMậtKhẩuToolStripMenuItem_Click);
             // 
             // đăngXuấtToolStripMenuItem
             // 
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng Xuất";
             // 
             // btnThemVaoGio
@@ -156,13 +158,24 @@
             this.btnThemVaoGio.TabIndex = 7;
             this.btnThemVaoGio.Text = "Thêm vào giỏ";
             this.btnThemVaoGio.UseVisualStyleBackColor = true;
+            this.btnThemVaoGio.Click += new System.EventHandler(this.BtnThemVaoGio_Click);
             // 
             // numSoLuong
             // 
             this.numSoLuong.Location = new System.Drawing.Point(489, 154);
+            this.numSoLuong.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numSoLuong.Name = "numSoLuong";
             this.numSoLuong.Size = new System.Drawing.Size(81, 20);
             this.numSoLuong.TabIndex = 8;
+            this.numSoLuong.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // btnPrev
             // 
@@ -172,6 +185,7 @@
             this.btnPrev.TabIndex = 10;
             this.btnPrev.Text = "<";
             this.btnPrev.UseVisualStyleBackColor = true;
+            this.btnPrev.Click += new System.EventHandler(this.BtnPrev_Click);
             // 
             // btnNext
             // 
@@ -181,6 +195,7 @@
             this.btnNext.TabIndex = 10;
             this.btnNext.Text = ">";
             this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.BtnNext_Click);
             // 
             // txtTrang
             // 
@@ -200,14 +215,17 @@
             // 
             // cbSapXep
             // 
+            this.cbSapXep.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSapXep.FormattingEnabled = true;
             this.cbSapXep.Location = new System.Drawing.Point(99, 54);
             this.cbSapXep.Name = "cbSapXep";
             this.cbSapXep.Size = new System.Drawing.Size(263, 21);
             this.cbSapXep.TabIndex = 1;
+            this.cbSapXep.SelectedValueChanged += new System.EventHandler(this.CbSapXep_SelectedValueChanged);
             // 
             // cbDanhMuc
             // 
+            this.cbDanhMuc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDanhMuc.FormattingEnabled = true;
             this.cbDanhMuc.Location = new System.Drawing.Point(99, 20);
             this.cbDanhMuc.Name = "cbDanhMuc";

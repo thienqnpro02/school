@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using System.Data;
 using DTO;
 using DAO;
+using System.Collections;
+
 namespace BUS
 {
     public class BUS_Hang
@@ -78,6 +80,11 @@ namespace BUS
         public bool isExistsImage(string fileName)
         {
             return DAO_Hang.Instance.isExistsImage(fileName);
+        }
+
+        public DataTable selectByID(Hashtable hashtable)
+        {
+            return DAO_Hang.Instance.selectByID(hashtable);
         }
     }
 }

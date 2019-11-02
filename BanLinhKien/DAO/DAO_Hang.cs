@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using DTO;
+using System.Collections;
+
 namespace DAO
 {
     public class DAO_Hang
@@ -99,6 +101,22 @@ namespace DAO
             if (res > 0)
                 return true;
             return false;
+        }
+
+        public DataTable selectByID(Hashtable hashtable)
+        {
+            
+            string sql = "select * from hang where MAHANG in (";
+            foreach(DictionaryEntry entry in hashtable)
+            {
+                sql += entry.Key + ",";
+            }
+            sql = sql.Remove(sql.Length - 1);
+            sql += ")";
+            
+
+
+            return DataProvider.Instance.ExecuteQuery(sql);
         }
     }
 }

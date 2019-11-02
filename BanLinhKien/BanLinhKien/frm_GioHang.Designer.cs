@@ -42,14 +42,13 @@
             this.cbInBienLai = new System.Windows.Forms.CheckBox();
             this.flpDanhSachSanPham = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnChiTietHang = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.label11 = new System.Windows.Forms.Label();
-            this.btnClearGio = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -66,6 +65,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
             this.label14 = new System.Windows.Forms.Label();
+            this.btnClearGio = new System.Windows.Forms.Button();
             this.flpDanhSachSanPham.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -210,6 +210,18 @@
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Red;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(389, 10);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(42, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // btnChiTietHang
             // 
             this.btnChiTietHang.Location = new System.Drawing.Point(356, 112);
@@ -259,27 +271,6 @@
             this.label11.Size = new System.Drawing.Size(231, 46);
             this.label11.TabIndex = 0;
             this.label11.Text = "Tên hàng Tên hàng Tên hàng Tên hàng";
-            // 
-            // btnClearGio
-            // 
-            this.btnClearGio.Location = new System.Drawing.Point(12, 346);
-            this.btnClearGio.Name = "btnClearGio";
-            this.btnClearGio.Size = new System.Drawing.Size(116, 36);
-            this.btnClearGio.TabIndex = 4;
-            this.btnClearGio.Text = "Làm sạch giỏ";
-            this.btnClearGio.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Red;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(389, 10);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(42, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "X";
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // groupBox1
             // 
@@ -437,6 +428,15 @@
             this.label14.TabIndex = 0;
             this.label14.Text = "Tên hàng Tên hàng Tên hàng Tên hàng";
             // 
+            // btnClearGio
+            // 
+            this.btnClearGio.Location = new System.Drawing.Point(12, 346);
+            this.btnClearGio.Name = "btnClearGio";
+            this.btnClearGio.Size = new System.Drawing.Size(116, 36);
+            this.btnClearGio.TabIndex = 4;
+            this.btnClearGio.Text = "Làm sạch giỏ";
+            this.btnClearGio.UseVisualStyleBackColor = true;
+            // 
             // frm_GioHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -460,6 +460,7 @@
             this.Name = "frm_GioHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Giỏ hàng";
+            this.Load += new System.EventHandler(this.Frm_GioHang_Load);
             this.flpDanhSachSanPham.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

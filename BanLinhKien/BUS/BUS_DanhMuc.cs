@@ -78,7 +78,7 @@ namespace BUS
 
         public void pageCount()
         {
-            totalPage = (int)Math.Ceiling((double)(rowCount() / this.pageSize));
+            totalPage = (int)Math.Ceiling(((double)rowCount() / (double)this.pageSize));
         }
 
         public int rowCount()
