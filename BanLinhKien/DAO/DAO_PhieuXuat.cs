@@ -23,5 +23,18 @@ namespace DAO
 
         private DAO_PhieuXuat() { }
 
+        public int insert(PhieuXuat item)
+        {
+            string sql = String.Format("insert into PhieuXuat values({0},GETDATE(),{1})", item.MaKH, item.MaNV);
+            int res = DataProvider.Instance.ExecuteNonQuery(sql, new object[] { item.MaKH, item.MaNV });
+
+            return res;
+        }
+
+        public int currentID()
+        {
+            string sql = "SELECT IDENT_CURRENT('PHIEUXUAT')";
+            return Convert.ToInt32(DataProvider.Instance.ExecuteScalar(sql));
+        }
     }
 }

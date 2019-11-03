@@ -9,13 +9,13 @@ namespace DTO
     public class PhieuXuat
     {
         private int maPhieuXuat;
-        private int maKH;
+        private int? maKH;
         private DateTime ngayTao;
         private int maNV;
 
 
         public int MaPhieuXuat { get => maPhieuXuat; set => maPhieuXuat = value; }
-        public int MaKH { get => maKH; set => maKH = value; }
+        public int? MaKH { get => maKH; set => maKH = value; }
         public DateTime NgayTao { get => ngayTao; set => ngayTao = value; }
         public int MaNV { get => maNV; set => maNV = value; }
 

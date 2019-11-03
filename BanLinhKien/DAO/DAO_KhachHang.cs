@@ -73,5 +73,11 @@ namespace DAO
             return effect;
         }
 
+        public int currentID()
+        {
+            string sql = "SELECT IDENT_CURRENT('KHACHHANG')";
+            return Convert.ToInt32(DataProvider.Instance.ExecuteScalar(sql));
+        }
+
     }
 }

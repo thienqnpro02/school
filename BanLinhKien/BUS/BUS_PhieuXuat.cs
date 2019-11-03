@@ -23,5 +23,15 @@ namespace BUS
         }
 
         private BUS_PhieuXuat() { }
+
+        public int insert(PhieuXuat item)
+        {
+            return DAO_PhieuXuat.Instance.insert(item);
+        }
+
+        public int currentID()
+        {
+            return DAO_PhieuXuat.Instance.currentID();
+        }
     }
 }

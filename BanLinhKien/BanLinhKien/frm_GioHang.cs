@@ -15,6 +15,10 @@ namespace BanLinhKien
     public partial class frm_GioHang : Form
     {
         public Hashtable items_picked;
+        private DataTable dt_hang;
+        private int totalPayment = 0;
+        private int idOldCustomer = -1;
+
 
         public frm_GioHang()
         {
@@ -25,14 +29,14 @@ namespace BanLinhKien
         private void loadCart()
         {
             List<int> list_id = new List<int>();
-
+            
             foreach(DictionaryEntry item in items_picked)
             {
                 list_id.Add(Convert.ToInt32(item.Key));
             }
             
-            DataTable data = BUS_Hang.Instance.selectByID(list_id);
-            foreach(DataRow row in data.Rows)
+            dt_hang = BUS_Hang.Instance.selectByID(list_id);
+            foreach(DataRow row in dt_hang.Rows)
             {
                 // groupbox
                 GroupBox gpHang = new GroupBox();                
@@ -53,6 +57,7 @@ namespace BanLinhKien
                 btn.Name = "btnHang" + row["MAHANG"].ToString();
                 btn.Text = "Xem chi tiết";                
                 btn.Location = new Point(356, 112);
+                btn.Tag = row["MAHANG"].ToString();
                 btn.Click += Btn_Click;
 
                 Button btnDel = new Button();
@@ -92,7 +97,9 @@ namespace BanLinhKien
                 num.Location = new Point(201, 78);
                 num.Size = new Size(43, 20);
                 num.Minimum = 1;
+                num.Tag = row["MAHANG"].ToString();
                 num.Value = Convert.ToInt32(items_picked[row["MAHANG"].ToString()]);
+                num.ValueChanged += Num_ValueChanged;
 
                 gpHang.Controls.Add(pic);
                 gpHang.Controls.Add(btn);
@@ -106,14 +113,34 @@ namespace BanLinhKien
                 flpDanhSachSanPham.Controls.Add(gpHang);
 
             }
+            totalPaymentAmount();
 
-            
+
+        }
+
+        private void Num_ValueChanged(object sender, EventArgs e)
+        {
+            NumericUpDown num = sender as NumericUpDown;
+            items_picked[num.Tag.ToString()] = Convert.ToInt32(num.Value);
+            totalPaymentAmount();
+        }
+
+        private void totalPaymentAmount()
+        {
+            int total = 0;
+            foreach(DataRow row in dt_hang.Rows)
+            {
+                total += Convert.ToInt32(row["GIA"]) * Convert.ToInt32(items_picked[row["MAHANG"].ToString()]);
+            }
+            totalPayment = total;
+            lblTongTien.Text = total + " VNĐ";
         }
 
         private void Btn_Click(object sender, EventArgs e)
         {
             frm_ChiTietHang form_ChiTietHang = new frm_ChiTietHang();
-            form_ChiTietHang.Show();
+            form_ChiTietHang.maHang = Convert.ToInt32((sender as Button).Tag);
+            form_ChiTietHang.ShowDialog();
         }
 
         private void BtnDel_Click(object sender, EventArgs e)
@@ -127,13 +154,82 @@ namespace BanLinhKien
 
         private void BtnChonKhachCu_Click(object sender, EventArgs e)
         {
-            frm_ChonKhach form_ChonKhach = new frm_ChonKhach();
+            frm_ChonKhach form_ChonKhach = new frm_ChonKhach();            
             form_ChonKhach.ShowDialog();
+            
+            
         }
 
         private void Frm_GioHang_Load(object sender, EventArgs e)
         {
             loadCart();
+        }
+
+        private void BtnClearGio_Click(object sender, EventArgs e)
+        {
+            this.items_picked.Clear();
+            flpDanhSachSanPham.Controls.Clear();
+        }
+
+        private void BtnThanhToan_Click(object sender, EventArgs e)
+        {
+            PhieuXuat phieuxuat = new PhieuXuat();
+            phieuxuat.MaNV = 1;            
+            phieuxuat.NgayTao = DateTime.Now;
+
+            if (idOldCustomer == -1)
+            {
+                insertKhachHang();
+                phieuxuat.MaKH = BUS_KhachHang.Instance.currentID();
+            }
+            else
+            {
+                phieuxuat.MaKH = idOldCustomer;
+            }
+
+            if (BUS_PhieuXuat.Instance.insert(phieuxuat) > 0)
+            {
+                insertCT_PhieuXuat();
+
+                MessageBox.Show("Thanh toan thanh cong");
+            }
+        }
+
+        void insertKhachHang()
+        {
+            KhachHang khachhang = new KhachHang();
+            khachhang.HoTen = txtTenKhachHang.Text;
+            khachhang.Sdt = txtSDTKhachHang.Text;
+            khachhang.NamSinh = dtpkNamSinhKhachHang.Value.ToString();
+            khachhang.NgayTao = DateTime.Now.ToString();
+
+            BUS_KhachHang.Instance.LuuBangKhachHang(khachhang);
+        }
+
+        void insertCT_PhieuXuat()
+        {
+            int currentID = BUS_PhieuXuat.Instance.currentID();
+            foreach (DataRow row in dt_hang.Rows)
+            {
+                int maHang = Convert.ToInt32(row["MAHANG"]);
+                ChiTietPhieuXuat ct_phieuxuat = new ChiTietPhieuXuat();
+                ct_phieuxuat.MaPhieuXuat = currentID;
+                ct_phieuxuat.MaHang = maHang;
+                ct_phieuxuat.SoLuong = Convert.ToInt32(items_picked[maHang.ToString()]);
+                ct_phieuxuat.GiaXuat = Convert.ToInt32(row["GIA"]);
+
+                if (BUS_ChiTietPhieuXuat.Instance.insert(ct_phieuxuat) > 0)
+                {
+                    BUS_Hang.Instance.updateSoLuongHang(maHang, Convert.ToInt32(items_picked[maHang.ToString()]));
+                }
+            }
+        }
+
+        private void BtnKhachMoi_Click(object sender, EventArgs e)
+        {
+            txtTenKhachHang.Enabled = !txtTenKhachHang.Enabled;
+            txtSDTKhachHang.Enabled = !txtSDTKhachHang.Enabled;
+            dtpkNamSinhKhachHang.Enabled = !dtpkNamSinhKhachHang.Enabled;
         }
     }
 }

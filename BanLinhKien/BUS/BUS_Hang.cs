@@ -101,8 +101,15 @@ namespace BUS
         public DataTable selectByMaDM(List<int> list_id)
         {
             if (list_id.Count == 0) return new DataTable();
-            return DAO_Hang.Instance.selectByMaDM(list_id);
-                
+            return DAO_Hang.Instance.selectByMaDM(list_id);                
         }
+
+        public int updateSoLuongHang(int maHang, int soLuong)
+        {
+
+            return DAO_Hang.Instance.updateSoLuongHang(maHang, soLuong);
+        }
+
+        
     }
 }

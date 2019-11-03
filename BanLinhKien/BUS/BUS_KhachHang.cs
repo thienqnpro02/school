@@ -93,6 +93,9 @@ namespace BUS
         }
 
 
-
+        public int currentID()
+        {
+            return DAO_KhachHang.Instance.currentID();
+        }
     }
 }

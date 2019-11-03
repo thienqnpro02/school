@@ -12,6 +12,7 @@ namespace BanLinhKien
 {
     public partial class frm_ChonKhach : Form
     {
+        public int idCustomer;
         public frm_ChonKhach()
         {
             InitializeComponent();

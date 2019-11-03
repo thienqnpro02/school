@@ -144,5 +144,11 @@ namespace DAO
 
             return DataProvider.Instance.ExecuteQuery(sql);
         }
+
+        public int updateSoLuongHang(int maHang, int soLuong)
+        {
+            string sql = "update Hang set SOLUONG -= @soluong where MAHANG = @mahang";
+            return Convert.ToInt32(DataProvider.Instance.ExecuteNonQuery(sql, new object[] { soLuong, maHang }));
+        }
     }
 }

@@ -43,6 +43,7 @@
             this.picHang.Location = new System.Drawing.Point(12, 12);
             this.picHang.Name = "picHang";
             this.picHang.Size = new System.Drawing.Size(176, 181);
+            this.picHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picHang.TabIndex = 0;
             this.picHang.TabStop = false;
             // 
@@ -113,7 +114,9 @@
             this.Controls.Add(this.lblTenHang);
             this.Controls.Add(this.picHang);
             this.Name = "frm_ChiTietHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chi tiết hàng";
+            this.Load += new System.EventHandler(this.Frm_ChiTietHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picHang)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
