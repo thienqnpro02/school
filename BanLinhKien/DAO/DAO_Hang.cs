@@ -41,11 +41,24 @@ namespace DAO
             return res;
         }
 
+        public DataTable pagingHangByMaDM(int currentPage, int pageSize, int maDM)
+        {            
+            string sql = "exec USP_PagingHangByMaDM @currentPage , @pageSize , @maDM";
+            DataTable res = DataProvider.Instance.ExecuteQuery(sql, new object[] { currentPage, pageSize, maDM });
+            return res;
+        }        
+
         public int rowCount()
         {
             string sql = "select count(*) from Hang";
             int row = Convert.ToInt32( DataProvider.Instance.ExecuteScalar(sql) );
             return row;
+        }
+        public int rowCountByMaDM(int maDM)
+        {
+            string sql = "select count(*) from Hang where MADANHMUC = @madm";
+            int totalRow = Convert.ToInt32(DataProvider.Instance.ExecuteScalar(sql,new object[] { maDM }));
+            return totalRow;
         }
 
         public int LuuBangHang(Hang hang)
@@ -103,18 +116,31 @@ namespace DAO
             return false;
         }
 
-        public DataTable selectByID(Hashtable hashtable)
+        public DataTable selectByID(List<int> list_id)
         {
             
             string sql = "select * from hang where MAHANG in (";
-            foreach(DictionaryEntry entry in hashtable)
+            foreach(int id in list_id)
             {
-                sql += entry.Key + ",";
+                sql += id + ",";
             }
             sql = sql.Remove(sql.Length - 1);
             sql += ")";
             
 
+
+            return DataProvider.Instance.ExecuteQuery(sql);
+        }
+
+        public DataTable selectByMaDM(List<int> list_id)
+        {
+            string sql = "select * from hang where MADANHMUC in (";
+            foreach (int id in list_id)
+            {
+                sql += id + ",";
+            }
+            sql = sql.Remove(sql.Length - 1);
+            sql += ")";
 
             return DataProvider.Instance.ExecuteQuery(sql);
         }

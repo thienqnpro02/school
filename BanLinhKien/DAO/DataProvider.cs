@@ -146,6 +146,36 @@ namespace DAO
 
             return data;
         }
+
+        public SqlDataReader ExcuteReader(string query, object[] parameters = null)
+        {
+            using (SqlConnection connection = new SqlConnection(this.STRconnection))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Connection.Open();
+
+                if (parameters != null)
+                {
+                    char[] CharToTrim = { ',' };
+
+                    string[] temp = query.Split(' ');
+                    int i = 0;
+
+                    foreach (string str in temp)
+                    {
+                        if (str.Contains('@'))
+                        {
+                            command.Parameters.Add(new SqlParameter
+                            {
+                                ParameterName = str.Trim(CharToTrim),
+                                Value = parameters[i++],
+                            });
+                        }
+                    }
+                }
+            }
+                return null;
+        }
     }
 }
 

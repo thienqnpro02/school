@@ -61,6 +61,7 @@
             this.dgvDanhSachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDanhSachHang.Location = new System.Drawing.Point(12, 199);
             this.dgvDanhSachHang.Name = "dgvDanhSachHang";
+            this.dgvDanhSachHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDanhSachHang.Size = new System.Drawing.Size(671, 238);
             this.dgvDanhSachHang.TabIndex = 0;
             // 
@@ -231,6 +232,7 @@
             this.cbDanhMuc.Name = "cbDanhMuc";
             this.cbDanhMuc.Size = new System.Drawing.Size(263, 21);
             this.cbDanhMuc.TabIndex = 1;
+            this.cbDanhMuc.SelectedValueChanged += new System.EventHandler(this.CbDanhMuc_SelectedValueChanged);
             // 
             // lblSapXep
             // 

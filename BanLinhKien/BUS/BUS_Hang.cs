@@ -42,10 +42,20 @@ namespace BUS
             this.pageCount();
             return DAO_Hang.Instance.pagingHang(currentPageHang,this.pageSize);
         }
+        public DataTable pagingHangByMaDM(int currentPage, int maDM)
+        {
+            this.pageCountByMaDM(maDM);
+            return DAO_Hang.Instance.pagingHangByMaDM(currentPage, this.pageSize, maDM);
+        }
 
         public void pageCount()
         {
-            BUS_Hang.Instance.totalPage = (int)Math.Ceiling( (double)DAO_Hang.Instance.rowCount() / this.pageSize );
+            BUS_Hang.Instance.totalPage = (int)Math.Ceiling( (double)DAO_Hang.Instance.rowCount() / (double)this.pageSize );
+        }
+
+        public void pageCountByMaDM(int maDM)
+        {
+            BUS_Hang.Instance.totalPage = (int)Math.Ceiling((double)DAO_Hang.Instance.rowCountByMaDM(maDM) / (double)this.pageSize);
         }
 
         public int Tongsohang()
@@ -82,9 +92,17 @@ namespace BUS
             return DAO_Hang.Instance.isExistsImage(fileName);
         }
 
-        public DataTable selectByID(Hashtable hashtable)
+        public DataTable selectByID(List<int> list_id)
         {
-            return DAO_Hang.Instance.selectByID(hashtable);
+            if (list_id.Count == 0) return new DataTable();
+            return DAO_Hang.Instance.selectByID(list_id);
+        }
+
+        public DataTable selectByMaDM(List<int> list_id)
+        {
+            if (list_id.Count == 0) return new DataTable();
+            return DAO_Hang.Instance.selectByMaDM(list_id);
+                
         }
     }
 }

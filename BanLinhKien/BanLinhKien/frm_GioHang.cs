@@ -24,7 +24,14 @@ namespace BanLinhKien
 
         private void loadCart()
         {
-            DataTable data = BUS_Hang.Instance.selectByID(items_picked);
+            List<int> list_id = new List<int>();
+
+            foreach(DictionaryEntry item in items_picked)
+            {
+                list_id.Add(Convert.ToInt32(item.Key));
+            }
+            
+            DataTable data = BUS_Hang.Instance.selectByID(list_id);
             foreach(DataRow row in data.Rows)
             {
                 // groupbox

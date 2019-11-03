@@ -19,8 +19,9 @@ namespace BanLinhKien
 
         private enum SapXepTheo
         {
-            GiamDan = 0,
-            TangDan = 1
+            TangDan = 0,
+            GiamDan = 1,            
+            ToanBoGia = 2
         }
 
         // variables for cbSapXep
@@ -28,6 +29,7 @@ namespace BanLinhKien
 
         // variables for cbDanhMuc
         bool cbDanhMucLoaded = false;
+        DataTable dt_danhmuc;
 
         // variables for dgvDanHSachHang
         private int currentPageHang = 1;
@@ -42,9 +44,10 @@ namespace BanLinhKien
 
         void initializeData()
         {
-            Hashtable sapXepTheo = new Hashtable() {
-                { 0, "Giảm dần"},
-                { 1, "Tăng dần" }
+            Hashtable sapXepTheo = new Hashtable() {                
+                { 0, "Tăng dần" },                
+                { 1, "Giảm dần"},
+                { 2, "Mặc định" }
             };
 
             cbSapXep.DataSource = new BindingSource(sapXepTheo,null);
@@ -52,19 +55,33 @@ namespace BanLinhKien
             cbSapXep.ValueMember = "Key";
             cbSapXepLoaded = true;
 
-            cbDanhMuc.DataSource = BUS_DanhMuc.Instance.BangDanhMuc();
+            dt_danhmuc = BUS_DanhMuc.Instance.BangDanhMuc();
+            DataRow row_danhmuc = dt_danhmuc.NewRow();
+            row_danhmuc["MADM"] = -1;
+            row_danhmuc["TENDANHMUC"] = "Tất cả danh mục";
+            dt_danhmuc.Rows.InsertAt(row_danhmuc, 0);
+            cbDanhMuc.DataSource = dt_danhmuc;
             cbDanhMuc.DisplayMember = "TenDanhMuc";
-            cbDanhMuc.ValueMember = "MaDM";
+            cbDanhMuc.ValueMember = "MaDM";            
             cbDanhMucLoaded = true;
 
-           
+            loadHang();
+
+
+
+            updatePagingText();
+
+        }
+
+        void loadHang()
+        {
             dt_hang = BUS_Hang.Instance.pagingHang(currentPageHang);
             dgvDanhSachHang.DataSource = dt_hang;
 
             // Ẩn cột            
             dgvDanhSachHang.Columns["THONGSO"].Visible = false;
             dgvDanhSachHang.Columns["BAOHANH"].Visible = false;
-            dgvDanhSachHang.Columns["SOLUONG"].Visible = false;            
+            dgvDanhSachHang.Columns["SOLUONG"].Visible = false;
             dgvDanhSachHang.Columns["HINH"].Visible = false;
             dgvDanhSachHang.Columns["NHASANXUAT"].Visible = false;
             dgvDanhSachHang.Columns["NGAYTAO"].Visible = false;
@@ -80,10 +97,12 @@ namespace BanLinhKien
             dgvDanhSachHang.Columns["MAHANG"].HeaderText = "Mã Hàng";
             dgvDanhSachHang.Columns["GIA"].HeaderText = "Giá";
             dgvDanhSachHang.Columns["TENHANG"].HeaderText = "Tên Hàng";
+        }
 
+        void updatePagingText()
+        {
             lblTongTrang.Text = "/" + BUS_Hang.Instance.totalPage;
             txtTrang.Text = currentPageHang.ToString();
-
         }
 
         private void Ql_DuLieuToolStripMenuItem_Click(object sender, EventArgs e)
@@ -120,48 +139,85 @@ namespace BanLinhKien
             frm_GioHang form_GioHang = new frm_GioHang();
             form_GioHang.items_picked = this.items_picked;
             form_GioHang.ShowDialog();
+            btnGioHang.Text = String.Format("Giỏ hàng ({0})", items_picked.Count);
         }
 
         private void CbSapXep_SelectedValueChanged(object sender, EventArgs e)
         {
             if (!cbSapXepLoaded) return;
-            MessageBox.Show(cbSapXep.SelectedValue.ToString());
+            sortHang((int)cbSapXep.SelectedValue);
         }
 
         private void BtnNext_Click(object sender, EventArgs e)
         {
+            int maDM = Convert.ToInt32(cbDanhMuc.SelectedValue);
             if (currentPageHang + 1 > BUS_Hang.Instance.totalPage)
                 return;
-            else
+            else if(maDM == -1)
             {
                 currentPageHang++;
                 dt_hang = BUS_Hang.Instance.pagingHang(currentPageHang);
-                dgvDanhSachHang.DataSource = dt_hang;
-                txtTrang.Text = currentPageHang.ToString();
-                lblTongTrang.Text = "/" + BUS_Hang.Instance.totalPage;
+                dgvDanhSachHang.DataSource = dt_hang;               
                 
             }
+            else
+            {
+                currentPageHang++;
+                dt_hang = BUS_Hang.Instance.pagingHangByMaDM(currentPageHang, maDM);
+                dgvDanhSachHang.DataSource = dt_hang;
+               
+            }
+
+            updatePagingText();
         }
 
         private void BtnPrev_Click(object sender, EventArgs e)
         {
+            int maDM = Convert.ToInt32(cbDanhMuc.SelectedValue);
             if (currentPageHang -1 <= 0)
                 return;
-            else
+            else if(maDM == -1)
             {
                 currentPageHang--;
                 dt_hang = BUS_Hang.Instance.pagingHang(currentPageHang);
-                dgvDanhSachHang.DataSource = dt_hang;
-                txtTrang.Text = currentPageHang.ToString();
-                lblTongTrang.Text = "/" + BUS_Hang.Instance.totalPage;
+                dgvDanhSachHang.DataSource = dt_hang;                
 
             }
+            else
+            {
+                currentPageHang--;
+                dt_hang = BUS_Hang.Instance.pagingHangByMaDM(currentPageHang, maDM);
+                dgvDanhSachHang.DataSource = dt_hang;
+            }
+
+            updatePagingText();
         }
 
         void searchHang()
         {
             DataView dv = new DataView(dt_hang);
             dv.RowFilter = String.Format("TenHang like '%{0}%'", txtTimKiem.Text);
+            dgvDanhSachHang.DataSource = dv;
+        }
+
+        void sortHang(int sortType)
+        {
+            
+            DataView dv = new DataView(dt_hang);
+            
+            switch (sortType)
+            {
+                case (int)SapXepTheo.GiamDan:
+                    dv.Sort = "GIA DESC";                    
+                    break;
+                case (int)SapXepTheo.TangDan:
+                    dv.Sort = "GIA ASC";
+                    break;
+                case (int)SapXepTheo.ToanBoGia:
+                    dv.Sort = "MAHANG ASC";
+                    break;
+            }
+            
             dgvDanhSachHang.DataSource = dv;
         }
 
@@ -189,8 +245,30 @@ namespace BanLinhKien
                 items_picked.Add(idHang, soLuong);
             }
 
+            btnGioHang.Text = String.Format("Giỏ hàng ({0})", items_picked.Count);
             
             
+        }
+
+        private void CbDanhMuc_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (!cbDanhMucLoaded) return;
+
+            currentPageHang = 1;
+            int maDM = Convert.ToInt32(cbDanhMuc.SelectedValue);
+
+            if (maDM == -1)
+            {
+                dt_hang = BUS_Hang.Instance.pagingHang(currentPageHang);
+                dgvDanhSachHang.DataSource = dt_hang;
+            }
+            else
+            {
+                dt_hang = BUS_Hang.Instance.pagingHangByMaDM(currentPageHang, maDM);
+                dgvDanhSachHang.DataSource = dt_hang;
+            }            
+
+            updatePagingText();
         }
     }
 }
