@@ -212,7 +212,7 @@ namespace BanLinhKien
             {
                 insertCT_PhieuXuat();
 
-                MessageBox.Show("Thanh toan thanh cong");
+                MessageBox.Show("Thanh toán thành công");
             }
         }
 
