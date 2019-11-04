@@ -97,5 +97,10 @@ namespace BUS
         {
             return DAO_KhachHang.Instance.currentID();
         }
+
+        public DataTable selectByID(List<int> list_id)
+        {
+            return DAO_KhachHang.Instance.selectByID(list_id);
+        }
     }
 }

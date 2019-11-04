@@ -45,8 +45,8 @@ namespace BanLinhKien
         void initializeData()
         {
             Hashtable sapXepTheo = new Hashtable() {                
-                { 0, "Tăng dần" },                
-                { 1, "Giảm dần"},
+                { 0, "Giá tăng dần" },                
+                { 1, "Giá giảm dần"},
                 { 2, "Mặc định" }
             };
 

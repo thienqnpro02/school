@@ -18,7 +18,7 @@ namespace BanLinhKien
         private DataTable dt_hang;
         private int totalPayment = 0;
         private int idOldCustomer = -1;
-
+        private bool isAnoynymousCustomer = true;
 
         public frm_GioHang()
         {
@@ -40,15 +40,13 @@ namespace BanLinhKien
             {
                 // groupbox
                 GroupBox gpHang = new GroupBox();                
-                gpHang.Name = "gpHang" + row["MAHANG"].ToString();
-                gpHang.Width = 437;
-                gpHang.Height = 142;
+                gpHang.Name = "gpHang" + row["MAHANG"].ToString();                
+                gpHang.Size = new Size(437, 142);
 
                 // picturebox
                 PictureBox pic = new PictureBox();
                 pic.ImageLocation = BUS_Hang.Instance.pathImage + row["HINH"].ToString();
-                pic.Width = 116;
-                pic.Height = 125;
+                pic.Size = new Size(116, 125);
                 pic.SizeMode = PictureBoxSizeMode.StretchImage;
                 pic.Location = new Point(6, 10);
 
@@ -155,7 +153,20 @@ namespace BanLinhKien
         private void BtnChonKhachCu_Click(object sender, EventArgs e)
         {
             frm_ChonKhach form_ChonKhach = new frm_ChonKhach();            
-            form_ChonKhach.ShowDialog();
+            
+            if(form_ChonKhach.ShowDialog() == DialogResult.OK)
+            {
+                this.isAnoynymousCustomer = false;
+                this.idOldCustomer = form_ChonKhach.idCustomer;
+                txtTenKhachHang.Enabled = false;
+                txtSDTKhachHang.Enabled = false;
+                dtpkNamSinhKhachHang.Enabled = false;
+
+                DataTable dt_khachahng = BUS_KhachHang.Instance.selectByID(new List<int> { this.idOldCustomer });
+                txtTenKhachHang.Text = dt_khachahng.Rows[0]["HOTEN"].ToString();
+                txtSDTKhachHang.Text = dt_khachahng.Rows[0]["SDT"].ToString();
+                dtpkNamSinhKhachHang.Value = DateTime.Parse(dt_khachahng.Rows[0]["NAMSINH"].ToString());
+            }
             
             
         }
@@ -173,11 +184,21 @@ namespace BanLinhKien
 
         private void BtnThanhToan_Click(object sender, EventArgs e)
         {
+            if(items_picked.Count == 0)
+            {
+                MessageBox.Show("Chọn hàng trước khi thanh toán");
+                return;
+            }
+
             PhieuXuat phieuxuat = new PhieuXuat();
             phieuxuat.MaNV = 1;            
             phieuxuat.NgayTao = DateTime.Now;
 
-            if (idOldCustomer == -1)
+            if(isAnoynymousCustomer == true)
+            {
+                phieuxuat.MaKH = null;
+            }
+            else if (idOldCustomer == -1)
             {
                 insertKhachHang();
                 phieuxuat.MaKH = BUS_KhachHang.Instance.currentID();
@@ -224,12 +245,22 @@ namespace BanLinhKien
                 }
             }
         }
+        
+        void clearInputKhachHang()
+        {
+            txtTenKhachHang.Text = "";
+            txtSDTKhachHang.Text = "";
+            dtpkNamSinhKhachHang.Value = DateTime.Now;
+        }
 
         private void BtnKhachMoi_Click(object sender, EventArgs e)
         {
-            txtTenKhachHang.Enabled = !txtTenKhachHang.Enabled;
-            txtSDTKhachHang.Enabled = !txtSDTKhachHang.Enabled;
-            dtpkNamSinhKhachHang.Enabled = !dtpkNamSinhKhachHang.Enabled;
+            this.isAnoynymousCustomer = false;
+            txtTenKhachHang.Enabled = true;
+            txtSDTKhachHang.Enabled = true;
+            dtpkNamSinhKhachHang.Enabled = true;
+            clearInputKhachHang();
+            
         }
     }
 }

@@ -39,7 +39,6 @@
             this.lblTongTien = new System.Windows.Forms.Label();
             this.btnThanhToan = new System.Windows.Forms.Button();
             this.btnChonKhachCu = new System.Windows.Forms.Button();
-            this.cbInBienLai = new System.Windows.Forms.CheckBox();
             this.flpDanhSachSanPham = new System.Windows.Forms.FlowLayoutPanel();
             this.btnClearGio = new System.Windows.Forms.Button();
             this.btnKhachMoi = new System.Windows.Forms.Button();
@@ -99,7 +98,9 @@
             // 
             // dtpkNamSinhKhachHang
             // 
+            this.dtpkNamSinhKhachHang.CustomFormat = "dd/M/yyyy";
             this.dtpkNamSinhKhachHang.Enabled = false;
+            this.dtpkNamSinhKhachHang.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpkNamSinhKhachHang.Location = new System.Drawing.Point(565, 174);
             this.dtpkNamSinhKhachHang.Name = "dtpkNamSinhKhachHang";
             this.dtpkNamSinhKhachHang.Size = new System.Drawing.Size(128, 20);
@@ -143,16 +144,6 @@
             this.btnChonKhachCu.UseVisualStyleBackColor = true;
             this.btnChonKhachCu.Click += new System.EventHandler(this.BtnChonKhachCu_Click);
             // 
-            // cbInBienLai
-            // 
-            this.cbInBienLai.AutoSize = true;
-            this.cbInBienLai.Location = new System.Drawing.Point(621, 214);
-            this.cbInBienLai.Name = "cbInBienLai";
-            this.cbInBienLai.Size = new System.Drawing.Size(72, 17);
-            this.cbInBienLai.TabIndex = 5;
-            this.cbInBienLai.Text = "In Biên lai";
-            this.cbInBienLai.UseVisualStyleBackColor = true;
-            // 
             // flpDanhSachSanPham
             // 
             this.flpDanhSachSanPham.AutoScroll = true;
@@ -189,7 +180,6 @@
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(705, 388);
             this.Controls.Add(this.flpDanhSachSanPham);
-            this.Controls.Add(this.cbInBienLai);
             this.Controls.Add(this.btnKhachMoi);
             this.Controls.Add(this.btnChonKhachCu);
             this.Controls.Add(this.btnClearGio);
@@ -224,7 +214,6 @@
         private System.Windows.Forms.Label lblTongTien;
         private System.Windows.Forms.Button btnThanhToan;
         private System.Windows.Forms.Button btnChonKhachCu;
-        private System.Windows.Forms.CheckBox cbInBienLai;
         private System.Windows.Forms.FlowLayoutPanel flpDanhSachSanPham;
         private System.Windows.Forms.Button btnClearGio;
         private System.Windows.Forms.Button btnKhachMoi;

@@ -79,5 +79,21 @@ namespace DAO
             return Convert.ToInt32(DataProvider.Instance.ExecuteScalar(sql));
         }
 
+        public DataTable selectByID(List<int> list_id)
+        {
+
+            string sql = "select * from KHACHHANG where MAKH in (";
+            foreach (int id in list_id)
+            {
+                sql += id + ",";
+            }
+            sql = sql.Remove(sql.Length - 1);
+            sql += ")";
+
+
+
+            return DataProvider.Instance.ExecuteQuery(sql);
+        }
+
     }
 }

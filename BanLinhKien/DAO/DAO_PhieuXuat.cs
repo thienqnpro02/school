@@ -25,7 +25,16 @@ namespace DAO
 
         public int insert(PhieuXuat item)
         {
-            string sql = String.Format("insert into PhieuXuat values({0},GETDATE(),{1})", item.MaKH, item.MaNV);
+            string sql = "";
+            if (item.MaKH != null)
+            {
+                sql = String.Format("insert into PhieuXuat values({0},GETDATE(),{1})", item.MaKH, item.MaNV);
+            }
+            else
+            {
+                sql = String.Format("insert into PhieuXuat values(null,GETDATE(),{0})", item.MaNV);
+            }
+           
             int res = DataProvider.Instance.ExecuteNonQuery(sql, new object[] { item.MaKH, item.MaNV });
 
             return res;
