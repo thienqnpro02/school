@@ -18,7 +18,7 @@ namespace BanLinhKien
         private DataTable dt_hang;
         private int totalPayment = 0;
         private int idOldCustomer = -1;
-        private bool isAnoynymousCustomer = true;
+        private bool isAnonymousCustomer = true;
 
         public frm_GioHang()
         {
@@ -156,7 +156,7 @@ namespace BanLinhKien
             
             if(form_ChonKhach.ShowDialog() == DialogResult.OK)
             {
-                this.isAnoynymousCustomer = false;
+                this.isAnonymousCustomer = false;
                 this.idOldCustomer = form_ChonKhach.idCustomer;
                 txtTenKhachHang.Enabled = false;
                 txtSDTKhachHang.Enabled = false;
@@ -194,7 +194,7 @@ namespace BanLinhKien
             phieuxuat.MaNV = 1;            
             phieuxuat.NgayTao = DateTime.Now;
 
-            if(isAnoynymousCustomer == true)
+            if(isAnonymousCustomer == true)
             {
                 phieuxuat.MaKH = null;
             }
@@ -255,7 +255,7 @@ namespace BanLinhKien
 
         private void BtnKhachMoi_Click(object sender, EventArgs e)
         {
-            this.isAnoynymousCustomer = false;
+            this.isAnonymousCustomer = false;
             txtTenKhachHang.Enabled = true;
             txtSDTKhachHang.Enabled = true;
             dtpkNamSinhKhachHang.Enabled = true;

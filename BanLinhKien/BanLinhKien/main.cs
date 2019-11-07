@@ -21,7 +21,7 @@ namespace BanLinhKien
         {
             TangDan = 0,
             GiamDan = 1,            
-            ToanBoGia = 2
+            MacDinh = 2
         }
 
         // variables for cbSapXep
@@ -123,11 +123,6 @@ namespace BanLinhKien
             form_ThongKe.ShowDialog();
         }
 
-        private void CaNhanToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void ĐổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frm_CaNhan form_CaNhan = new frm_CaNhan();
@@ -213,7 +208,7 @@ namespace BanLinhKien
                 case (int)SapXepTheo.TangDan:
                     dv.Sort = "GIA ASC";
                     break;
-                case (int)SapXepTheo.ToanBoGia:
+                case (int)SapXepTheo.MacDinh:
                     dv.Sort = "MAHANG ASC";
                     break;
             }

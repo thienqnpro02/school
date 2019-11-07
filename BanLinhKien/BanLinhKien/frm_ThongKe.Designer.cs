@@ -43,6 +43,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.cbThongKePhieuXuat = new System.Windows.Forms.ComboBox();
             this.tabPhieuNhap = new System.Windows.Forms.TabPage();
+            this.dtpkToPhieuNhap = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
             this.rpvPhieuNhap = new Microsoft.Reporting.WinForms.ReportViewer();
             this.dtpkFromPhieuNhap = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
@@ -51,8 +53,6 @@
             this.tabLoiNhuan = new System.Windows.Forms.TabPage();
             this.rpvLoiNhuan = new Microsoft.Reporting.WinForms.ReportViewer();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dtpkToPhieuNhap = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
             this.tabKhachHang.SuspendLayout();
             this.tabPhieuXuat.SuspendLayout();
             this.tabPhieuNhap.SuspendLayout();
@@ -204,6 +204,24 @@
             this.tabPhieuNhap.Text = "Phiếu nhập";
             this.tabPhieuNhap.UseVisualStyleBackColor = true;
             // 
+            // dtpkToPhieuNhap
+            // 
+            this.dtpkToPhieuNhap.CustomFormat = "dd/MM/yyyy";
+            this.dtpkToPhieuNhap.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpkToPhieuNhap.Location = new System.Drawing.Point(467, 40);
+            this.dtpkToPhieuNhap.Name = "dtpkToPhieuNhap";
+            this.dtpkToPhieuNhap.Size = new System.Drawing.Size(200, 20);
+            this.dtpkToPhieuNhap.TabIndex = 45;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(393, 40);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(27, 13);
+            this.label2.TabIndex = 44;
+            this.label2.Text = "Đến";
+            // 
             // rpvPhieuNhap
             // 
             this.rpvPhieuNhap.Location = new System.Drawing.Point(9, 66);
@@ -214,6 +232,8 @@
             // 
             // dtpkFromPhieuNhap
             // 
+            this.dtpkFromPhieuNhap.CustomFormat = "dd/MM/yyyy";
+            this.dtpkFromPhieuNhap.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpkFromPhieuNhap.Location = new System.Drawing.Point(80, 40);
             this.dtpkFromPhieuNhap.Name = "dtpkFromPhieuNhap";
             this.dtpkFromPhieuNhap.Size = new System.Drawing.Size(200, 20);
@@ -275,22 +295,6 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(230, 21);
             this.comboBox1.TabIndex = 46;
-            // 
-            // dtpkToPhieuNhap
-            // 
-            this.dtpkToPhieuNhap.Location = new System.Drawing.Point(467, 40);
-            this.dtpkToPhieuNhap.Name = "dtpkToPhieuNhap";
-            this.dtpkToPhieuNhap.Size = new System.Drawing.Size(200, 20);
-            this.dtpkToPhieuNhap.TabIndex = 45;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(393, 40);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(27, 13);
-            this.label2.TabIndex = 44;
-            this.label2.Text = "Đến";
             // 
             // frm_ThongKe
             // 
