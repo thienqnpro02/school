@@ -166,7 +166,7 @@ namespace BanLinhKien
             DateTime from = new DateTime();
             DateTime to = new DateTime();
 
-            if ((int)cbThongKePhieuXuat.SelectedValue == (int)TimeReport.Custom)
+            if ((int)cbThongKeKhachHang.SelectedValue == (int)TimeReport.Custom)
             {
                 lblFromKhachHang.Visible = true;
                 lblToKhachHang.Visible = true;
