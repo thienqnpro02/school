@@ -31,6 +31,10 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.USP_ReportKhachHangBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DataSet_ThongKe = new BanLinhKien.DataSet_ThongKe();
+            this.USP_ReportPhieuXuatBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabKhachHang = new System.Windows.Forms.TabPage();
             this.rpvKhachHang = new Microsoft.Reporting.WinForms.ReportViewer();
             this.dtpkToKhachHang = new System.Windows.Forms.DateTimePicker();
@@ -55,21 +59,35 @@
             this.tabControlThongKe = new System.Windows.Forms.TabControl();
             this.tabLoiNhuan = new System.Windows.Forms.TabPage();
             this.rpvLoiNhuan = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.cbThongKeLoiNhuan = new System.Windows.Forms.ComboBox();
-            this.DataSet_ThongKe = new BanLinhKien.DataSet_ThongKe();
-            this.USP_ReportPhieuXuatBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.USP_ReportPhieuXuatTableAdapter = new BanLinhKien.DataSet_ThongKeTableAdapters.USP_ReportPhieuXuatTableAdapter();
-            this.USP_ReportKhachHangBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.USP_ReportKhachHangTableAdapter = new BanLinhKien.DataSet_ThongKeTableAdapters.USP_ReportKhachHangTableAdapter();
+            this.USP_ReportLoiNhuanBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.USP_ReportLoiNhuanTableAdapter = new BanLinhKien.DataSet_ThongKeTableAdapters.USP_ReportLoiNhuanTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.USP_ReportKhachHangBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSet_ThongKe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.USP_ReportPhieuXuatBindingSource)).BeginInit();
             this.tabKhachHang.SuspendLayout();
             this.tabPhieuXuat.SuspendLayout();
             this.tabPhieuNhap.SuspendLayout();
             this.tabControlThongKe.SuspendLayout();
             this.tabLoiNhuan.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataSet_ThongKe)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.USP_ReportPhieuXuatBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.USP_ReportKhachHangBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.USP_ReportLoiNhuanBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // USP_ReportKhachHangBindingSource
+            // 
+            this.USP_ReportKhachHangBindingSource.DataMember = "USP_ReportKhachHang";
+            this.USP_ReportKhachHangBindingSource.DataSource = this.DataSet_ThongKe;
+            // 
+            // DataSet_ThongKe
+            // 
+            this.DataSet_ThongKe.DataSetName = "DataSet_ThongKe";
+            this.DataSet_ThongKe.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // USP_ReportPhieuXuatBindingSource
+            // 
+            this.USP_ReportPhieuXuatBindingSource.DataMember = "USP_ReportPhieuXuat";
+            this.USP_ReportPhieuXuatBindingSource.DataSource = this.DataSet_ThongKe;
             // 
             // tabKhachHang
             // 
@@ -222,7 +240,7 @@
             this.tabPhieuNhap.Location = new System.Drawing.Point(4, 22);
             this.tabPhieuNhap.Name = "tabPhieuNhap";
             this.tabPhieuNhap.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPhieuNhap.Size = new System.Drawing.Size(673, 473);
+            this.tabPhieuNhap.Size = new System.Drawing.Size(819, 473);
             this.tabPhieuNhap.TabIndex = 0;
             this.tabPhieuNhap.Text = "Phiếu nhập";
             this.tabPhieuNhap.UseVisualStyleBackColor = true;
@@ -295,53 +313,42 @@
             // tabLoiNhuan
             // 
             this.tabLoiNhuan.Controls.Add(this.rpvLoiNhuan);
-            this.tabLoiNhuan.Controls.Add(this.cbThongKeLoiNhuan);
             this.tabLoiNhuan.Location = new System.Drawing.Point(4, 22);
             this.tabLoiNhuan.Name = "tabLoiNhuan";
             this.tabLoiNhuan.Padding = new System.Windows.Forms.Padding(3);
-            this.tabLoiNhuan.Size = new System.Drawing.Size(673, 473);
+            this.tabLoiNhuan.Size = new System.Drawing.Size(819, 473);
             this.tabLoiNhuan.TabIndex = 3;
             this.tabLoiNhuan.Text = "Lợi nhuận";
             this.tabLoiNhuan.UseVisualStyleBackColor = true;
             // 
             // rpvLoiNhuan
             // 
+            reportDataSource3.Name = "DataSet_TableLoiNhuan";
+            reportDataSource3.Value = this.USP_ReportLoiNhuanBindingSource;
+            this.rpvLoiNhuan.LocalReport.DataSources.Add(reportDataSource3);
+            this.rpvLoiNhuan.LocalReport.ReportEmbeddedResource = "BanLinhKien.rp_LoiNhuan.rdlc";
             this.rpvLoiNhuan.Location = new System.Drawing.Point(9, 66);
             this.rpvLoiNhuan.Name = "rpvLoiNhuan";
             this.rpvLoiNhuan.ServerReport.BearerToken = null;
-            this.rpvLoiNhuan.Size = new System.Drawing.Size(658, 401);
+            this.rpvLoiNhuan.Size = new System.Drawing.Size(804, 401);
             this.rpvLoiNhuan.TabIndex = 51;
-            // 
-            // cbThongKeLoiNhuan
-            // 
-            this.cbThongKeLoiNhuan.FormattingEnabled = true;
-            this.cbThongKeLoiNhuan.Location = new System.Drawing.Point(221, 6);
-            this.cbThongKeLoiNhuan.Name = "cbThongKeLoiNhuan";
-            this.cbThongKeLoiNhuan.Size = new System.Drawing.Size(230, 21);
-            this.cbThongKeLoiNhuan.TabIndex = 46;
-            // 
-            // DataSet_ThongKe
-            // 
-            this.DataSet_ThongKe.DataSetName = "DataSet_ThongKe";
-            this.DataSet_ThongKe.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // USP_ReportPhieuXuatBindingSource
-            // 
-            this.USP_ReportPhieuXuatBindingSource.DataMember = "USP_ReportPhieuXuat";
-            this.USP_ReportPhieuXuatBindingSource.DataSource = this.DataSet_ThongKe;
             // 
             // USP_ReportPhieuXuatTableAdapter
             // 
             this.USP_ReportPhieuXuatTableAdapter.ClearBeforeFill = true;
             // 
-            // USP_ReportKhachHangBindingSource
-            // 
-            this.USP_ReportKhachHangBindingSource.DataMember = "USP_ReportKhachHang";
-            this.USP_ReportKhachHangBindingSource.DataSource = this.DataSet_ThongKe;
-            // 
             // USP_ReportKhachHangTableAdapter
             // 
             this.USP_ReportKhachHangTableAdapter.ClearBeforeFill = true;
+            // 
+            // USP_ReportLoiNhuanBindingSource
+            // 
+            this.USP_ReportLoiNhuanBindingSource.DataMember = "USP_ReportLoiNhuan";
+            this.USP_ReportLoiNhuanBindingSource.DataSource = this.DataSet_ThongKe;
+            // 
+            // USP_ReportLoiNhuanTableAdapter
+            // 
+            this.USP_ReportLoiNhuanTableAdapter.ClearBeforeFill = true;
             // 
             // frm_ThongKe
             // 
@@ -353,6 +360,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Thống kê";
             this.Load += new System.EventHandler(this.Frm_ThongKe_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.USP_ReportKhachHangBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSet_ThongKe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.USP_ReportPhieuXuatBindingSource)).EndInit();
             this.tabKhachHang.ResumeLayout(false);
             this.tabKhachHang.PerformLayout();
             this.tabPhieuXuat.ResumeLayout(false);
@@ -361,9 +371,7 @@
             this.tabPhieuNhap.PerformLayout();
             this.tabControlThongKe.ResumeLayout(false);
             this.tabLoiNhuan.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DataSet_ThongKe)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.USP_ReportPhieuXuatBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.USP_ReportKhachHangBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.USP_ReportLoiNhuanBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -392,7 +400,6 @@
         private System.Windows.Forms.TabControl tabControlThongKe;
         private System.Windows.Forms.TabPage tabLoiNhuan;
         private Microsoft.Reporting.WinForms.ReportViewer rpvLoiNhuan;
-        private System.Windows.Forms.ComboBox cbThongKeLoiNhuan;
         private System.Windows.Forms.DateTimePicker dtpkToPhieuNhap;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.BindingSource USP_ReportPhieuXuatBindingSource;
@@ -400,5 +407,7 @@
         private DataSet_ThongKeTableAdapters.USP_ReportPhieuXuatTableAdapter USP_ReportPhieuXuatTableAdapter;
         private System.Windows.Forms.BindingSource USP_ReportKhachHangBindingSource;
         private DataSet_ThongKeTableAdapters.USP_ReportKhachHangTableAdapter USP_ReportKhachHangTableAdapter;
+        private System.Windows.Forms.BindingSource USP_ReportLoiNhuanBindingSource;
+        private DataSet_ThongKeTableAdapters.USP_ReportLoiNhuanTableAdapter USP_ReportLoiNhuanTableAdapter;
     }
 }

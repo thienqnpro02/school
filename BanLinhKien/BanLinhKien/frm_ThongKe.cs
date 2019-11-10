@@ -16,7 +16,7 @@ namespace BanLinhKien
         bool isCbPhieuNhapLoaded = false;
         bool isCbPhieuXuatLoaded = false;
         bool isCbKhachHangLoaded = false;
-        bool isCbLoiNhuanLoaded = false;
+        
 
         private enum TimeReport
         {
@@ -64,11 +64,8 @@ namespace BanLinhKien
             cbThongKeKhachHang.ValueMember = "Key";
             isCbKhachHangLoaded = true;
 
-            cbThongKeLoiNhuan.DataSource = new BindingSource(timeReport, null);
-            cbThongKeLoiNhuan.DisplayMember = "Value";
-            cbThongKeLoiNhuan.ValueMember = "Key";
-            isCbLoiNhuanLoaded = true;
-            //loadingReportPhieuXuat(DateTime.Now, DateTime.Now);
+           
+            
         }
         
         void pickTime(int value, ref DateTime from, ref DateTime to)
@@ -229,6 +226,8 @@ namespace BanLinhKien
                     loadingReportKhachHang(DateTime.Now, DateTime.Now);
                     break;
                 case "tabLoiNhuan":
+                    this.USP_ReportLoiNhuanTableAdapter.Fill(this.DataSet_ThongKe.USP_ReportLoiNhuan);
+                    this.rpvLoiNhuan.RefreshReport();
                     break;
             }
         }
