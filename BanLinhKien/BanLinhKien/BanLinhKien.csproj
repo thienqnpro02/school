@@ -169,6 +169,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="rp_KhachHang.rdlc" />
     <EmbeddedResource Include="rp_PhieuXuat.rdlc" />
     <None Include="DataSet_ThongKe.xsc">
       <DependentUpon>DataSet_ThongKe.xsd</DependentUpon>
