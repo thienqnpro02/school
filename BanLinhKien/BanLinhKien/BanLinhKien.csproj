@@ -62,6 +62,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSet_ThongKe.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_ThongKe.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frm_CaNhan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +169,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="rp_PhieuXuat.rdlc" />
+    <None Include="DataSet_ThongKe.xsc">
+      <DependentUpon>DataSet_ThongKe.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_ThongKe.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_ThongKe.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet_ThongKe.xss">
+      <DependentUpon>DataSet_ThongKe.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
