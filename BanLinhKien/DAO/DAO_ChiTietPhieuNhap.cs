@@ -23,7 +23,7 @@ namespace DAO
 
         public int LuuBangChiTietPhieuNhap(ChiTietPhieuNhap ct_phieunhap)
         {
-            String sql = String.Format("insert into chitietphieunhap_test(maphieunhap,mahang,soluong,gianhap) " +
+            String sql = String.Format("insert into chitietphieunhap(maphieunhap,mahang,soluong,gianhap) " +
                 "values({0},{1},{2},{3})",
                 ct_phieunhap.MaPhieuNhap,ct_phieunhap.MaHang,ct_phieunhap.SoLuong,ct_phieunhap.GiaNhap);
             int effect = dataProvider.ExecuteNonQuery(sql);
