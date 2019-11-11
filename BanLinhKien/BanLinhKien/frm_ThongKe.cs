@@ -63,9 +63,6 @@ namespace BanLinhKien
             cbThongKeKhachHang.DisplayMember = "Value";
             cbThongKeKhachHang.ValueMember = "Key";
             isCbKhachHangLoaded = true;
-
-           
-            
         }
         
         void pickTime(int value, ref DateTime from, ref DateTime to)
@@ -113,8 +110,6 @@ namespace BanLinhKien
                         case "tabLoiNhuan":
                             break;
                     }
-
-
                     break;
             }
         }
