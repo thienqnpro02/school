@@ -72,5 +72,10 @@ namespace DAO
             return effect;
         }
 
+        public int MaNCC()
+        {
+            String sql = "select ident_current('nhacungcap')";
+            return Convert.ToInt32(dataProvider.ExecuteScalar(sql));
+        }
     }
 }

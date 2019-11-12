@@ -71,6 +71,11 @@ namespace DAO
             return numberRow;
         }
 
-       
+        public int MaDanhMuc()
+        {
+            String sql = "select ident_current('danhmuc')";
+            return Convert.ToInt32(dataProvider.ExecuteScalar(sql));
+        }
+
     }
 }

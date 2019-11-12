@@ -39,12 +39,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS_ChiTietPhieuNhap.cs" />
     <Compile Include="BUS_ChiTietPhieuXuat.cs" />
     <Compile Include="BUS_DanhMuc.cs" />
     <Compile Include="BUS_KhachHang.cs" />
     <Compile Include="BUS_NCC.cs" />
     <Compile Include="BUS_NhanVien.cs" />
     <Compile Include="BUS_Hang.cs" />
+    <Compile Include="BUS_NhapHang.cs" />
+    <Compile Include="BUS_PhieuNhap.cs" />
     <Compile Include="BUS_PhieuXuat.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

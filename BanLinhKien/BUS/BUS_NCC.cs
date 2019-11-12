@@ -31,7 +31,7 @@ namespace BUS
 
         public int totalPage = 0;
         public int pageSize = 10;
-        
+
 
         public DataTable BangNCC()
         {
@@ -59,10 +59,10 @@ namespace BUS
         public String LuuBangNhaCungCap(NhaCungCap ncc)
         {
             int effect = dao_ncc.LuuBangNhaCungCap(ncc);
-            if(effect > 0)
+            if (effect > 0)
             {
                 return "Luu du lieu thanh cong";
-            }else
+            } else
             {
                 return "Luu du lieu khong thanh cong";
             }
@@ -71,10 +71,10 @@ namespace BUS
         public String SuuBangNhaCungCap(NhaCungCap ncc)
         {
             int effect = dao_ncc.SuuBangNhaCungCap(ncc);
-            if(effect > 0)
+            if (effect > 0)
             {
                 return "Sua du lieu thanh cong";
-            }else
+            } else
             {
                 return "Suu du lieu khong thanh cong";
             }
@@ -83,13 +83,18 @@ namespace BUS
         public String XoaDLBangNhaCungCap(int mancc)
         {
             int effect = dao_ncc.XoaDLBangNhaCungCap(mancc);
-            if(effect > 0)
+            if (effect > 0)
             {
                 return "Xoa du lieu thanh cong";
-            }else
+            } else
             {
                 return "Xoa du lieu khong thanh cong";
             }
+        }
+
+        public int MaNCC()
+        {
+            return dao_ncc.MaNCC();
         }
     }
 }
