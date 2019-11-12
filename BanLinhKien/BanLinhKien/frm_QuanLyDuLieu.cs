@@ -103,7 +103,7 @@ namespace BanLinhKien
             if (btnThemDM.Text.Contains("Th"))
             {
                 btnThemDM.Text = "Lưu";
-                txtIDDanhMuc.Text = "";
+                txtIDDanhMuc.Text = (busDanhmuc.MaDanhMuc()+1).ToString();
                 txtTenDanhMuc.Text = "";
             }
 
@@ -356,7 +356,7 @@ namespace BanLinhKien
             if (btnThemHang.Text.Contains("Th"))
             {
                 btnThemHang.Text = "Lưu";
-                txtIDHang.Text = "";
+                txtIDHang.Text = (bus_hang.MaHang()+1).ToString();
                 txtTenHang.Text = " ";
                 txtBaoHanh.Text = "";
                 txtGia.Text = "";
@@ -511,10 +511,6 @@ namespace BanLinhKien
                 
         }
 
-       
-
-        
-
         private void DLTrenTungTrang_BangNhanVien()
         {
             dgvNhanVien.DataSource = bus_nhanvien.DlTrenMotTrang_NhanVien(currentPageNhanVien);
@@ -629,7 +625,7 @@ namespace BanLinhKien
             DataTable datatable_nhanvien = bus_nhanvien.BangNhanVien();
             if (btnThemNV.Text.Contains("Th"))
             {
-                txtIDNhanVien.Text = "";
+                txtIDNhanVien.Text = (bus_nhanvien.MaNhanVien()+1).ToString();
                 txtHoTenNhanVien.Text = "";
                 txtUsername.Text = "";
                 txtPassword.Text = "";
@@ -780,7 +776,7 @@ namespace BanLinhKien
             DataTable datatable_khachhang = bus_khachhang.BangKhachHang();
             if (btnThemKH.Text.Contains("Th"))
             {
-                txtIDKhachHang.Text = "";
+                txtIDKhachHang.Text = (bus_khachhang.currentID()+1).ToString();
                 txtHoTenKhachHang.Text = "";
                 txtSDTKhachHang.Text = "";
                 dtpkNamSinhKhachHang.DataBindings.Clear();
@@ -914,7 +910,7 @@ namespace BanLinhKien
             DataTable datatable_ncc = bus_ncc.BangNCC();
             if (btnThemNCC.Text.Contains("Th"))
             {
-                txtIDNCC.Text = "";
+                txtIDNCC.Text =(bus_ncc.MaNCC()+1).ToString();
                 txtTenNCC.Text = "";
                 txtDiaChiNCC.Text = "";
                 txtFaxNCC.Text = "";

@@ -85,5 +85,10 @@ namespace BUS
         {
             return dao_danhmuc.rowCount();
         }
+
+        public int MaDanhMuc()
+        {
+            return dao_danhmuc.MaDanhMuc();
+        }
     }
 }

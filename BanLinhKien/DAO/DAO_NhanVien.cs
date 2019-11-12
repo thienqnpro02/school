@@ -75,7 +75,12 @@ namespace DAO
             return effect;
         }
 
+        public int MaNhanVien()
+        {
+            String sql = "select ident_current('nhanvien')";
+            return Convert.ToInt32(dataProvider.ExecuteScalar(sql));
+        }
 
-        
+
     }
 }

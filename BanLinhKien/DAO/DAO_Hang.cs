@@ -150,5 +150,11 @@ namespace DAO
             string sql = "update Hang set SOLUONG -= @soluong where MAHANG = @mahang";
             return Convert.ToInt32(DataProvider.Instance.ExecuteNonQuery(sql, new object[] { soLuong, maHang }));
         }
+
+        public int MaHang()
+        {
+            String sql = "select ident_current('hang')";
+            return Convert.ToInt32(dataProvider.ExecuteScalar(sql));
+        }
     }
 }

@@ -110,6 +110,9 @@ namespace BUS
             return DAO_Hang.Instance.updateSoLuongHang(maHang, soLuong);
         }
 
-        
+        public int MaHang()
+        {
+            return dao_hang.MaHang();
+        }
     }
 }

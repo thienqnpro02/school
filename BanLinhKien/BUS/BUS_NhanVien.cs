@@ -91,6 +91,11 @@ namespace BUS
 
         }
 
+        public int MaNhanVien()
+        {
+            return dao_nhanvien.MaNhanVien();
+        }
+
        
     }
 }

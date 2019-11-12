@@ -90,10 +90,10 @@ namespace DAO
             sql = sql.Remove(sql.Length - 1);
             sql += ")";
 
-
-
             return DataProvider.Instance.ExecuteQuery(sql);
         }
+
+
 
     }
 }
