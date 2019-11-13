@@ -44,10 +44,7 @@ namespace BanLinhKien
 
         private void Frm_ThongKe_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'DataSet_ThongKe.USP_ReportKhachHang' table. You can move, or remove it, as needed.
            
-
-
             // set datasource for combobox
             cbThongKePhieuNhap.DataSource = new BindingSource(timeReport, null);
             cbThongKePhieuNhap.DisplayMember = "Value";
@@ -63,6 +60,9 @@ namespace BanLinhKien
             cbThongKeKhachHang.DisplayMember = "Value";
             cbThongKeKhachHang.ValueMember = "Key";
             isCbKhachHangLoaded = true;
+
+            // load defailt report
+            loadingReportPhieuNhap(DateTime.Now, DateTime.Now);
         }
         
         void pickTime(int value, ref DateTime from, ref DateTime to)
@@ -153,6 +153,23 @@ namespace BanLinhKien
             this.rpvKhachHang.RefreshReport();
         }
 
+        void loadingReportPhieuNhap(DateTime from, DateTime to)
+        {
+            string distanceTime = "";
+            if (from.Equals(to))
+            {
+                distanceTime = String.Format("Ngày {0}", from.ToString("dd-MM-yyyy"));
+            }
+            else
+            {
+                distanceTime = String.Format("Từ: {0}       Đến: {1}", from.ToString("dd-MM-yyyy"), to.ToString("dd-MM-yyyy"));
+            }
+            ReportParameter param = new ReportParameter("txtDistanceTimePN", distanceTime);
+            this.rpvPhieuNhap.LocalReport.SetParameters(param);
+            this.USP_ReportPhieuNhapTableAdapter.Fill(this.DataSet_ThongKe.USP_ReportPhieuNhap,from.ToString("yyyy-MM-dd"), to.ToString("yyyy-MM-dd"));
+            this.rpvPhieuNhap.RefreshReport();
+        }
+
         private void CbThongKeKhachHang_SelectedValueChanged(object sender, EventArgs e)
         {
             if (!isCbKhachHangLoaded) return;
@@ -207,12 +224,39 @@ namespace BanLinhKien
             loadingReportPhieuXuat(from, to);
         }
 
+        private void CbThongKePhieuNhap_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (!isCbPhieuNhapLoaded) return;
+
+
+            DateTime from = new DateTime();
+            DateTime to = new DateTime();
+
+            if ((int)cbThongKePhieuNhap.SelectedValue == (int)TimeReport.Custom)
+            {
+                lblFromPhieuNhap.Visible = true;
+                lblToPhieuNhap.Visible = true;
+                dtpkFromPhieuNhap.Visible = true;
+                dtpkToPhieuNhap.Visible = true;
+            }
+            else
+            {
+                lblFromPhieuNhap.Visible = false;
+                lblToPhieuNhap.Visible = false;
+                dtpkFromPhieuNhap.Visible = false;
+                dtpkToPhieuNhap.Visible = false;
+            }
+            pickTime((int)cbThongKePhieuNhap.SelectedValue, ref from, ref to);
+
+            loadingReportPhieuNhap(from, to);
+        }
+
         private void TabControlThongKe_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch (tabControlThongKe.SelectedTab.Name)
             {
                 case "tabPhieuNhap":
-
+                    loadingReportPhieuNhap(DateTime.Now, DateTime.Now);
                     break;
                 case "tabPhieuXuat":
                     loadingReportPhieuXuat(DateTime.Now, DateTime.Now);
@@ -226,5 +270,7 @@ namespace BanLinhKien
                     break;
             }
         }
+
+       
     }
 }
