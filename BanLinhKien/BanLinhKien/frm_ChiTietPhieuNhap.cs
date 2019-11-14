@@ -34,6 +34,7 @@ namespace BanLinhKien
             ncc = bus_ncc.BangNCC();
             LoadHang();
             BuocVaoComboBox_NCC();
+            
         }
 
         int i = 0;
@@ -44,6 +45,7 @@ namespace BanLinhKien
                 GroupBox_HangNhap(hang);
                 i++;
             }
+            totalPaymentAmount();
         }
 
         private void GroupBox_HangNhap(Hang hang)
@@ -176,6 +178,7 @@ namespace BanLinhKien
 
             Label label_gia=listlabel[num_soluong.TabIndex];
             label_gia.Text = formatCultureToString((hang.Gia * hang.SoLuong)) + " VNĐ";
+            totalPaymentAmount();
         }
 
         private void Text_Gia_TextChanged(object sender, EventArgs e)
@@ -192,6 +195,7 @@ namespace BanLinhKien
                     label_gia.Text = formatCultureToString((hang.Gia * hang.SoLuong)) + " VNĐ";
                     txt_gia.Text = formatCultureToString(hang.Gia);
                     txt_gia.Select(txt_gia.TextLength, 0);
+                    totalPaymentAmount();
                 }
 
             }catch(FormatException ex) { }
@@ -263,6 +267,17 @@ namespace BanLinhKien
             return (effect==listhang.Count && update==listhang.Count)?1:0;
         }
 
+        private void totalPaymentAmount()
+        {
+            int total = 0;
+            foreach (Label lbl in listlabel)
+            {
+                total += Convert.ToInt32(sanitizeString(lbl.Text));
+            }
+
+            lblTongTien.Text = formatCultureToString(total) + " VNĐ";
+        }
+
         string formatCultureToString(int num)
         {
             return String.Format("{0:n0}", num);
@@ -270,6 +285,12 @@ namespace BanLinhKien
 
         string sanitizeString(string str)
         {
+            int idx = str.IndexOf(' ');
+            if(idx != -1)
+            {
+                str = str.Substring(0, idx);
+            }
+            
             return String.Join("", str.Split(',', '.'));
         }
     }
