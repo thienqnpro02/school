@@ -105,7 +105,7 @@ namespace BanLinhKien
                             break;
                         case "tabKhachHang":
                             from = dtpkFromKhachHang.Value;
-                            from = dtpkToPhieuXuat.Value;
+                            to = dtpkToKhachHang.Value;
                             break;
                         case "tabLoiNhuan":
                             break;

@@ -120,5 +120,14 @@ namespace BUS
             return null;
         }
 
+        public int KiemTraMatKhauCu(String matkhau)
+        {
+            return dao_nhanvien.KiemTraMatKhauCu(matkhau);
+        }
+
+        public int CapNhapLaiMatKhau(String password, int manv)
+        {
+            return dao_nhanvien.CapNhapLaiMatKhau(password, manv);
+        }
     }
 }
