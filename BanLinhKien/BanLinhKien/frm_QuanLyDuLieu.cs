@@ -46,7 +46,7 @@ namespace BanLinhKien
 
         private void frm_QuanLyDuLieu_Load(object sender, EventArgs e)
         {
-            //setClientPermission();
+            setClientPermission();
 
             if (tabControlQL_DuLieu.SelectedIndex == 0)
             {
@@ -1013,18 +1013,7 @@ namespace BanLinhKien
         {
             
             txtGia_2.Text = txtGia.Text;
-        }
-
-        string formatCultureToString(int num)
-        {
-            return String.Format("{0:n0}", num);
-           
-        }
-
-        string sanitizeString(string str)
-        {
-            return String.Join("", str.Split(',', '.'));
-        }
+        }       
 
         private void TxtGia_2_TextChanged(object sender, EventArgs e)
         {
@@ -1034,6 +1023,17 @@ namespace BanLinhKien
 
             txtGia_2.Text = str;
             txtGia_2.Select(txtGia_2.TextLength, 0);
+        }
+
+        string formatCultureToString(int num)
+        {
+            return String.Format("{0:n0}", num);
+
+        }
+
+        string sanitizeString(string str)
+        {
+            return String.Join("", str.Split(',', '.'));
         }
     }
 

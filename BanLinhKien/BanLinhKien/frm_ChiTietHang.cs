@@ -29,7 +29,7 @@ namespace BanLinhKien
                 lblTenHang.Text = data.Rows[0]["TENHANG"].ToString();
                 lblThongSo.Text = data.Rows[0]["THONGSO"].ToString();
                 lblBaoHanh.Text = data.Rows[0]["BAOHANH"] + " tháng";
-                lblGia.Text = data.Rows[0]["GIA"] + " VNĐ";
+                lblGia.Text = formatCultureToString(Convert.ToInt32(data.Rows[0]["GIA"])) + " VNĐ";
                 picHang.ImageLocation = BUS_Hang.Instance.pathImage + data.Rows[0]["HINH"].ToString();
             }else
             {
@@ -39,6 +39,12 @@ namespace BanLinhKien
                 lblGia.Text = hang.Gia + " VNĐ";
                 picHang.ImageLocation = BUS_Hang.Instance.pathImage + hang.Hinh.ToString();
             }
+        }
+
+        string formatCultureToString(int num)
+        {
+            return String.Format("{0:n0}", num);
+
         }
     }
 }

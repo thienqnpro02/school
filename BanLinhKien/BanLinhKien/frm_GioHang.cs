@@ -15,8 +15,7 @@ namespace BanLinhKien
     public partial class frm_GioHang : Form
     {
         public Hashtable items_picked;
-        private DataTable dt_hang;
-        private int totalPayment = 0;
+        private DataTable dt_hang;       
         private int idOldCustomer = -1;
         private bool isAnonymousCustomer = true;
 
@@ -79,7 +78,7 @@ namespace BanLinhKien
 
                 Label lblGiaHang = new Label();
                 lblGiaHang.Name = "lblGiaHang" + row["MAHANG"].ToString();
-                lblGiaHang.Text = row["GIA"].ToString() + " VNĐ";
+                lblGiaHang.Text = formatCultureToString(Convert.ToInt32(row["GIA"])) + " VNĐ";
                 lblGiaHang.AutoSize = true;
                 lblGiaHang.Location = new Point(356, 86);
 
@@ -130,8 +129,8 @@ namespace BanLinhKien
             {
                 total += Convert.ToInt32(row["GIA"]) * Convert.ToInt32(items_picked[row["MAHANG"].ToString()]);
             }
-            totalPayment = total;
-            lblTongTien.Text = total + " VNĐ";
+            
+            lblTongTien.Text = formatCultureToString(total) + " VNĐ";
         }
 
         private void Btn_Click(object sender, EventArgs e)
@@ -261,6 +260,12 @@ namespace BanLinhKien
             dtpkNamSinhKhachHang.Enabled = true;
             clearInputKhachHang();
             
+        }
+
+        string formatCultureToString(int num)
+        {
+            return String.Format("{0:n0}", num);
+
         }
     }
 }

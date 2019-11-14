@@ -74,6 +74,7 @@ namespace BanLinhKien
             PictureBox pic = new PictureBox();
             pic.Size = pictureBox1.Size;
             pic.Name = "pic" + hang.MaHang;
+            pic.SizeMode = PictureBoxSizeMode.StretchImage;
             pic.ImageLocation =bus_hang.pathImage + hang.Hinh.ToString();
             pic.Location = pictureBox1.Location;
 
@@ -174,7 +175,7 @@ namespace BanLinhKien
             hang.SoLuong = (int)num_soluong.Value;
 
             Label label_gia=listlabel[num_soluong.TabIndex];
-            label_gia.Text = (hang.Gia * hang.SoLuong).ToString()+" VNĐ";
+            label_gia.Text = formatCultureToString((hang.Gia * hang.SoLuong)) + " VNĐ";
         }
 
         private void Text_Gia_TextChanged(object sender, EventArgs e)
@@ -183,12 +184,16 @@ namespace BanLinhKien
             Hang hang = (Hang)listhang[txt_gia.Tag];
             try
             {
-                hang.Gia = Convert.ToInt32(txt_gia.Text);
+               
+                hang.Gia = Convert.ToInt32(sanitizeString(txt_gia.Text));
                 if (!txt_gia.Text.Equals("0"))
                 {
                     Label label_gia = listlabel[txt_gia.TabIndex];
-                    label_gia.Text = (hang.Gia * hang.SoLuong).ToString()+" VNĐ";
+                    label_gia.Text = formatCultureToString((hang.Gia * hang.SoLuong)) + " VNĐ";
+                    txt_gia.Text = formatCultureToString(hang.Gia);
+                    txt_gia.Select(txt_gia.TextLength, 0);
                 }
+
             }catch(FormatException ex) { }
         }
 
@@ -227,7 +232,7 @@ namespace BanLinhKien
 
         private int LuuBangPhieuNhap()
         {
-            String ngaytao = DateTime.Now.ToString("yyy-MM-dd");
+            String ngaytao = DateTime.Now.ToString("yyyy-MM-dd");
             int mancc = Convert.ToInt32(cbNhaCungCap.SelectedValue);
 
             PhieuNhap phieunhap = new PhieuNhap();
@@ -256,6 +261,16 @@ namespace BanLinhKien
                 update +=bus_chitietphieunhap.CapNhapSoLuongHang(chitietphieunhap);
             }
             return (effect==listhang.Count && update==listhang.Count)?1:0;
+        }
+
+        string formatCultureToString(int num)
+        {
+            return String.Format("{0:n0}", num);
+        }
+
+        string sanitizeString(string str)
+        {
+            return String.Join("", str.Split(',', '.'));
         }
     }
 }

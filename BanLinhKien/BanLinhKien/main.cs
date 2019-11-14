@@ -297,7 +297,7 @@ namespace BanLinhKien
 
         private void Main_Load(object sender, EventArgs e)
         {
-            setClientPermission();
+            //setClientPermission();
         }
     }
 }
