@@ -13,6 +13,7 @@ namespace BUS
         private static BUS_ChiTietPhieuNhap instance;
         private DAO_ChiTietPhieuNhap chitietphieunhap = DAO_ChiTietPhieuNhap.Instance;
         private DAO_PhieuNhap dao_phieunhap = DAO_PhieuNhap.Instance;
+        private DAO_Hang dao_hang = DAO_Hang.Instance;
 
         public static BUS_ChiTietPhieuNhap Instance
         {
@@ -34,5 +35,11 @@ namespace BUS
         {
             return dao_phieunhap.MaPhieuNhap();
         }
+
+        public int CapNhapSoLuongHang(ChiTietPhieuNhap hangnhap)
+        {
+            return dao_hang.updateSoLuongHang(hangnhap.MaHang,hangnhap.SoLuong);
+        }
+
     }
 }

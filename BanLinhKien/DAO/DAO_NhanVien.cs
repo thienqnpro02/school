@@ -87,5 +87,18 @@ namespace DAO
             DataTable data = DataProvider.Instance.ExecuteQuery(sql, new object[] { username, password });
             return data;
         }
+
+        public int KiemTraMatKhauCu(String matkhau)
+        {
+            String sql = String.Format("Select manv from nhanvien where password like '{0}'", matkhau);
+            int manv = Convert.ToInt32(dataProvider.ExecuteScalar(sql));
+            return manv;
+        }
+
+        public int CapNhapLaiMatKhau(String password,int manv)
+        {
+            String sql =String.Format("update nhanvien set password= '{0}' where manv = {1}",password,manv);
+            return dataProvider.ExecuteNonQuery(sql);
+        }
     }
 }

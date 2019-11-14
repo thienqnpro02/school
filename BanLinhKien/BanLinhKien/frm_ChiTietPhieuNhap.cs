@@ -243,6 +243,7 @@ namespace BanLinhKien
         {
             int maphieunhap = bus_chitietphieunhap.MaPhieuNhap();
             int effect = 0;
+            int update = 0;
             foreach (Hang hang in listhang.Values)
             {
                 ChiTietPhieuNhap chitietphieunhap = new ChiTietPhieuNhap();
@@ -252,8 +253,9 @@ namespace BanLinhKien
                 chitietphieunhap.GiaNhap = hang.Gia;
 
                 effect += bus_chitietphieunhap.LuuBangChiTietPhieuNhap(chitietphieunhap);
+                update +=bus_chitietphieunhap.CapNhapSoLuongHang(chitietphieunhap);
             }
-            return effect;
+            return (effect==listhang.Count && update==listhang.Count)?1:0;
         }
     }
 }
