@@ -96,6 +96,29 @@ namespace BUS
             return dao_nhanvien.MaNhanVien();
         }
 
-       
+        public NhanVien Login(string username, string password)
+        {
+
+            DataTable data = DAO_NhanVien.Instance.Login(username, password);
+            if(data.Rows.Count > 0)
+            {
+                NhanVien nv = new NhanVien();
+                nv.MaNV = Convert.ToInt32(data.Rows[0]["MANV"]);
+                nv.Username = data.Rows[0]["USERNAME"].ToString();
+                nv.Password = data.Rows[0]["PASSWORD"].ToString();
+                nv.Sdt = data.Rows[0]["SDT"].ToString();
+                nv.DiaChi = data.Rows[0]["DIACHI"].ToString();
+                nv.HoTen = data.Rows[0]["HOTEN"].ToString();
+                nv.NamSinh = data.Rows[0]["NAMSINH"].ToString();
+                nv.LoaiNhanVien = Convert.ToInt32(data.Rows[0]["LOAINHANVIEN"]);
+                nv.GioiTinh = Convert.ToInt32(data.Rows[0]["GIOITINH"]);
+                nv.NgayTao = data.Rows[0]["NGAYTAO"].ToString();
+
+                return nv;
+
+            }
+            return null;
+        }
+
     }
 }

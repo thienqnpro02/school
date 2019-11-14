@@ -81,6 +81,11 @@ namespace DAO
             return Convert.ToInt32(dataProvider.ExecuteScalar(sql));
         }
 
-
+        public DataTable Login(string username, string password)
+        {
+            string sql = "select * from NHANVIEN where username like @username AND password like @password";
+            DataTable data = DataProvider.Instance.ExecuteQuery(sql, new object[] { username, password });
+            return data;
+        }
     }
 }

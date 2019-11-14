@@ -191,7 +191,7 @@ namespace BanLinhKien
             }
 
             PhieuXuat phieuxuat = new PhieuXuat();
-            phieuxuat.MaNV = 1;            
+            phieuxuat.MaNV = NhanVien.client.MaNV;            
             phieuxuat.NgayTao = DateTime.Now;
 
             if(isAnonymousCustomer == true)

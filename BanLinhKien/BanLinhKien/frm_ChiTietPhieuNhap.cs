@@ -233,6 +233,7 @@ namespace BanLinhKien
             PhieuNhap phieunhap = new PhieuNhap();
             phieunhap.NgayTao = ngaytao;
             phieunhap.MaNCC = mancc;
+            phieunhap.MaNV = NhanVien.client.MaNV;
 
             int effect = bus_phieunhap.LuuBangPhieuNhap(phieunhap);
             return effect;

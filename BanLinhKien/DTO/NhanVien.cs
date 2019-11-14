@@ -25,7 +25,13 @@ namespace DTO
                 {"1", "Nhân viên bán hàng" },
                 {"2", "Nhân viên tin học" }
             };
-
+        public  enum E_LoaiNhanVien
+            {
+                QUANLY = 0,
+                NV_BanHang = 1,
+                NV_TinHoc = 2
+            };
+        public static NhanVien client = null;
 
         public int MaNV { get => maNV; set => maNV = value; }
         public string Username { get => username; set => username = value; }
