@@ -173,6 +173,7 @@
     </Compile>
     <EmbeddedResource Include="rp_KhachHang.rdlc" />
     <EmbeddedResource Include="rp_LoiNhuan.rdlc" />
+    <EmbeddedResource Include="rp_PhieuNhap.rdlc" />
     <EmbeddedResource Include="rp_PhieuXuat.rdlc" />
     <None Include="DataSet_ThongKe.xsc">
       <DependentUpon>DataSet_ThongKe.xsd</DependentUpon>

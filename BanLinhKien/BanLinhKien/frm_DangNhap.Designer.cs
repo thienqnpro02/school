@@ -50,7 +50,7 @@
             this.txtUsername.Location = new System.Drawing.Point(142, 38);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(178, 20);
-            this.txtUsername.TabIndex = 1;
+            this.txtUsername.TabIndex = 0;
             // 
             // label2
             // 
@@ -65,6 +65,7 @@
             // 
             this.txtPassword.Location = new System.Drawing.Point(142, 90);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(178, 20);
             this.txtPassword.TabIndex = 1;
             // 
@@ -76,15 +77,17 @@
             this.btnDangNhap.TabIndex = 2;
             this.btnDangNhap.Text = "Đăng nhập";
             this.btnDangNhap.UseVisualStyleBackColor = true;
+            this.btnDangNhap.Click += new System.EventHandler(this.BtnDangNhap_Click);
             // 
             // btnThoat
             // 
             this.btnThoat.Location = new System.Drawing.Point(12, 138);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(73, 38);
-            this.btnThoat.TabIndex = 2;
+            this.btnThoat.TabIndex = 3;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.BtnThoat_Click);
             // 
             // frm_DangNhap
             // 
@@ -98,7 +101,9 @@
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.label1);
             this.Name = "frm_DangNhap";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Frm_DangNhap_FormClosed);
             this.Load += new System.EventHandler(this.Frm_DangNhap_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

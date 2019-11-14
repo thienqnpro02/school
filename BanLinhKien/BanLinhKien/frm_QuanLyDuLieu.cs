@@ -46,11 +46,26 @@ namespace BanLinhKien
 
         private void frm_QuanLyDuLieu_Load(object sender, EventArgs e)
         {
+            setClientPermission();
+
             if (tabControlQL_DuLieu.SelectedIndex == 0)
             {
                 CapNhapLaiDLTrenForm();
             }
         }
+
+        void setClientPermission()
+        {
+            switch (NhanVien.client.LoaiNhanVien)
+            {
+                case (int)NhanVien.E_LoaiNhanVien.QUANLY:
+                    break;                
+                case (int)NhanVien.E_LoaiNhanVien.NV_TinHoc:
+                    tabControlQL_DuLieu.TabPages.Remove(tabNhanVien);
+                    break;
+            }
+        }
+
         private void CapNhapLaiDLTrenForm()
         {
             datatable_Danhmuc = busDanhmuc.pagingDanhMuc(currentPageDanhMuc);

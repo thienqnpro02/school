@@ -265,6 +265,40 @@ namespace BanLinhKien
 
             updatePagingText();
         }
+
+        private void ĐăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NhanVien.client = null;
+            frm_DangNhap frm_login = new frm_DangNhap();
+            frm_login.Show();
+            this.Close();
+            
+        }
+
+        void setClientPermission()
+        {
+            switch (NhanVien.client.LoaiNhanVien)
+            {
+                case (int)NhanVien.E_LoaiNhanVien.QUANLY:
+                    break;
+                case (int)NhanVien.E_LoaiNhanVien.NV_BanHang:
+                    menuStrip.Items["ql_DuLieuToolStripMenuItem"].Visible = false;
+                    menuStrip.Items["nhapHangToolStripMenuItem"].Visible = false;
+                    break;
+                case (int)NhanVien.E_LoaiNhanVien.NV_TinHoc:
+                    break;
+            }
+        }
+
+        private void Main_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+            setClientPermission();
+        }
     }
 }
 
