@@ -23,7 +23,7 @@ namespace BanLinhKien
         // variables for tab Hang
         private bool dgvHangLoaded = false;
         private bool isUpdateImage = false;
-        private int currentPageHang = 1;
+        private int currentPageHang = 1;       
 
         // variables for tab Nhan Vien      
         BUS_NhanVien bus_nhanvien = BUS_NhanVien.Instance;
@@ -46,7 +46,7 @@ namespace BanLinhKien
 
         private void frm_QuanLyDuLieu_Load(object sender, EventArgs e)
         {
-            setClientPermission();
+            //setClientPermission();
 
             if (tabControlQL_DuLieu.SelectedIndex == 0)
             {
@@ -403,7 +403,7 @@ namespace BanLinhKien
                     String thongso = txtThongSo.Text;
                     int baohanh = Int32.Parse(txtBaoHanh.Text);
                     int soluong = Int32.Parse(txtSoLuong.Text);
-                    int gia = Int32.Parse(txtGia.Text);
+                    int gia = Int32.Parse(sanitizeString(txtGia_2.Text));
                     String ngaytao = DateTime.Now.ToString("yyyy-MM-dd");
                     String nhasanxuat = txtNhaSanXuat.Text;
                     int madm = (Int32)cbDanhMuc.SelectedValue;
@@ -459,12 +459,13 @@ namespace BanLinhKien
 
         private void btnSuaHang_Click(object sender, EventArgs e)
         {
+            
             int mahang = Int32.Parse(txtIDHang.Text);
             String tenhang_ = txtTenHang.Text;
             String thongso = txtThongSo.Text;
             int baohanh = Int32.Parse(txtBaoHanh.Text);
             int soluong = Int32.Parse(txtSoLuong.Text);
-            int gia = Int32.Parse(txtGia.Text);
+            int gia =  Int32.Parse(sanitizeString(txtGia_2.Text));
             String ngaytao = DateTime.Now.ToString("yyyy-MM-dd");
             String nhasanxuat = txtNhaSanXuat.Text;
             int madm = (Int32)cbDanhMuc.SelectedValue;
@@ -1006,6 +1007,33 @@ namespace BanLinhKien
             {
                 bindingCBLoaiNhanVien();
             }
+        }
+
+        private void TxtGia_TextChanged(object sender, EventArgs e)
+        {
+            
+            txtGia_2.Text = txtGia.Text;
+        }
+
+        string formatCultureToString(int num)
+        {
+            return String.Format("{0:n0}", num);
+           
+        }
+
+        string sanitizeString(string str)
+        {
+            return String.Join("", str.Split(',', '.'));
+        }
+
+        private void TxtGia_2_TextChanged(object sender, EventArgs e)
+        {
+            if (txtGia_2.Text == "") return;
+            string str = sanitizeString(txtGia_2.Text);
+            str = formatCultureToString(Convert.ToInt32(str));
+
+            txtGia_2.Text = str;
+            txtGia_2.Select(txtGia_2.TextLength, 0);
         }
     }
 
