@@ -81,6 +81,8 @@ namespace BanLinhKien
             pic.Location = pictureBox1.Location;
 
             NumericUpDown num = new NumericUpDown();
+            num.Minimum = 0;
+            num.Maximum = Int32.MaxValue;
             num.Size = numericUpDown2.Size;
             num.Name = "num" + hang.MaHang;
             num.Value = hang.SoLuong;

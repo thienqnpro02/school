@@ -45,6 +45,7 @@
             this.dgvDanhSachHang = new System.Windows.Forms.DataGridView();
             this.mahang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenhang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SOLUONG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbLocHang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numSoLuong)).BeginInit();
@@ -202,6 +203,7 @@
             this.dgvDanhSachHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.mahang,
             this.tenhang,
+            this.SOLUONG,
             this.gia});
             this.dgvDanhSachHang.Location = new System.Drawing.Point(12, 186);
             this.dgvDanhSachHang.Name = "dgvDanhSachHang";
@@ -217,10 +219,16 @@
             // 
             // tenhang
             // 
+            this.tenhang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.tenhang.DataPropertyName = "tenhang";
             this.tenhang.HeaderText = "Tên Hàng";
             this.tenhang.Name = "tenhang";
-            this.tenhang.Width = 400;
+            // 
+            // SOLUONG
+            // 
+            this.SOLUONG.DataPropertyName = "SOLUONG";
+            this.SOLUONG.HeaderText = "Số Lượng";
+            this.SOLUONG.Name = "SOLUONG";
             // 
             // gia
             // 
@@ -277,6 +285,7 @@
         private System.Windows.Forms.DataGridView dgvDanhSachHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn mahang;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenhang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SOLUONG;
         private System.Windows.Forms.DataGridViewTextBoxColumn gia;
     }
 }

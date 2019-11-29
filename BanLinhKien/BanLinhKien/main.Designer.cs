@@ -124,7 +124,7 @@
             // thongKeToolStripMenuItem
             // 
             this.thongKeToolStripMenuItem.Name = "thongKeToolStripMenuItem";
-            this.thongKeToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
+            this.thongKeToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this.thongKeToolStripMenuItem.Text = "Thống kê";
             this.thongKeToolStripMenuItem.Click += new System.EventHandler(this.ThongKeToolStripMenuItem_Click);
             // 
@@ -164,6 +164,11 @@
             // numSoLuong
             // 
             this.numSoLuong.Location = new System.Drawing.Point(489, 154);
+            this.numSoLuong.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
             this.numSoLuong.Minimum = new decimal(new int[] {
             1,
             0,

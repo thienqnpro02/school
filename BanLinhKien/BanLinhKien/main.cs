@@ -80,8 +80,7 @@ namespace BanLinhKien
 
             // Ẩn cột            
             dgvDanhSachHang.Columns["THONGSO"].Visible = false;
-            dgvDanhSachHang.Columns["BAOHANH"].Visible = false;
-            dgvDanhSachHang.Columns["SOLUONG"].Visible = false;
+            dgvDanhSachHang.Columns["BAOHANH"].Visible = false;            
             dgvDanhSachHang.Columns["HINH"].Visible = false;
             dgvDanhSachHang.Columns["NHASANXUAT"].Visible = false;
             dgvDanhSachHang.Columns["NGAYTAO"].Visible = false;
@@ -95,8 +94,10 @@ namespace BanLinhKien
 
             // chỉnh header text
             dgvDanhSachHang.Columns["MAHANG"].HeaderText = "Mã Hàng";
-            dgvDanhSachHang.Columns["GIA"].HeaderText = "Giá";
             dgvDanhSachHang.Columns["TENHANG"].HeaderText = "Tên Hàng";
+            dgvDanhSachHang.Columns["SOLUONG"].HeaderText = "Số Lượng";
+            dgvDanhSachHang.Columns["GIA"].HeaderText = "Giá";
+            
         }
 
         void updatePagingText()
@@ -230,6 +231,12 @@ namespace BanLinhKien
         {
             string idHang = dgvDanhSachHang.CurrentRow.Cells["MAHANG"].Value.ToString();
             int soLuong = Convert.ToInt32(numSoLuong.Value);
+            if(soLuong > Convert.ToInt32(dgvDanhSachHang.CurrentRow.Cells["SOLUONG"].Value))
+            {
+                MessageBox.Show("Số lượng không hợp lệ");
+                return;
+            }
+
             if (items_picked.ContainsKey(idHang))
             {
                 
@@ -297,7 +304,7 @@ namespace BanLinhKien
 
         private void Main_Load(object sender, EventArgs e)
         {
-            //setClientPermission();
+            setClientPermission();
         }
     }
 }

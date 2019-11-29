@@ -70,7 +70,7 @@ namespace BanLinhKien
 
             dgvDanhSachHang.Columns["ThongSo"].Visible = false;
             dgvDanhSachHang.Columns["BaoHanh"].Visible = false;
-            dgvDanhSachHang.Columns["SoLuong"].Visible = false;
+            //dgvDanhSachHang.Columns["SoLuong"].Visible = false;
             dgvDanhSachHang.Columns["Hinh"].Visible = false;
             dgvDanhSachHang.Columns["NhaSanXuat"].Visible = false;
             dgvDanhSachHang.Columns["NgayTao"].Visible = false;
@@ -167,6 +167,7 @@ namespace BanLinhKien
             String nhasanxuat = dgvDanhSachHang.CurrentRow.Cells["nhasanxuat"].Value.ToString();
 
             Hang hang = new Hang(mahang,tenhang,thongso,baohanh,soluong,gia,hinh,nhasanxuat,ngaytao,madanhmuc);
+           
 
             if (listhang.ContainsKey(mahang))
             {
