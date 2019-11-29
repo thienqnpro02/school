@@ -256,13 +256,13 @@ namespace BanLinhKien
             switch (tabControlThongKe.SelectedTab.Name)
             {
                 case "tabPhieuNhap":
-                    loadingReportPhieuNhap(DateTime.Now, DateTime.Now);
+                    CbThongKePhieuNhap_SelectedValueChanged(new object(), new EventArgs());
                     break;
                 case "tabPhieuXuat":
-                    loadingReportPhieuXuat(DateTime.Now, DateTime.Now);
+                    CbThongKePhieuXuat_SelectedValueChanged(new object(), new EventArgs());
                     break;
                 case "tabKhachHang":
-                    loadingReportKhachHang(DateTime.Now, DateTime.Now);
+                    CbThongKeKhachHang_SelectedValueChanged(new object(), new EventArgs());
                     break;
                 case "tabLoiNhuan":
                     this.USP_ReportLoiNhuanTableAdapter.Fill(this.DataSet_ThongKe.USP_ReportLoiNhuan);

@@ -123,11 +123,13 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!TongChi.Value</Value>
+                              <Value>=String.Format("{0:n0}",Fields!TongChi.Value)</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>TongChi</rd:DefaultName>
@@ -153,11 +155,13 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!TongThu.Value</Value>
+                              <Value>=String.Format("{0:n0}",Fields!TongThu.Value)</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>TongThu</rd:DefaultName>
@@ -183,11 +187,13 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!LoiNhuan.Value</Value>
+                              <Value>=String.Format("{0:n0}",Fields!LoiNhuan.Value)</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>LoiNhuan</rd:DefaultName>
