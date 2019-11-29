@@ -157,6 +157,7 @@
             // 
             // cbNhaCungCap
             // 
+            this.cbNhaCungCap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbNhaCungCap.FormattingEnabled = true;
             this.cbNhaCungCap.Location = new System.Drawing.Point(565, 48);
             this.cbNhaCungCap.Name = "cbNhaCungCap";
@@ -182,7 +183,7 @@
             this.flpDanhSachSanPham.Controls.Add(this.groupBox3);
             this.flpDanhSachSanPham.Location = new System.Drawing.Point(12, 12);
             this.flpDanhSachSanPham.Name = "flpDanhSachSanPham";
-            this.flpDanhSachSanPham.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.flpDanhSachSanPham.Padding = new System.Windows.Forms.Padding(5);
             this.flpDanhSachSanPham.Size = new System.Drawing.Size(472, 328);
             this.flpDanhSachSanPham.TabIndex = 21;
             // 

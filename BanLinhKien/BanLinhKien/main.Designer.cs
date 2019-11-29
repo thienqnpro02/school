@@ -205,6 +205,7 @@
             // 
             // txtTrang
             // 
+            this.txtTrang.Enabled = false;
             this.txtTrang.Location = new System.Drawing.Point(312, 459);
             this.txtTrang.Name = "txtTrang";
             this.txtTrang.Size = new System.Drawing.Size(39, 20);

@@ -69,6 +69,7 @@
             this.ngaytao_nv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tennv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabHang = new System.Windows.Forms.TabPage();
+            this.txtGia_2 = new System.Windows.Forms.TextBox();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.btnSuaHang = new System.Windows.Forms.Button();
             this.btnThemHang = new System.Windows.Forms.Button();
@@ -135,6 +136,11 @@
             this.btnTimKiemKH = new System.Windows.Forms.Button();
             this.txtTimKiemKH = new System.Windows.Forms.TextBox();
             this.dgvKhachHang = new System.Windows.Forms.DataGridView();
+            this.makh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hoten = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sodt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namsinh_kh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngaytao_kh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabNhaCungCap = new System.Windows.Forms.TabPage();
             this.txtEmailNCC = new System.Windows.Forms.TextBox();
             this.txtFaxNCC = new System.Windows.Forms.TextBox();
@@ -156,18 +162,12 @@
             this.btnSuaNCC = new System.Windows.Forms.Button();
             this.btnThemNCC = new System.Windows.Forms.Button();
             this.dgvNhaCungCap = new System.Windows.Forms.DataGridView();
-            this.makh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hoten = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sodt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namsinh_kh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngaytao_kh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mancc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenncc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.diachi_ncc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fax = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email_ncc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngaytao_ncc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtGia_2 = new System.Windows.Forms.TextBox();
             this.tabNhanVien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).BeginInit();
             this.tabHang.SuspendLayout();
@@ -259,6 +259,7 @@
             // 
             // txtTrangNV
             // 
+            this.txtTrangNV.Enabled = false;
             this.txtTrangNV.Location = new System.Drawing.Point(138, 439);
             this.txtTrangNV.Name = "txtTrangNV";
             this.txtTrangNV.Size = new System.Drawing.Size(37, 20);
@@ -486,6 +487,7 @@
             this.tennv});
             this.dgvNhanVien.Location = new System.Drawing.Point(6, 32);
             this.dgvNhanVien.Name = "dgvNhanVien";
+            this.dgvNhanVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvNhanVien.Size = new System.Drawing.Size(345, 387);
             this.dgvNhanVien.TabIndex = 7;
             this.dgvNhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhanVien_CellClick);
@@ -598,6 +600,14 @@
             this.tabHang.Text = "Hàng";
             this.tabHang.UseVisualStyleBackColor = true;
             // 
+            // txtGia_2
+            // 
+            this.txtGia_2.Location = new System.Drawing.Point(493, 212);
+            this.txtGia_2.Name = "txtGia_2";
+            this.txtGia_2.Size = new System.Drawing.Size(177, 20);
+            this.txtGia_2.TabIndex = 8;
+            this.txtGia_2.TextChanged += new System.EventHandler(this.TxtGia_2_TextChanged);
+            // 
             // txtSoLuong
             // 
             this.txtSoLuong.Location = new System.Drawing.Point(493, 285);
@@ -667,6 +677,7 @@
             // 
             // txtTrangHang
             // 
+            this.txtTrangHang.Enabled = false;
             this.txtTrangHang.Location = new System.Drawing.Point(138, 439);
             this.txtTrangHang.Name = "txtTrangHang";
             this.txtTrangHang.Size = new System.Drawing.Size(37, 20);
@@ -902,6 +913,7 @@
             // 
             // txtTrangDM
             // 
+            this.txtTrangDM.Enabled = false;
             this.txtTrangDM.Location = new System.Drawing.Point(138, 439);
             this.txtTrangDM.Name = "txtTrangDM";
             this.txtTrangDM.Size = new System.Drawing.Size(37, 20);
@@ -1177,6 +1189,7 @@
             // 
             // txtTrangKH
             // 
+            this.txtTrangKH.Enabled = false;
             this.txtTrangKH.Location = new System.Drawing.Point(138, 439);
             this.txtTrangKH.Name = "txtTrangKH";
             this.txtTrangKH.Size = new System.Drawing.Size(37, 20);
@@ -1232,6 +1245,41 @@
             this.dgvKhachHang.Name = "dgvKhachHang";
             this.dgvKhachHang.Size = new System.Drawing.Size(345, 387);
             this.dgvKhachHang.TabIndex = 22;
+            // 
+            // makh
+            // 
+            this.makh.DataPropertyName = "makh";
+            this.makh.HeaderText = "MAKH";
+            this.makh.Name = "makh";
+            this.makh.Width = 50;
+            // 
+            // hoten
+            // 
+            this.hoten.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.hoten.DataPropertyName = "hoten";
+            this.hoten.HeaderText = "HOTEN";
+            this.hoten.Name = "hoten";
+            // 
+            // sodt
+            // 
+            this.sodt.DataPropertyName = "sdt";
+            this.sodt.HeaderText = "SDT";
+            this.sodt.Name = "sodt";
+            this.sodt.Visible = false;
+            // 
+            // namsinh_kh
+            // 
+            this.namsinh_kh.DataPropertyName = "namsinh";
+            this.namsinh_kh.HeaderText = "NAM SINH";
+            this.namsinh_kh.Name = "namsinh_kh";
+            this.namsinh_kh.Visible = false;
+            // 
+            // ngaytao_kh
+            // 
+            this.ngaytao_kh.DataPropertyName = "ngaytao";
+            this.ngaytao_kh.HeaderText = "NGAY TAO";
+            this.ngaytao_kh.Name = "ngaytao_kh";
+            this.ngaytao_kh.Visible = false;
             // 
             // tabNhaCungCap
             // 
@@ -1371,6 +1419,7 @@
             // 
             // txtTrangNCC
             // 
+            this.txtTrangNCC.Enabled = false;
             this.txtTrangNCC.Location = new System.Drawing.Point(138, 439);
             this.txtTrangNCC.Name = "txtTrangNCC";
             this.txtTrangNCC.Size = new System.Drawing.Size(37, 20);
@@ -1441,43 +1490,9 @@
             this.ngaytao_ncc});
             this.dgvNhaCungCap.Location = new System.Drawing.Point(6, 32);
             this.dgvNhaCungCap.Name = "dgvNhaCungCap";
+            this.dgvNhaCungCap.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvNhaCungCap.Size = new System.Drawing.Size(345, 387);
             this.dgvNhaCungCap.TabIndex = 25;
-            // 
-            // makh
-            // 
-            this.makh.DataPropertyName = "makh";
-            this.makh.HeaderText = "MAKH";
-            this.makh.Name = "makh";
-            this.makh.Width = 50;
-            // 
-            // hoten
-            // 
-            this.hoten.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.hoten.DataPropertyName = "hoten";
-            this.hoten.HeaderText = "HOTEN";
-            this.hoten.Name = "hoten";
-            // 
-            // sodt
-            // 
-            this.sodt.DataPropertyName = "sdt";
-            this.sodt.HeaderText = "SDT";
-            this.sodt.Name = "sodt";
-            this.sodt.Visible = false;
-            // 
-            // namsinh_kh
-            // 
-            this.namsinh_kh.DataPropertyName = "namsinh";
-            this.namsinh_kh.HeaderText = "NAM SINH";
-            this.namsinh_kh.Name = "namsinh_kh";
-            this.namsinh_kh.Visible = false;
-            // 
-            // ngaytao_kh
-            // 
-            this.ngaytao_kh.DataPropertyName = "ngaytao";
-            this.ngaytao_kh.HeaderText = "NGAY TAO";
-            this.ngaytao_kh.Name = "ngaytao_kh";
-            this.ngaytao_kh.Visible = false;
             // 
             // mancc
             // 
@@ -1519,14 +1534,6 @@
             this.ngaytao_ncc.HeaderText = "NGAY TAO";
             this.ngaytao_ncc.Name = "ngaytao_ncc";
             this.ngaytao_ncc.Visible = false;
-            // 
-            // txtGia_2
-            // 
-            this.txtGia_2.Location = new System.Drawing.Point(493, 212);
-            this.txtGia_2.Name = "txtGia_2";
-            this.txtGia_2.Size = new System.Drawing.Size(177, 20);
-            this.txtGia_2.TabIndex = 8;
-            this.txtGia_2.TextChanged += new System.EventHandler(this.TxtGia_2_TextChanged);
             // 
             // frm_QuanLyDuLieu
             // 

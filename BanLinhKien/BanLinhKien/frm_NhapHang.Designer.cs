@@ -63,6 +63,7 @@
             // 
             // txtTrang
             // 
+            this.txtTrang.Enabled = false;
             this.txtTrang.Location = new System.Drawing.Point(312, 446);
             this.txtTrang.Name = "txtTrang";
             this.txtTrang.Size = new System.Drawing.Size(39, 20);
@@ -121,6 +122,7 @@
             // 
             // cbLocDanhMuc
             // 
+            this.cbLocDanhMuc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbLocDanhMuc.FormattingEnabled = true;
             this.cbLocDanhMuc.Location = new System.Drawing.Point(99, 20);
             this.cbLocDanhMuc.Name = "cbLocDanhMuc";
@@ -130,9 +132,10 @@
             // 
             // cbSapXep
             // 
+            this.cbSapXep.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSapXep.FormattingEnabled = true;
             this.cbSapXep.Items.AddRange(new object[] {
-            "Toàn bộ giá",
+            "Mặc định",
             "Giá giảm dần",
             "Giá tăng dần"});
             this.cbSapXep.Location = new System.Drawing.Point(99, 54);
