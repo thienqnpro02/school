@@ -77,5 +77,16 @@ namespace DAO
             return Convert.ToInt32(dataProvider.ExecuteScalar(sql));
         }
 
+        public bool isHasManyHang(int maDanhMuc)
+        {
+            string sql = "select count(*) from HANG where MADANHMUC = @maDanhMuc";
+
+            int res = Convert.ToInt32(DataProvider.Instance.ExecuteScalar(sql, new object[] { maDanhMuc }));
+
+            if (res > 0)
+                return true;
+
+            return false;
+        }
     }
 }

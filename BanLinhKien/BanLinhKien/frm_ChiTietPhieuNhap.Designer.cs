@@ -444,9 +444,10 @@
             // lblTongTien
             // 
             this.lblTongTien.AutoSize = true;
+            this.lblTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTongTien.Location = new System.Drawing.Point(562, 307);
             this.lblTongTien.Name = "lblTongTien";
-            this.lblTongTien.Size = new System.Drawing.Size(75, 13);
+            this.lblTongTien.Size = new System.Drawing.Size(99, 16);
             this.lblTongTien.TabIndex = 23;
             this.lblTongTien.Text = "9999999 VNĐ";
             // 

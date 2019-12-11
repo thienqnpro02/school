@@ -90,5 +90,10 @@ namespace BUS
         {
             return dao_danhmuc.MaDanhMuc();
         }
+
+        public bool isHasManyHang(int maDanhMuc)
+        {
+            return DAO_DanhMuc.Instance.isHasManyHang(maDanhMuc);
+        }
     }
 }

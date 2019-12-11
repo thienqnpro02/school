@@ -181,6 +181,7 @@ namespace BanLinhKien
         {
             this.items_picked.Clear();
             flpDanhSachSanPham.Controls.Clear();
+            lblTongTien.Text = "0 VNĐ";
         }
 
         private void BtnThanhToan_Click(object sender, EventArgs e)

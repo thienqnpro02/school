@@ -183,8 +183,18 @@ namespace BanLinhKien
         private void btnXoaDM_Click(object sender, EventArgs e)
         {
             int madm = Int32.Parse(txtIDDanhMuc.Text);
-            MessageBox.Show(busDanhmuc.XoaDLBangDanhMuc(madm));
-            CapNhapLaiDLTrenForm();
+
+            if (BUS_DanhMuc.Instance.isHasManyHang(madm) == false)
+            {
+                MessageBox.Show(busDanhmuc.XoaDLBangDanhMuc(madm));
+                CapNhapLaiDLTrenForm();
+            }
+            else
+            {
+                MessageBox.Show("Không thể xóa Danh mục này, vì có chứa các mặt hàng");
+            }
+
+            
             
         }
        
