@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29215.179
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BanLinhKien", "BanLinhKien\BanLinhKien.csproj", "{E1C2B131-65F6-4920-81B1-2D6D82E43593}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO", "DTO\DTO.csproj", "{CEC12B60-0122-41C6-A37B-3B0C8730CCD3}"
@@ -8,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BUS", "BUS\BUS.csproj", "{E98ECBAA-5859-4BAA-B7C3-EF6C6A435ABB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAO", "DAO\DAO.csproj", "{8B9B8341-0899-44F5-A422-1A25B952E6F9}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{F8069360-F678-498A-9259-2FE23BBAF8AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,8 +35,13 @@ Global
 		{8B9B8341-0899-44F5-A422-1A25B952E6F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B9B8341-0899-44F5-A422-1A25B952E6F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B9B8341-0899-44F5-A422-1A25B952E6F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8069360-F678-498A-9259-2FE23BBAF8AB}.Debug|Any CPU.ActiveCfg = Debug
+		{F8069360-F678-498A-9259-2FE23BBAF8AB}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7739C6D8-1A79-46D6-83A2-C51C791EF0B7}
 	EndGlobalSection
 EndGlobal
