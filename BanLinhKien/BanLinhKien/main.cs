@@ -66,9 +66,6 @@ namespace BanLinhKien
             cbDanhMucLoaded = true;
 
             loadHang();
-
-
-
             updatePagingText();
 
         }
@@ -116,6 +113,7 @@ namespace BanLinhKien
         {
             frm_NhapHang form_NhapHang = new frm_NhapHang();
             form_NhapHang.ShowDialog();
+            loadHang();
         }
 
         private void ThongKeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -134,6 +132,7 @@ namespace BanLinhKien
         {
             frm_GioHang form_GioHang = new frm_GioHang();
             form_GioHang.items_picked = this.items_picked;
+            form_GioHang.actionReloadHang = loadHang;
             form_GioHang.ShowDialog();
             btnGioHang.Text = String.Format("Giỏ hàng ({0})", items_picked.Count);
         }

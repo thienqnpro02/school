@@ -18,6 +18,9 @@ namespace BanLinhKien
         private DataTable dt_hang;       
         private int idOldCustomer = -1;
         private bool isAnonymousCustomer = true;
+        public delegate void ReloadHang();
+        public ReloadHang actionReloadHang;
+
 
         public frm_GioHang()
         {
@@ -213,7 +216,7 @@ namespace BanLinhKien
             if (BUS_PhieuXuat.Instance.insert(phieuxuat) > 0)
             {
                 insertCT_PhieuXuat();
-
+                actionReloadHang();
                 MessageBox.Show("Thanh toán thành công");
             }
         }

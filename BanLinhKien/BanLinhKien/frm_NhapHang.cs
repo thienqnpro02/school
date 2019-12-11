@@ -25,6 +25,7 @@ namespace BanLinhKien
         private void BtnGioNhapHang_Click(object sender, EventArgs e)
         {
             frm_ChiTietPhieuNhap form_ChiTietPhieuNhap = new frm_ChiTietPhieuNhap();
+            form_ChiTietPhieuNhap.actionReloadHang = this.actionReload;
             form_ChiTietPhieuNhap.ShowDialog();
             btnGioNhapHang.Text = String.Format("Phiếu nhập ({0})", listhang.Count);
         }
@@ -185,6 +186,11 @@ namespace BanLinhKien
         public static Hashtable ListHang()
         {
             return listhang;
+        }
+
+        void actionReload()
+        {
+            DLTrenTungTrang_NhapHang((int)cbLocDanhMuc.SelectedValue);
         }
     }
 }

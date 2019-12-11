@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource25 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource26 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource27 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource28 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.USP_ReportKhachHangBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DataSet_ThongKe = new BanLinhKien.DataSet_ThongKe();
             this.USP_ReportPhieuXuatBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -121,9 +121,9 @@
             // 
             // rpvKhachHang
             // 
-            reportDataSource1.Name = "DataSet_TableKhachHang";
-            reportDataSource1.Value = this.USP_ReportKhachHangBindingSource;
-            this.rpvKhachHang.LocalReport.DataSources.Add(reportDataSource1);
+            reportDataSource25.Name = "DataSet_TableKhachHang";
+            reportDataSource25.Value = this.USP_ReportKhachHangBindingSource;
+            this.rpvKhachHang.LocalReport.DataSources.Add(reportDataSource25);
             this.rpvKhachHang.LocalReport.ReportEmbeddedResource = "BanLinhKien.rp_KhachHang.rdlc";
             this.rpvKhachHang.Location = new System.Drawing.Point(9, 66);
             this.rpvKhachHang.Name = "rpvKhachHang";
@@ -133,11 +133,14 @@
             // 
             // dtpkToKhachHang
             // 
+            this.dtpkToKhachHang.CustomFormat = "dd/MM/yyyy";
+            this.dtpkToKhachHang.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpkToKhachHang.Location = new System.Drawing.Point(613, 40);
             this.dtpkToKhachHang.Name = "dtpkToKhachHang";
             this.dtpkToKhachHang.Size = new System.Drawing.Size(200, 20);
             this.dtpkToKhachHang.TabIndex = 43;
             this.dtpkToKhachHang.Visible = false;
+            this.dtpkToKhachHang.ValueChanged += new System.EventHandler(this.DtpkToKhachHang_ValueChanged);
             // 
             // lblToKhachHang
             // 
@@ -151,11 +154,14 @@
             // 
             // dtpkFromKhachHang
             // 
+            this.dtpkFromKhachHang.CustomFormat = "dd/MM/yyyy";
+            this.dtpkFromKhachHang.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpkFromKhachHang.Location = new System.Drawing.Point(80, 40);
             this.dtpkFromKhachHang.Name = "dtpkFromKhachHang";
             this.dtpkFromKhachHang.Size = new System.Drawing.Size(200, 20);
             this.dtpkFromKhachHang.TabIndex = 44;
             this.dtpkFromKhachHang.Visible = false;
+            this.dtpkFromKhachHang.ValueChanged += new System.EventHandler(this.DtpkFromKhachHang_ValueChanged);
             // 
             // lblFromKhachHang
             // 
@@ -195,9 +201,9 @@
             // 
             // rpvPhieuXuat
             // 
-            reportDataSource2.Name = "DataSet_TablePhieuXuat";
-            reportDataSource2.Value = this.USP_ReportPhieuXuatBindingSource;
-            this.rpvPhieuXuat.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource26.Name = "DataSet_TablePhieuXuat";
+            reportDataSource26.Value = this.USP_ReportPhieuXuatBindingSource;
+            this.rpvPhieuXuat.LocalReport.DataSources.Add(reportDataSource26);
             this.rpvPhieuXuat.LocalReport.ReportEmbeddedResource = "BanLinhKien.rp_PhieuXuat.rdlc";
             this.rpvPhieuXuat.Location = new System.Drawing.Point(9, 66);
             this.rpvPhieuXuat.Name = "rpvPhieuXuat";
@@ -207,11 +213,14 @@
             // 
             // dtpkToPhieuXuat
             // 
+            this.dtpkToPhieuXuat.CustomFormat = "dd/MM/yyyy";
+            this.dtpkToPhieuXuat.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpkToPhieuXuat.Location = new System.Drawing.Point(613, 40);
             this.dtpkToPhieuXuat.Name = "dtpkToPhieuXuat";
             this.dtpkToPhieuXuat.Size = new System.Drawing.Size(200, 20);
             this.dtpkToPhieuXuat.TabIndex = 43;
             this.dtpkToPhieuXuat.Visible = false;
+            this.dtpkToPhieuXuat.ValueChanged += new System.EventHandler(this.DtpkToPhieuXuat_ValueChanged);
             // 
             // lblToPhieuXuat
             // 
@@ -225,11 +234,14 @@
             // 
             // dtpkFromPhieuXuat
             // 
+            this.dtpkFromPhieuXuat.CustomFormat = "dd/MM/yyyy";
+            this.dtpkFromPhieuXuat.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpkFromPhieuXuat.Location = new System.Drawing.Point(80, 40);
             this.dtpkFromPhieuXuat.Name = "dtpkFromPhieuXuat";
             this.dtpkFromPhieuXuat.Size = new System.Drawing.Size(200, 20);
             this.dtpkFromPhieuXuat.TabIndex = 44;
             this.dtpkFromPhieuXuat.Visible = false;
+            this.dtpkFromPhieuXuat.ValueChanged += new System.EventHandler(this.DtpkFromPhieuXuat_ValueChanged);
             // 
             // lblFromPhieuXuat
             // 
@@ -276,6 +288,7 @@
             this.dtpkToPhieuNhap.Size = new System.Drawing.Size(200, 20);
             this.dtpkToPhieuNhap.TabIndex = 45;
             this.dtpkToPhieuNhap.Visible = false;
+            this.dtpkToPhieuNhap.ValueChanged += new System.EventHandler(this.DtpkToPhieuNhap_ValueChanged);
             // 
             // lblToPhieuNhap
             // 
@@ -289,9 +302,9 @@
             // 
             // rpvPhieuNhap
             // 
-            reportDataSource3.Name = "DataSet_TablePhieuNhap";
-            reportDataSource3.Value = this.USP_ReportPhieuNhapBindingSource;
-            this.rpvPhieuNhap.LocalReport.DataSources.Add(reportDataSource3);
+            reportDataSource27.Name = "DataSet_TablePhieuNhap";
+            reportDataSource27.Value = this.USP_ReportPhieuNhapBindingSource;
+            this.rpvPhieuNhap.LocalReport.DataSources.Add(reportDataSource27);
             this.rpvPhieuNhap.LocalReport.ReportEmbeddedResource = "BanLinhKien.rp_PhieuNhap.rdlc";
             this.rpvPhieuNhap.Location = new System.Drawing.Point(9, 66);
             this.rpvPhieuNhap.Name = "rpvPhieuNhap";
@@ -308,6 +321,7 @@
             this.dtpkFromPhieuNhap.Size = new System.Drawing.Size(200, 20);
             this.dtpkFromPhieuNhap.TabIndex = 2;
             this.dtpkFromPhieuNhap.Visible = false;
+            this.dtpkFromPhieuNhap.ValueChanged += new System.EventHandler(this.DtpkFromPhieuNhap_ValueChanged);
             // 
             // lblFromPhieuNhap
             // 
@@ -355,9 +369,9 @@
             // 
             // rpvLoiNhuan
             // 
-            reportDataSource4.Name = "DataSet_TableLoiNhuan";
-            reportDataSource4.Value = this.USP_ReportLoiNhuanBindingSource;
-            this.rpvLoiNhuan.LocalReport.DataSources.Add(reportDataSource4);
+            reportDataSource28.Name = "DataSet_TableLoiNhuan";
+            reportDataSource28.Value = this.USP_ReportLoiNhuanBindingSource;
+            this.rpvLoiNhuan.LocalReport.DataSources.Add(reportDataSource28);
             this.rpvLoiNhuan.LocalReport.ReportEmbeddedResource = "BanLinhKien.rp_LoiNhuan.rdlc";
             this.rpvLoiNhuan.Location = new System.Drawing.Point(9, 66);
             this.rpvLoiNhuan.Name = "rpvLoiNhuan";

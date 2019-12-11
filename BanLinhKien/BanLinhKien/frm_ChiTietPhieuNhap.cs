@@ -22,6 +22,8 @@ namespace BanLinhKien
 
         private DataTable ncc = new DataTable();
         private List<Label> listlabel = new List<Label>();
+        public delegate void ReloadHang();
+        public ReloadHang actionReloadHang;
 
         public frm_ChiTietPhieuNhap()
         {
@@ -232,6 +234,7 @@ namespace BanLinhKien
         {
             if(LuuBangPhieuNhap()>0 && LuuBangChiTietPhieuNhap() > 0)
             {
+                actionReloadHang();
                 MessageBox.Show("Nhập hàng thành công");
             }   
         }

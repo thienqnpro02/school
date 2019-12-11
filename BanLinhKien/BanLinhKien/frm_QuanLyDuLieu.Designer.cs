@@ -1013,6 +1013,7 @@
             this.ngaytao});
             this.dgvDanhMuc.Location = new System.Drawing.Point(6, 32);
             this.dgvDanhMuc.Name = "dgvDanhMuc";
+            this.dgvDanhMuc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDanhMuc.Size = new System.Drawing.Size(345, 387);
             this.dgvDanhMuc.TabIndex = 0;
             this.dgvDanhMuc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhMuc_CellClick);
@@ -1243,6 +1244,7 @@
             this.ngaytao_kh});
             this.dgvKhachHang.Location = new System.Drawing.Point(6, 32);
             this.dgvKhachHang.Name = "dgvKhachHang";
+            this.dgvKhachHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvKhachHang.Size = new System.Drawing.Size(345, 387);
             this.dgvKhachHang.TabIndex = 22;
             // 

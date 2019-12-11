@@ -79,7 +79,7 @@ namespace BanLinhKien
                     if ((int)DateTime.Today.DayOfWeek == 0)
                         from = DateTime.Today.AddDays(-6);
                     else
-                        from = DateTime.Today.AddDays(-((int)DateTime.Today.DayOfWeek + (int)DayOfWeek.Monday));
+                        from = DateTime.Today.AddDays(-( (int)DateTime.Today.DayOfWeek - (int)DayOfWeek.Monday ));
 
                     to = DateTime.Now;
                     break;
@@ -271,6 +271,34 @@ namespace BanLinhKien
             }
         }
 
-       
+        private void DtpkFromPhieuNhap_ValueChanged(object sender, EventArgs e)
+        {
+            CbThongKePhieuNhap_SelectedValueChanged(this, new EventArgs());
+        }
+
+        private void DtpkToPhieuNhap_ValueChanged(object sender, EventArgs e)
+        {
+            CbThongKePhieuNhap_SelectedValueChanged(this, new EventArgs());
+        }
+
+        private void DtpkFromPhieuXuat_ValueChanged(object sender, EventArgs e)
+        {
+            CbThongKePhieuXuat_SelectedValueChanged(this, new EventArgs());
+        }
+
+        private void DtpkToPhieuXuat_ValueChanged(object sender, EventArgs e)
+        {
+            CbThongKePhieuXuat_SelectedValueChanged(this, new EventArgs());
+        }
+
+        private void DtpkFromKhachHang_ValueChanged(object sender, EventArgs e)
+        {
+            CbThongKeKhachHang_SelectedValueChanged(this, new EventArgs());
+        }
+
+        private void DtpkToKhachHang_ValueChanged(object sender, EventArgs e)
+        {
+            CbThongKeKhachHang_SelectedValueChanged(this, new EventArgs());
+        }
     }
 }
