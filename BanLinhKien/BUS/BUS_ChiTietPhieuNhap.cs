@@ -38,7 +38,7 @@ namespace BUS
 
         public int CapNhapSoLuongHang(ChiTietPhieuNhap hangnhap)
         {
-            return dao_hang.updateSoLuongHang(hangnhap.MaHang,hangnhap.SoLuong);
+            return dao_hang.updateSoLuongHang(hangnhap.MaHang,hangnhap.SoLuong - (hangnhap.SoLuong * 2));
         }
 
     }
