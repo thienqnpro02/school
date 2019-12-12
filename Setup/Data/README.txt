@@ -1,0 +1,1 @@
+run before open application Create database.bat

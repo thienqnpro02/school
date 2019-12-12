@@ -232,11 +232,19 @@ namespace BanLinhKien
 
         private void btnNhapHang_Click(object sender, EventArgs e)
         {
-            if(LuuBangPhieuNhap()>0 && LuuBangChiTietPhieuNhap() > 0)
+            if(listhang.Count > 0)
             {
-                actionReloadHang();
-                MessageBox.Show("Nhập hàng thành công");
-            }   
+                if (LuuBangPhieuNhap() > 0 && LuuBangChiTietPhieuNhap() > 0)
+                {
+                    actionReloadHang();
+                    MessageBox.Show("Nhập hàng thành công");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Chọn hàng trước khi nhập");
+            }
+              
         }
 
         private int LuuBangPhieuNhap()
