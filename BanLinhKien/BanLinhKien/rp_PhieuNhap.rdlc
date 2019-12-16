@@ -125,10 +125,10 @@
                   <Width>2.61458in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>1.41667in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>0.72917in</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>1.15625in</Width>
@@ -438,7 +438,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!NGAYTAO.Value</Value>
+                                  <Value>=Convert.ToDateTime(Fields!NGAYTAO.Value).ToString("dd-MM-yyyy HH:mm")</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -502,7 +502,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=String.Format("{0:n0}",Fields!GIANHAP.Value)</Value>
+                                  <Value>=String.Format("{0:n0}",Fields!GIANHAP.Value) + " VNĐ"</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -534,7 +534,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=String.Format("{0:n0}",Fields!THANHTIEN.Value)</Value>
+                                  <Value>=String.Format("{0:n0}",Fields!THANHTIEN.Value) + " VNĐ"</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -606,7 +606,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=String.Format("{0:n0}",Sum(Fields!THANHTIEN.Value))</Value>
+                                  <Value>=String.Format("{0:n0}",Sum(Fields!THANHTIEN.Value)) + " VNĐ"</Value>
                                   <Style>
                                     <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -667,7 +667,7 @@
             <Top>1.03in</Top>
             <Left>0.13417in</Left>
             <Height>0.75in</Height>
-            <Width>7.94791in</Width>
+            <Width>8.09375in</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -742,7 +742,7 @@
         <Height>2.84375in</Height>
         <Style />
       </Body>
-      <Width>8.24875in</Width>
+      <Width>8.49875in</Width>
       <Page>
         <LeftMargin>1in</LeftMargin>
         <RightMargin>1in</RightMargin>

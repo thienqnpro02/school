@@ -62,10 +62,10 @@
                   <Width>2.61458in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>1.41667in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>0.72917in</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>1.15625in</Width>
@@ -172,6 +172,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -348,7 +349,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Convert.ToDateTime(Fields!NGAYTAO.Value).ToString("dd-MM-yyyy")</Value>
+                                  <Value>=Convert.ToDateTime(Fields!NGAYTAO.Value).ToString("dd-MM-yyyy HH:mm")</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -369,7 +370,6 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -578,7 +578,7 @@
             <Top>1.29042in</Top>
             <Left>0.13417in</Left>
             <Height>0.75in</Height>
-            <Width>7.94791in</Width>
+            <Width>8.09375in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -716,7 +716,7 @@
         <Height>2.84375in</Height>
         <Style />
       </Body>
-      <Width>8.24875in</Width>
+      <Width>8.49875in</Width>
       <Page>
         <LeftMargin>1in</LeftMargin>
         <RightMargin>1in</RightMargin>
