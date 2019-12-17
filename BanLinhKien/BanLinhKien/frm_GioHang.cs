@@ -149,10 +149,26 @@ namespace BanLinhKien
         {
             Button btnDel = sender as Button;
             GroupBox gpParent = btnDel.Parent as GroupBox;
+
+
+            
             flpDanhSachSanPham.Controls.Remove(gpParent);
             items_picked.Remove(btnDel.Tag.ToString());
+
             totalPaymentAmount();
 
+            DataTable dt_hang_CLone = dt_hang;
+            int idx = 0;
+            foreach (DataRow row_del in dt_hang_CLone.Rows)
+            {
+
+                if(row_del["MAHANG"].ToString() == btnDel.Tag.ToString())
+                {
+                    dt_hang.Rows.RemoveAt(idx);
+                    break;
+                }
+                idx++;
+            }
         }
 
         private void BtnChonKhachCu_Click(object sender, EventArgs e)
