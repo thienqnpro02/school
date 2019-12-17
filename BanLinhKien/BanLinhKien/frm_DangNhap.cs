@@ -20,8 +20,7 @@ namespace BanLinhKien
 
         private void Frm_DangNhap_Load(object sender, EventArgs e)
         {
-
-            
+                       
         }
 
         private void BtnDangNhap_Click(object sender, EventArgs e)

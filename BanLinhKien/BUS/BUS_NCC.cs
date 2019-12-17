@@ -61,10 +61,10 @@ namespace BUS
             int effect = dao_ncc.LuuBangNhaCungCap(ncc);
             if (effect > 0)
             {
-                return "Luu du lieu thanh cong";
+                return "Lưu dữ liệu thành công";
             } else
             {
-                return "Luu du lieu khong thanh cong";
+                return "Lưu dữ liệu không thành công";
             }
         }
 
@@ -73,10 +73,10 @@ namespace BUS
             int effect = dao_ncc.SuuBangNhaCungCap(ncc);
             if (effect > 0)
             {
-                return "Sua du lieu thanh cong";
+                return "Sửa dữ liệu thành công";
             } else
             {
-                return "Suu du lieu khong thanh cong";
+                return "Sửa dữ liệu không thành công";
             }
         }
 
@@ -85,10 +85,10 @@ namespace BUS
             int effect = dao_ncc.XoaDLBangNhaCungCap(mancc);
             if (effect > 0)
             {
-                return "Xoa du lieu thanh cong";
+                return "Xóa dữ liệu thành công";
             } else
             {
-                return "Xoa du lieu khong thanh cong";
+                return "Xóa dữ liệu không thành công";
             }
         }
 

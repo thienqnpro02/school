@@ -27,8 +27,8 @@ namespace BUS
         }
 
         public int totalPage = 0;        
-        public int pageSize = 10;
-        public string pathImage = @"D:\Ex-on-school\school\BanLinhKien\BanLinhKien\images\";
+        public int pageSize = 10;        
+        public string pathImage = string.Format(@"{0}\{1}\",System.Environment.CurrentDirectory, "images");
 
         private BUS_Hang() {  }
 
@@ -80,10 +80,10 @@ namespace BUS
             int effect = dao_hang.XoaDLBangHang(mahang);
             if(effect >0)
             {                
-                return "Xoa du lieu thanh cong";
+                return "Xóa dữ liệu thành công";
             }else
             {
-                return "Xoa du lieu khong thanh cong";
+                return "Xóa dữ liệu không thành công";
             }
         }
 

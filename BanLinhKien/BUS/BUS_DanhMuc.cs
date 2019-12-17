@@ -44,9 +44,9 @@ namespace BUS
             int effect=dao_danhmuc.LuuBangDanhMuc(tendanhmuc,ngaytao);
             if (effect > 0)
             {
-                return "Luu du lieu thanh cong";
+                return "Lưu dữ liệu thành công";
             }
-            return "Luu du lieu khong thanh cong";
+            return "Lưu dữ liệu không thành công";
         }
 
         public String SuaBangDanhMuc(int madm,String tendanhmuc)
@@ -54,9 +54,9 @@ namespace BUS
             int effect=dao_danhmuc.SuaBangDanhMuc(madm, tendanhmuc);
             if (effect > 0)
             {
-                return "Suu du lieu thanh cong";
+                return "Sửa dữ liệu thành công";
             }
-            return "Suu du lieu khong thanh cong";
+            return "Sửa dữ liệu không thành công";
         }
 
         public String XoaDLBangDanhMuc(int madm)
@@ -64,9 +64,9 @@ namespace BUS
             int effect=dao_danhmuc.XoaDLBangDanhMuc(madm);
             if (effect > 0)
             {
-                return "Xoa du lieu thanh cong";
+                return "Xóa dữ liệu thành công";
             }
-            return "Xoa du lieu khong thanh cong";
+            return "Xóa dữ liệu không thành công";
         }
 
         public DataTable pagingDanhMuc(int currentPageDanhMuc)

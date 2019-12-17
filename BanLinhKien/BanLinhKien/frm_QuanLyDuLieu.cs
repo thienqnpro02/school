@@ -673,7 +673,7 @@ namespace BanLinhKien
 
                 if (View.Count > 0)
                 {
-                    MessageBox.Show("Nhan vien da ton tai");
+                    MessageBox.Show("Nhân viên đã tồn tại");
                 }
                 else
                 {
@@ -813,25 +813,16 @@ namespace BanLinhKien
             if (txtHoTenKhachHang.Text != "")
             {
                 
-                String tenkh = txtHoTenKhachHang.Text;
-                DataView View = new DataView(datatable_khachhang);
-                View.RowFilter = String.Format("hoten like '%{0}%'",tenkh);
-
-                if (View.Count > 0)
-                {
-                    MessageBox.Show("Nhan vien da ton tai");
-                }
-                else
-                {
-                    String sdtkh = txtSDTKhachHang.Text;
-                    String namsinh = dtpkNamSinhKhachHang.Value.ToString("yyyy-MM-dd");
-                    String ngaytao = DateTime.Now.ToString("yyyy-MM-dd");
+                String tenkh = txtHoTenKhachHang.Text;             
+                String sdtkh = txtSDTKhachHang.Text;
+                String namsinh = dtpkNamSinhKhachHang.Value.ToString("yyyy-MM-dd");
+                String ngaytao = DateTime.Now.ToString("yyyy-MM-dd");
                     
-                    KhachHang khachhang = new KhachHang(-1,tenkh,sdtkh,namsinh,ngaytao);
-                    MessageBox.Show(bus_khachhang.LuuBangKhachHang(khachhang));
-                    DLTrenTungTrang_KhachHang();
-                    btnThemKH.Text = "Thêm";
-                }
+                KhachHang khachhang = new KhachHang(-1,tenkh,sdtkh,namsinh,ngaytao);
+                MessageBox.Show(bus_khachhang.LuuBangKhachHang(khachhang));
+                DLTrenTungTrang_KhachHang();
+                btnThemKH.Text = "Thêm";
+                
             }
         }
 
@@ -953,7 +944,7 @@ namespace BanLinhKien
 
                 if (View.Count > 0)
                 {
-                    MessageBox.Show("Nha cung cap da ton tai");
+                    MessageBox.Show("Nhà cung cấp đã tồn tại");
                 }
                 else
                 {

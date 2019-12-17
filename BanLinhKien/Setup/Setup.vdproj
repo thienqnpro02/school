@@ -15,8 +15,26 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_1054FF89F3C24AB08424C47941E2EFA2"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_5515B98D9B0B38F3D0C4964114424C65"
         "OwnerKey" = "8:_8FFB11E9227744E38CC2C98D4A032B87"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_5BEA0A1B006543A98AC6BC6A2F97B51C"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_5C8888272EAF4553BEBFF177183FBF7F"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -28,6 +46,18 @@
         "Entry"
         {
         "MsmKey" = "8:_7D0C9A688B8142FFB7849B2EDCAA6D6E"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_7D8676555C334433B844DF3B67AB81B3"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_8B3982FB424A4057B30A1C969214A1C9"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -77,6 +107,12 @@
         {
         "MsmKey" = "8:_D7C0254CBC69AC9D034F51375E1AB64F"
         "OwnerKey" = "8:_5515B98D9B0B38F3D0C4964114424C65"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D9B0D78BD7C345459A48DECB0AEE1CFE"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -240,6 +276,26 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1054FF89F3C24AB08424C47941E2EFA2"
+            {
+            "SourcePath" = "8:..\\BanLinhKien\\images\\bif0c9v39l.jpg"
+            "TargetName" = "8:bif0c9v39l.jpg"
+            "Tag" = "8:"
+            "Folder" = "8:_929656013DEC47A0835D05A50D413174"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_5515B98D9B0B38F3D0C4964114424C65"
             {
             "AssemblyRegister" = "3:1"
@@ -269,6 +325,46 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5BEA0A1B006543A98AC6BC6A2F97B51C"
+            {
+            "SourcePath" = "8:..\\BanLinhKien\\images\\8kh9jrw3sn.png"
+            "TargetName" = "8:8kh9jrw3sn.png"
+            "Tag" = "8:"
+            "Folder" = "8:_929656013DEC47A0835D05A50D413174"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5C8888272EAF4553BEBFF177183FBF7F"
+            {
+            "SourcePath" = "8:..\\BanLinhKien\\images\\default.png"
+            "TargetName" = "8:default.png"
+            "Tag" = "8:"
+            "Folder" = "8:_929656013DEC47A0835D05A50D413174"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_7546E99B261BB66D4BA66F3E08108A90"
@@ -308,6 +404,46 @@
             "TargetName" = "8:BanLinhKien.exe.config"
             "Tag" = "8:"
             "Folder" = "8:_07467670BBB74DD59DB49053DBC01B5A"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7D8676555C334433B844DF3B67AB81B3"
+            {
+            "SourcePath" = "8:..\\BanLinhKien\\images\\8mc370pksh.jpg"
+            "TargetName" = "8:8mc370pksh.jpg"
+            "Tag" = "8:"
+            "Folder" = "8:_929656013DEC47A0835D05A50D413174"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8B3982FB424A4057B30A1C969214A1C9"
+            {
+            "SourcePath" = "8:..\\BanLinhKien\\images\\b9rrdmzjio.jpg"
+            "TargetName" = "8:b9rrdmzjio.jpg"
+            "Tag" = "8:"
+            "Folder" = "8:_929656013DEC47A0835D05A50D413174"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -508,6 +644,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D9B0D78BD7C345459A48DECB0AEE1CFE"
+            {
+            "SourcePath" = "8:..\\BanLinhKien\\images\\mrdegfoc0q.jpg"
+            "TargetName" = "8:mrdegfoc0q.jpg"
+            "Tag" = "8:"
+            "Folder" = "8:_929656013DEC47A0835D05A50D413174"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_FD9F8C214CC83D15AA4B96DD040D66D9"
             {
             "AssemblyRegister" = "3:1"
@@ -555,6 +711,17 @@
             "Property" = "8:TARGETDIR"
                 "Folders"
                 {
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_929656013DEC47A0835D05A50D413174"
+                    {
+                    "Name" = "8:images"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_DF737E07F4B94989ACDBFA22CA01D830"
+                        "Folders"
+                        {
+                        }
+                    }
                 }
             }
             "{1525181F-901A-416C-8A58-119130FE478E}:_C833BFDC971F4AD6B10FA0436253A123"
@@ -596,7 +763,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Setup"
         "ProductCode" = "8:{484710F8-5EE2-49E7-A659-0376BA948563}"
-        "PackageCode" = "8:{15FA3564-C363-4D7D-98F7-5751CA0EAC40}"
+        "PackageCode" = "8:{CC1A0B84-E066-4CA2-9AEF-9BAC77880997}"
         "UpgradeCode" = "8:{E5C4069E-ECB3-40E5-B8F6-152DE0FEDB12}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

@@ -59,10 +59,10 @@ namespace BUS
             int effect = dao_nhanvien.LuuBangNhanVien(nhanvien);
             if(effect > 0)
             {
-                return "Luu du lieu thanh cong";
+                return "Lưu dữ liệu thành công";
             }else
             {
-                return "Luu du lieu khong thanh cong";
+                return "Lưu dữ liệu không thành công";
             }
         }
 
@@ -71,10 +71,10 @@ namespace BUS
             int effect = dao_nhanvien.XoaDlBangNhanVien(manv);
             if(effect > 0)
             {
-                return "Xoa du lieu thanh cong";
+                return "Xóa dữ liệu thành công";
             }else
             {
-                return "Xoa du lieu khong thanh cong";
+                return "Xóa dữ liệu không thành công";
             }
         }
 
@@ -83,10 +83,10 @@ namespace BUS
             int effect = dao_nhanvien.CapNhapBangNhanVien(nhanvien);
             if(effect > 0)
             {
-                return "Cap nhap du lieu thanh cong";
+                return "Cập nhật dữ liệu thành công";
             }else
             {
-                return "Cap nhap du lieu khong thanh cong";
+                return "Cập nhật dữ liệu không thành công";
             }
 
         }

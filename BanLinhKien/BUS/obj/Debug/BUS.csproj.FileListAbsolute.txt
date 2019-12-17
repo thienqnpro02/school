@@ -1,0 +1,11 @@
+D:\Ex-on-school\school\BanLinhKien\BUS\bin\Debug\BUS.dll
+D:\Ex-on-school\school\BanLinhKien\BUS\bin\Debug\BUS.pdb
+D:\Ex-on-school\school\BanLinhKien\BUS\bin\Debug\DAO.dll
+D:\Ex-on-school\school\BanLinhKien\BUS\bin\Debug\DTO.dll
+D:\Ex-on-school\school\BanLinhKien\BUS\bin\Debug\DAO.pdb
+D:\Ex-on-school\school\BanLinhKien\BUS\bin\Debug\DTO.pdb
+D:\Ex-on-school\school\BanLinhKien\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
+D:\Ex-on-school\school\BanLinhKien\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\Ex-on-school\school\BanLinhKien\BUS\obj\Debug\BUS.csproj.CopyComplete
+D:\Ex-on-school\school\BanLinhKien\BUS\obj\Debug\BUS.dll
+D:\Ex-on-school\school\BanLinhKien\BUS\obj\Debug\BUS.pdb
