@@ -36,6 +36,9 @@ namespace BanLinhKien
         private DataTable dt_hang;
         public Hashtable items_picked = new Hashtable();
 
+        public delegate void OpenFormDangNhap();
+        public OpenFormDangNhap ActionOpenFormDangNhap;
+
         public main()
         {
             InitializeComponent();
@@ -275,10 +278,8 @@ namespace BanLinhKien
         private void ĐăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {
             NhanVien.client = null;
-            frm_DangNhap frm_login = new frm_DangNhap();
-            frm_login.Show();
-            this.Close();
-            
+            ActionOpenFormDangNhap();            
+
         }
 
         void setClientPermission()
@@ -298,12 +299,17 @@ namespace BanLinhKien
 
         private void Main_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            Application.OpenForms["frm_DangNhap"].Show();
         }
 
         private void Main_Load(object sender, EventArgs e)
         {
             setClientPermission();
+        }
+
+        private void Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            
         }
     }
 }

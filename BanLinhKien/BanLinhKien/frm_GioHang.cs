@@ -151,6 +151,7 @@ namespace BanLinhKien
             GroupBox gpParent = btnDel.Parent as GroupBox;
             flpDanhSachSanPham.Controls.Remove(gpParent);
             items_picked.Remove(btnDel.Tag.ToString());
+            totalPaymentAmount();
 
         }
 
