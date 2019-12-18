@@ -106,7 +106,7 @@ namespace BanLinhKien
             label_gia.Size = label5.Size;
             label_gia.Name = "lb_gia" + hang.MaHang;
             label_gia.Location = label5.Location;
-            label_gia.Text = (num.Value + Convert.ToInt32(textGia.Text)).ToString()+" VNĐ";
+            label_gia.Text = (num.Value * Convert.ToInt32(textGia.Text)).ToString()+" VNĐ";
             label_gia.Tag = hang.MaHang;
             listlabel.Add(label_gia);
 
@@ -202,14 +202,25 @@ namespace BanLinhKien
                     txt_gia.Select(txt_gia.TextLength, 0);
                     totalPaymentAmount();
                 }
+                if (txt_gia.TextLength > 11)
+                {
+                    txt_gia.Text = "";
+                    txt_gia.Focus();
+                    Label lb_gia = listlabel[txt_gia.TabIndex];
+                    lb_gia.Text = "0 VNĐ";
+                    totalPaymentAmount();
+                }
 
-            }catch(FormatException ex) { }
+            }
+            catch(FormatException ex) { }
         }
 
         private void btnClearPhieu_Click(object sender, EventArgs e)
         {
             flpDanhSachSanPham.Controls.Clear();
             listhang.Clear();
+            listlabel.Clear();
+            totalPaymentAmount();
         }
 
         private void BtnDel_Click(object sender, EventArgs e)
