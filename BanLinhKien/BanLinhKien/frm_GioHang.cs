@@ -24,8 +24,7 @@ namespace BanLinhKien
 
         public frm_GioHang()
         {
-            InitializeComponent();
-            
+            InitializeComponent();        
         }
 
         private void loadCart()
@@ -111,13 +110,9 @@ namespace BanLinhKien
                 gpHang.Controls.Add(lblSoLuong);
                 gpHang.Controls.Add(num);
 
-
                 flpDanhSachSanPham.Controls.Add(gpHang);
-
             }
             totalPaymentAmount();
-
-
         }
 
         private void Num_ValueChanged(object sender, EventArgs e)
@@ -150,25 +145,23 @@ namespace BanLinhKien
             Button btnDel = sender as Button;
             GroupBox gpParent = btnDel.Parent as GroupBox;
 
-
-            
             flpDanhSachSanPham.Controls.Remove(gpParent);
             items_picked.Remove(btnDel.Tag.ToString());
-
-            totalPaymentAmount();
 
             DataTable dt_hang_CLone = dt_hang;
             int idx = 0;
             foreach (DataRow row_del in dt_hang_CLone.Rows)
             {
 
-                if(row_del["MAHANG"].ToString() == btnDel.Tag.ToString())
+                if (row_del["MAHANG"].ToString() == btnDel.Tag.ToString())
                 {
                     dt_hang.Rows.RemoveAt(idx);
                     break;
                 }
                 idx++;
             }
+
+            totalPaymentAmount();
         }
 
         private void BtnChonKhachCu_Click(object sender, EventArgs e)
@@ -188,7 +181,6 @@ namespace BanLinhKien
                 txtSDTKhachHang.Text = dt_khachahng.Rows[0]["SDT"].ToString();
                 dtpkNamSinhKhachHang.Value = DateTime.Parse(dt_khachahng.Rows[0]["NAMSINH"].ToString());
             }
-            
             
         }
 
@@ -288,7 +280,6 @@ namespace BanLinhKien
         string formatCultureToString(int num)
         {
             return String.Format("{0:n0}", num);
-
         }
     }
 }
