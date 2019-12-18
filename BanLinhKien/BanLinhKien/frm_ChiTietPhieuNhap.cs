@@ -106,7 +106,7 @@ namespace BanLinhKien
             label_gia.Size = label5.Size;
             label_gia.Name = "lb_gia" + hang.MaHang;
             label_gia.Location = label5.Location;
-            label_gia.Text = (num.Value * Convert.ToInt32(textGia.Text)).ToString()+" VNĐ";
+            label_gia.Text = (num.Value + Convert.ToInt32(textGia.Text)).ToString()+" VNĐ";
             label_gia.Tag = hang.MaHang;
             listlabel.Add(label_gia);
 
