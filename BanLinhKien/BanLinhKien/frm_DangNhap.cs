@@ -66,12 +66,8 @@ namespace BanLinhKien
 
         void openFormDangNhap()
         {
-            
-            
-            Application.OpenForms["frm_DangNhap"].Show();
             Application.OpenForms["main"].Close();
-            
-                
+            Application.OpenForms["frm_DangNhap"].Show();          
         }
     }
 }

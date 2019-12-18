@@ -94,7 +94,7 @@ namespace BanLinhKien
                 // numericUpDown
                 NumericUpDown num = new NumericUpDown();
                 num.Minimum = 0;
-                num.Maximum = Int32.MaxValue;
+                num.Maximum = Convert.ToInt32(row["SOLUONG"]);
                 num.Name = "numHang" + row["MAHANG"].ToString();
                 num.Location = new Point(201, 78);
                 num.Size = new Size(43, 20);
