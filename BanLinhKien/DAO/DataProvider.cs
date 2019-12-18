@@ -25,8 +25,8 @@ namespace DAO
         }
 
 
-        //private string STRconnection = @"Data Source=DESKTOP-9FMDUHL\SQLEXPRESS;Initial Catalog=QL_LINHKIEN;Integrated Security=True";
-        private string STRconnection = @"Data Source=.;Initial Catalog=QL_LINHKIEN;Integrated Security=True";
+        private string STRconnection = @"Data Source=DESKTOP-9FMDUHL\SQLEXPRESS;Initial Catalog=QL_LINHKIEN;Integrated Security=True";
+        //private string STRconnection = @"Data Source=.;Initial Catalog=QL_LINHKIEN;Integrated Security=True";
         //private string STRconnection = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\QL_LINHKIEN.mdf;Integrated Security=True";
 
         private DataProvider() { }
