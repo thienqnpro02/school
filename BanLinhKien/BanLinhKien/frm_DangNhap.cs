@@ -32,8 +32,12 @@ namespace BanLinhKien
 
             if(NhanVien.client != null)
             {
+                
+                
+                clearTextBox();
                 this.Hide();
                 main frm_main = new main();
+                frm_main.ActionOpenFormDangNhap = openFormDangNhap;
                 frm_main.Show();
             }
             else
@@ -51,6 +55,19 @@ namespace BanLinhKien
         private void Frm_DangNhap_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        void clearTextBox()
+        {
+            txtUsername.Text = "";
+            txtPassword.Text = "";
+            txtUsername.Focus();
+        }
+
+        void openFormDangNhap()
+        {
+            Application.OpenForms["main"].Close();
+            Application.OpenForms["frm_DangNhap"].Show();          
         }
     }
 }

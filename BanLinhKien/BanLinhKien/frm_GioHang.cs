@@ -94,7 +94,7 @@ namespace BanLinhKien
                 // numericUpDown
                 NumericUpDown num = new NumericUpDown();
                 num.Minimum = 0;
-                num.Maximum = Int32.MaxValue;
+                num.Maximum = Convert.ToInt32(row["SOLUONG"]);
                 num.Name = "numHang" + row["MAHANG"].ToString();
                 num.Location = new Point(201, 78);
                 num.Size = new Size(43, 20);
@@ -149,9 +149,26 @@ namespace BanLinhKien
         {
             Button btnDel = sender as Button;
             GroupBox gpParent = btnDel.Parent as GroupBox;
+
+
+            
             flpDanhSachSanPham.Controls.Remove(gpParent);
             items_picked.Remove(btnDel.Tag.ToString());
 
+            totalPaymentAmount();
+
+            DataTable dt_hang_CLone = dt_hang;
+            int idx = 0;
+            foreach (DataRow row_del in dt_hang_CLone.Rows)
+            {
+
+                if(row_del["MAHANG"].ToString() == btnDel.Tag.ToString())
+                {
+                    dt_hang.Rows.RemoveAt(idx);
+                    break;
+                }
+                idx++;
+            }
         }
 
         private void BtnChonKhachCu_Click(object sender, EventArgs e)
