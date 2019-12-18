@@ -9,3 +9,14 @@ D:\Ex-on-school\school\BanLinhKien\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.ca
 D:\Ex-on-school\school\BanLinhKien\BUS\obj\Debug\BUS.csproj.CopyComplete
 D:\Ex-on-school\school\BanLinhKien\BUS\obj\Debug\BUS.dll
 D:\Ex-on-school\school\BanLinhKien\BUS\obj\Debug\BUS.pdb
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BUS\bin\Debug\BUS.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BUS\bin\Debug\BUS.pdb
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BUS\bin\Debug\DAO.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BUS\bin\Debug\DTO.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BUS\bin\Debug\DAO.pdb
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BUS\bin\Debug\DTO.pdb
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BUS\obj\Debug\BUS.csproj.CopyComplete
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BUS\obj\Debug\BUS.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BUS\obj\Debug\BUS.pdb
