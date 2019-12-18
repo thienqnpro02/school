@@ -107,6 +107,7 @@ namespace BanLinhKien
             label_gia.Name = "lb_gia" + hang.MaHang;
             label_gia.Location = label5.Location;
             label_gia.Text = (num.Value + Convert.ToInt32(textGia.Text)).ToString()+" VNĐ";
+            label_gia.Tag = hang.MaHang;
             listlabel.Add(label_gia);
 
             Button btn_xemchitiet = new Button();
@@ -216,8 +217,19 @@ namespace BanLinhKien
             Button btnDel = sender as Button;
             GroupBox gp = btnDel.Parent as GroupBox;
 
+            foreach(Label lbl in listlabel)
+            {
+                if (btnDel.Tag.ToString() == lbl.Tag.ToString())
+                {
+                    listlabel.Remove(lbl);
+                    break;
+                }                   
+                
+            }
+
             flpDanhSachSanPham.Controls.Remove(gp);
             listhang.Remove(btnDel.Tag);
+            totalPaymentAmount();
         }
 
         private void BtnXemChiTiet_Click(object sender, EventArgs e)
