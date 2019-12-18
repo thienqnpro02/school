@@ -15,7 +15,7 @@ namespace BanLinhKien
 {
     public partial class frm_ChiTietPhieuNhap : Form
     {
-	    BUS_Hang bus_hang = BUS_Hang.Instance;
+        BUS_Hang bus_hang = BUS_Hang.Instance;
         BUS_NCC bus_ncc = BUS_NCC.Instance;
         BUS_PhieuNhap bus_phieunhap = BUS_PhieuNhap.Instance;
         BUS_ChiTietPhieuNhap bus_chitietphieunhap = BUS_ChiTietPhieuNhap.Instance;
@@ -36,7 +36,7 @@ namespace BanLinhKien
             ncc = bus_ncc.BangNCC();
             LoadHang();
             BuocVaoComboBox_NCC();
-            
+
         }
 
         int i = 0;
@@ -79,7 +79,7 @@ namespace BanLinhKien
             pic.Size = pictureBox1.Size;
             pic.Name = "pic" + hang.MaHang;
             pic.SizeMode = PictureBoxSizeMode.StretchImage;
-            pic.ImageLocation =bus_hang.pathImage + hang.Hinh.ToString();
+            pic.ImageLocation = bus_hang.pathImage + hang.Hinh.ToString();
             pic.Location = pictureBox1.Location;
 
             NumericUpDown num = new NumericUpDown();
@@ -106,7 +106,7 @@ namespace BanLinhKien
             label_gia.Size = label5.Size;
             label_gia.Name = "lb_gia" + hang.MaHang;
             label_gia.Location = label5.Location;
-            label_gia.Text = (num.Value + Convert.ToInt32(textGia.Text)).ToString()+" VNĐ";
+            label_gia.Text = (num.Value * Convert.ToInt32(textGia.Text)).ToString() + " VNĐ";
             label_gia.Tag = hang.MaHang;
             listlabel.Add(label_gia);
 
@@ -125,7 +125,7 @@ namespace BanLinhKien
             btnDel.BackColor = System.Drawing.Color.Red;
             btnDel.Text = "X";
             btnDel.ForeColor = System.Drawing.Color.White;
-            btnDel.Font=new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            btnDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             btnDel.Tag = hang.MaHang;
             btnDel.Click += BtnDel_Click;
 
@@ -144,7 +144,7 @@ namespace BanLinhKien
 
         private void BuocVaoComboBox_NCC()
         {
-            cbNhaCungCap.DataSource =ncc;
+            cbNhaCungCap.DataSource = ncc;
             cbNhaCungCap.DisplayMember = "TenNCC";
             cbNhaCungCap.ValueMember = "MaNCC";
             cbNhaCungCap.SelectedValue = 1;
@@ -175,13 +175,24 @@ namespace BanLinhKien
             BuocVaoCacDieuKhien_NCC();
         }
 
+        private void totalPaymentAmount()
+        {
+            int total = 0;
+            foreach (Label lbl in listlabel)
+            {
+                total += Convert.ToInt32(sanitizeString(lbl.Text));
+            }
+
+            lblTongTien.Text = formatCultureToString(total) + " VNĐ";
+        }
+
         private void Num_SoLuong_ValueChanged(object sender, EventArgs e)
         {
             NumericUpDown num_soluong = sender as NumericUpDown;
             Hang hang = (Hang)listhang[num_soluong.Tag];
             hang.SoLuong = (int)num_soluong.Value;
 
-            Label label_gia=listlabel[num_soluong.TabIndex];
+            Label label_gia = listlabel[num_soluong.TabIndex];
             label_gia.Text = formatCultureToString((hang.Gia * hang.SoLuong)) + " VNĐ";
             totalPaymentAmount();
         }
@@ -192,7 +203,7 @@ namespace BanLinhKien
             Hang hang = (Hang)listhang[txt_gia.Tag];
             try
             {
-               
+
                 hang.Gia = Convert.ToInt32(sanitizeString(txt_gia.Text));
                 if (!txt_gia.Text.Equals("0"))
                 {
@@ -202,14 +213,25 @@ namespace BanLinhKien
                     txt_gia.Select(txt_gia.TextLength, 0);
                     totalPaymentAmount();
                 }
-
-            }catch(FormatException ex) { }
+                if (txt_gia.TextLength > 11)
+                {
+                    txt_gia.Text = "";
+                    txt_gia.Focus();
+                    Label lb_gia = listlabel[txt_gia.TabIndex];
+                    lb_gia.Text = "0 VNĐ";
+                    totalPaymentAmount();
+                }
+            }
+            catch (FormatException ex) { }
         }
+    
 
         private void btnClearPhieu_Click(object sender, EventArgs e)
         {
             flpDanhSachSanPham.Controls.Clear();
             listhang.Clear();
+            listlabel.Clear();
+            totalPaymentAmount();
         }
 
         private void BtnDel_Click(object sender, EventArgs e)
@@ -224,7 +246,6 @@ namespace BanLinhKien
                     listlabel.Remove(lbl);
                     break;
                 }                   
-                
             }
 
             flpDanhSachSanPham.Controls.Remove(gp);
@@ -292,16 +313,6 @@ namespace BanLinhKien
             return (effect==listhang.Count && update==listhang.Count)?1:0;
         }
 
-        private void totalPaymentAmount()
-        {
-            int total = 0;
-            foreach (Label lbl in listlabel)
-            {
-                total += Convert.ToInt32(sanitizeString(lbl.Text));
-            }
-
-            lblTongTien.Text = formatCultureToString(total) + " VNĐ";
-        }
 
         string formatCultureToString(int num)
         {
