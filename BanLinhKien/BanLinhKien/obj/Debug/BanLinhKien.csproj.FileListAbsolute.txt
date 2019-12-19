@@ -209,3 +209,5 @@ C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\obj\De
 C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.csproj.CopyComplete
 C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.exe
 C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.pdb
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\QL_LINHKIEN.mdf
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\QL_LINHKIEN_log.ldf
