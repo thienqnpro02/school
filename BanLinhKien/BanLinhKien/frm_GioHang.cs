@@ -235,6 +235,12 @@ namespace BanLinhKien
                 insertCT_PhieuXuat();
                 actionReloadHang();
                 MessageBox.Show("Thanh toán thành công");
+
+                flpDanhSachSanPham.Controls.Clear();
+                items_picked.Clear();
+                dt_hang.Clear();
+
+                totalPaymentAmount();
             }
         }
 

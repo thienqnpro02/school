@@ -4,3 +4,9 @@ D:\Ex-on-school\school\BanLinhKien\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.ca
 D:\Ex-on-school\school\BanLinhKien\DTO\obj\Debug\DTO.dll
 D:\Ex-on-school\school\BanLinhKien\DTO\obj\Debug\DTO.pdb
 D:\Ex-on-school\school\BanLinhKien\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\DTO\bin\Debug\DTO.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\DTO\bin\Debug\DTO.pdb
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\DTO\obj\Debug\DTO.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\DTO\obj\Debug\DTO.pdb

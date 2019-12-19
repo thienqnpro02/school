@@ -42,6 +42,16 @@ namespace BanLinhKien
         public frm_QuanLyDuLieu()
         {
             InitializeComponent();
+            AnLbHoantac();
+        }
+
+        private void AnLbHoantac()
+        {
+            lb_hoantacdanhmuc.Visible = false;
+            lb_hoantachang.Visible = false;
+            lb_hoantackhachhang.Visible = false;
+            lb_hoantacncc.Visible = false;
+            lb_hoantacnhanviven.Visible = false;
         }
 
         private void frm_QuanLyDuLieu_Load(object sender, EventArgs e)
@@ -51,6 +61,27 @@ namespace BanLinhKien
             if (tabControlQL_DuLieu.SelectedIndex == 0)
             {
                 CapNhapLaiDLTrenForm();
+            }
+        }
+
+        private void TabControlQL_DuLieu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (tabControlQL_DuLieu.SelectedTab.Name)
+            {
+                case "tabDanhMuc":
+                    break;
+                case "tabHang":
+                    configDGVHang();
+                    break;
+                case "tabNhanVien":
+                    DLTrenTungTrang_BangNhanVien();
+                    break;
+                case "tabKhachHang":
+                    DLTrenTungTrang_KhachHang();
+                    break;
+                case "tabNhaCungCap":
+                    DLTrenTungTrang_BangNCC();
+                    break;
             }
         }
 
@@ -65,6 +96,16 @@ namespace BanLinhKien
                     break;
             }
         }
+        
+        private Boolean Hoantac(String tenchucnang)
+        {
+            String canhbao=(tenchucnang.Equals("Sửa"))?"Bạn có muốn sửa dữ liệu không":
+                "Bạn có muốn xóa dữ liệu không";
+            DialogResult result = MessageBox.Show(canhbao, "Cảnh báo", 
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            return (result == DialogResult.Yes) ? true : false;
+        }
+
 
         private void CapNhapLaiDLTrenForm()
         {
@@ -117,6 +158,7 @@ namespace BanLinhKien
         {
             if (btnThemDM.Text.Contains("Th"))
             {
+                lb_hoantacdanhmuc.Visible = true;
                 btnThemDM.Text = "Lưu";
                 txtIDDanhMuc.Text = (busDanhmuc.MaDanhMuc()+1).ToString();
                 txtTenDanhMuc.Text = "";
@@ -124,7 +166,6 @@ namespace BanLinhKien
 
             if (txtTenDanhMuc.Text != "")
             {
-                
                 
                 String tendanhmuc = txtTenDanhMuc.Text;
                 DataView View = new DataView(datatable_Danhmuc);
@@ -140,6 +181,7 @@ namespace BanLinhKien
                     MessageBox.Show(busDanhmuc.LuuBangDanhMuc(tendanhmuc, ngaytao));
                     CapNhapLaiDLTrenForm();
                     btnThemDM.Text = "Thêm";
+                    lb_hoantacdanhmuc.Visible = false;
                 }
             }
         }
@@ -154,7 +196,6 @@ namespace BanLinhKien
                 currentPageDanhMuc++;
                 dgvDanhMuc.DataSource = busDanhmuc.pagingDanhMuc(currentPageDanhMuc);
                 CapNhapLaiDLTrenForm();
-
             }
         }
 
@@ -174,56 +215,39 @@ namespace BanLinhKien
 
         private void btnSuaDM_Click(object sender, EventArgs e)
         {
-            int madm = Int32.Parse(txtIDDanhMuc.Text);
-            String tendanhmuc = txtTenDanhMuc.Text;
-            MessageBox.Show(busDanhmuc.SuaBangDanhMuc(madm, tendanhmuc));
-            CapNhapLaiDLTrenForm();
+            if (Hoantac(btnSuaDM.Text))
+            {
+                int madm = Int32.Parse(txtIDDanhMuc.Text);
+                String tendanhmuc = txtTenDanhMuc.Text;
+                MessageBox.Show(busDanhmuc.SuaBangDanhMuc(madm, tendanhmuc));
+                CapNhapLaiDLTrenForm();
+            }else { CapNhapLaiDLTrenForm(); }
+
         }
 
         private void btnXoaDM_Click(object sender, EventArgs e)
         {
-            int madm = Int32.Parse(txtIDDanhMuc.Text);
-
-            if (BUS_DanhMuc.Instance.isHasManyHang(madm) == false)
+            if (Hoantac(btnXoaDM.Text))
             {
-                MessageBox.Show(busDanhmuc.XoaDLBangDanhMuc(madm));
-                CapNhapLaiDLTrenForm();
-            }
-            else
-            {
-                MessageBox.Show("Không thể xóa Danh mục này, vì có chứa các mặt hàng");
-            }
+                int madm = Int32.Parse(txtIDDanhMuc.Text);
 
-            
-            
+                if (BUS_DanhMuc.Instance.isHasManyHang(madm) == false)
+                {
+                    MessageBox.Show(busDanhmuc.XoaDLBangDanhMuc(madm));
+                    CapNhapLaiDLTrenForm();
+                }
+                else
+                {
+                    MessageBox.Show("Không thể xóa Danh mục này, vì có chứa các mặt hàng");
+                }
+            }else { CapNhapLaiDLTrenForm(); }
         }
        
         private void dgvDanhMuc_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             BuocDlVaoCacDieuKhien();
         }
-
         
-        private void TabControlQL_DuLieu_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            switch (tabControlQL_DuLieu.SelectedTab.Name)
-            {
-                case "tabDanhMuc":
-                    break;
-                case "tabHang":
-                    configDGVHang();
-                    break;
-                case "tabNhanVien":
-                    DLTrenTungTrang_BangNhanVien();
-                    break;
-                case "tabKhachHang":
-                    DLTrenTungTrang_KhachHang();
-                    break;
-                case "tabNhaCungCap":
-                    DLTrenTungTrang_BangNCC();
-                    break;
-            }
-        }
         //hang
         BUS_Hang bus_hang = BUS_Hang.Instance;
         
@@ -308,8 +332,6 @@ namespace BanLinhKien
             
         }
 
-        
-
         private void DgvHang_SelectionChanged(object sender, EventArgs e)
         {
             if (dgvHangLoaded == false) return;
@@ -380,6 +402,7 @@ namespace BanLinhKien
             DataTable datatable_hang=bus_hang.select();
             if (btnThemHang.Text.Contains("Th"))
             {
+                lb_hoantachang.Visible = true;
                 btnThemHang.Text = "Lưu";
                 txtIDHang.Text = (bus_hang.MaHang()+1).ToString();
                 txtTenHang.Text = " ";
@@ -446,6 +469,7 @@ namespace BanLinhKien
                     }
 
                     btnThemHang.Text = "Thêm";
+                    lb_hoantachang.Visible = false;
                     configDGVHang();
                 }
             }
@@ -469,71 +493,77 @@ namespace BanLinhKien
 
         private void btnSuaHang_Click(object sender, EventArgs e)
         {
-            
-            int mahang = Int32.Parse(txtIDHang.Text);
-            String tenhang_ = txtTenHang.Text;
-            String thongso = txtThongSo.Text;
-            int baohanh = Int32.Parse(txtBaoHanh.Text);
-            int soluong = Int32.Parse(txtSoLuong.Text);
-            int gia =  Int32.Parse(sanitizeString(txtGia_2.Text));
-            String ngaytao = DateTime.Now.ToString("yyyy-MM-dd");
-            String nhasanxuat = txtNhaSanXuat.Text;
-            int madm = (Int32)cbDanhMuc.SelectedValue;
-
-            string hinh = "";            
-
-            if (isUpdateImage)
+            if (Hoantac(btnSuaHang.Text))
             {
-                do
+                int mahang = Int32.Parse(txtIDHang.Text);
+                String tenhang_ = txtTenHang.Text;
+                String thongso = txtThongSo.Text;
+                int baohanh = Int32.Parse(txtBaoHanh.Text);
+                int soluong = Int32.Parse(txtSoLuong.Text);
+                int gia = Int32.Parse(sanitizeString(txtGia_2.Text));
+                String ngaytao = DateTime.Now.ToString("yyyy-MM-dd");
+                String nhasanxuat = txtNhaSanXuat.Text;
+                int madm = (Int32)cbDanhMuc.SelectedValue;
+
+                string hinh = "";
+
+                if (isUpdateImage)
                 {
-                    hinh = RandomString(10) + Path.GetExtension(picHang.ImageLocation);
-                } while (BUS_Hang.Instance.isExistsImage(hinh));
-            }          
-            
-            Hang hang = new Hang(mahang,tenhang_, thongso, baohanh, soluong, gia,hinh, nhasanxuat, ngaytao, madm);
-            
-            int res = bus_hang.SuaBangHang(hang);
-            if(res > 0)
-            {
-                string oldFileName = dgvHang.CurrentRow.Cells["HINH"].Value.ToString();
-                if (oldFileName != hang.Hinh)
-                {              
-                    
-
-                    if (isUpdateImage)
+                    do
                     {
-                        if (File.Exists(BUS_Hang.Instance.pathImage + oldFileName) && oldFileName != "default.png")
-                        {
-                            File.Delete(BUS_Hang.Instance.pathImage + oldFileName);
-                        }
-                        File.Copy(picHang.ImageLocation, BUS_Hang.Instance.pathImage + hang.Hinh);
-                        isUpdateImage = false;
-                    }
-                    
-                    configDGVHang();
+                        hinh = RandomString(10) + Path.GetExtension(picHang.ImageLocation);
+                    } while (BUS_Hang.Instance.isExistsImage(hinh));
                 }
 
-                
-                MessageBox.Show("Sửa thành công");
+                Hang hang = new Hang(mahang, tenhang_, thongso, baohanh, soluong, gia, hinh, nhasanxuat, ngaytao, madm);
+
+                int res = bus_hang.SuaBangHang(hang);
+                if (res > 0)
+                {
+                    string oldFileName = dgvHang.CurrentRow.Cells["HINH"].Value.ToString();
+                    if (oldFileName != hang.Hinh)
+                    {
+
+
+                        if (isUpdateImage)
+                        {
+                            if (File.Exists(BUS_Hang.Instance.pathImage + oldFileName) && oldFileName != "default.png")
+                            {
+                                File.Delete(BUS_Hang.Instance.pathImage + oldFileName);
+                            }
+                            File.Copy(picHang.ImageLocation, BUS_Hang.Instance.pathImage + hang.Hinh);
+                            isUpdateImage = false;
+                        }
+
+                        configDGVHang();
+                    }
+
+
+                    MessageBox.Show("Sửa thành công");
+                }
+                else
+                {
+
+                    MessageBox.Show("Sửa thất bại");
+                }
             }
-            else
-            {
-                
-                MessageBox.Show("Sửa thất bại");
-            }
+            else { configDGVHang(); }
             
         }
 
         private void btnXoaHang_Click(object sender, EventArgs e)
         {
-            int mahang = Int32.Parse(txtIDHang.Text);
-            MessageBox.Show(bus_hang.XoaDLBangHang(mahang));
-            configDGVHang();
-            if (currentPageHang > BUS_Hang.Instance.totalPage)
+            if (Hoantac(btnXoaHang.Text))
             {
-                currentPageHang = BUS_Hang.Instance.totalPage;
-                txtTrangHang.Text = currentPageHang.ToString();
-            }
+                int mahang = Int32.Parse(txtIDHang.Text);
+                MessageBox.Show(bus_hang.XoaDLBangHang(mahang));
+                configDGVHang();
+                if (currentPageHang > BUS_Hang.Instance.totalPage)
+                {
+                    currentPageHang = BUS_Hang.Instance.totalPage;
+                    txtTrangHang.Text = currentPageHang.ToString();
+                }
+            }else { configDGVHang(); }
                 
         }
 
@@ -651,6 +681,7 @@ namespace BanLinhKien
             DataTable datatable_nhanvien = bus_nhanvien.BangNhanVien();
             if (btnThemNV.Text.Contains("Th"))
             {
+                lb_hoantacnhanviven.Visible = true;
                 txtIDNhanVien.Text = (bus_nhanvien.MaNhanVien()+1).ToString();
                 txtHoTenNhanVien.Text = "";
                 txtUsername.Text = "";
@@ -690,37 +721,42 @@ namespace BanLinhKien
                     MessageBox.Show(bus_nhanvien.LuuBangNhanVien(nhanvien_));
                     DLTrenTungTrang_BangNhanVien();
                     btnThemNV.Text = "Thêm";
+                    lb_hoantacnhanviven.Visible = false;
                 }
             }
         }
 
         private void btnXoaNV_Click(object sender, EventArgs e)
         {
-            int manv = Int32.Parse(txtIDNhanVien.Text);
-            MessageBox.Show(bus_nhanvien.XoaDLBangNhanVien(manv));
-            DLTrenTungTrang_BangNhanVien();
-            
-            
+            if (Hoantac(btnXoaNV.Text))
+            {
+                int manv = Int32.Parse(txtIDNhanVien.Text);
+                MessageBox.Show(bus_nhanvien.XoaDLBangNhanVien(manv));
+                DLTrenTungTrang_BangNhanVien();
+            }else { DLTrenTungTrang_BangNhanVien(); }   
         }
 
         private void btnSuaNV_Click(object sender, EventArgs e)
         {
-            int manv = Int32.Parse(txtIDNhanVien.Text);
-            String tennv = txtHoTenNhanVien.Text;
-            String username = txtUsername.Text;
-            String password = txtPassword.Text;
-            String sdt = txtSDTNhanVien.Text;
-            String diachi = txtDiaChiNhanVien.Text;
-            String namsinh = dtpkNamSinhNhanVien.Value.ToString("yyyy-MM-dd");
-            int loainhanvien = Convert.ToInt32(cbLoaiNhanVIen.SelectedValue);
-            int gioitinh = (rdNam.Checked) ? 0 : 1;
-            String ngaytao = DateTime.Now.ToString("yyy-MM-dd");
+            if (Hoantac(btnSuaNV.Text))
+            {
+                int manv = Int32.Parse(txtIDNhanVien.Text);
+                String tennv = txtHoTenNhanVien.Text;
+                String username = txtUsername.Text;
+                String password = txtPassword.Text;
+                String sdt = txtSDTNhanVien.Text;
+                String diachi = txtDiaChiNhanVien.Text;
+                String namsinh = dtpkNamSinhNhanVien.Value.ToString("yyyy-MM-dd");
+                int loainhanvien = Convert.ToInt32(cbLoaiNhanVIen.SelectedValue);
+                int gioitinh = (rdNam.Checked) ? 0 : 1;
+                String ngaytao = DateTime.Now.ToString("yyy-MM-dd");
 
-            NhanVien nhanvien_ = new NhanVien(manv, username, password, tennv, sdt,
-                diachi, namsinh, loainhanvien, gioitinh, ngaytao);
+                NhanVien nhanvien_ = new NhanVien(manv, username, password, tennv, sdt,
+                    diachi, namsinh, loainhanvien, gioitinh, ngaytao);
 
-            MessageBox.Show(bus_nhanvien.CapNhapDLBangNhanVien(nhanvien_));
-            DLTrenTungTrang_BangNhanVien();
+                MessageBox.Show(bus_nhanvien.CapNhapDLBangNhanVien(nhanvien_));
+                DLTrenTungTrang_BangNhanVien();
+            }else { DLTrenTungTrang_BangNhanVien(); }
         }
 
         
@@ -802,6 +838,7 @@ namespace BanLinhKien
             DataTable datatable_khachhang = bus_khachhang.BangKhachHang();
             if (btnThemKH.Text.Contains("Th"))
             {
+                lb_hoantackhachhang.Visible = true;
                 txtIDKhachHang.Text = (bus_khachhang.currentID()+1).ToString();
                 txtHoTenKhachHang.Text = "";
                 txtSDTKhachHang.Text = "";
@@ -822,28 +859,36 @@ namespace BanLinhKien
                 MessageBox.Show(bus_khachhang.LuuBangKhachHang(khachhang));
                 DLTrenTungTrang_KhachHang();
                 btnThemKH.Text = "Thêm";
+                lb_hoantackhachhang.Visible = false;
                 
             }
         }
 
         private void btnSuaKH_Click(object sender, EventArgs e)
         {
-            int makh = Int32.Parse(txtIDKhachHang.Text);
-            String tenkh = txtHoTenKhachHang.Text;
-            String sdtkh = txtSDTKhachHang.Text;
-            String namsinh = dtpkNamSinhKhachHang.Value.ToString("yyyy-MM-dd");
-            String ngaytao = DateTime.Now.ToString("yyyy-MM-dd");
+            if (Hoantac(btnSuaKH.Text))
+            {
+                int makh = Int32.Parse(txtIDKhachHang.Text);
+                String tenkh = txtHoTenKhachHang.Text;
+                String sdtkh = txtSDTKhachHang.Text;
+                String namsinh = dtpkNamSinhKhachHang.Value.ToString("yyyy-MM-dd");
+                String ngaytao = DateTime.Now.ToString("yyyy-MM-dd");
 
-            KhachHang khachhang = new KhachHang(makh, tenkh, sdtkh, namsinh, ngaytao);
-            MessageBox.Show(bus_khachhang.SuaBangKhachHang(khachhang));
-            DLTrenTungTrang_KhachHang();
+                KhachHang khachhang = new KhachHang(makh, tenkh, sdtkh, namsinh, ngaytao);
+                MessageBox.Show(bus_khachhang.SuaBangKhachHang(khachhang));
+                DLTrenTungTrang_KhachHang();
+            }else { DLTrenTungTrang_KhachHang(); }
         }
 
         private void btnXoaKH_Click(object sender, EventArgs e)
         {
-            int makh = Int32.Parse(txtIDKhachHang.Text);
-            MessageBox.Show(bus_khachhang.XoaDlBangKhachHang(makh));
-            DLTrenTungTrang_KhachHang();
+            if (Hoantac(btnXoaKH.Text))
+            {
+                int makh = Int32.Parse(txtIDKhachHang.Text);
+                MessageBox.Show(bus_khachhang.XoaDlBangKhachHang(makh));
+                DLTrenTungTrang_KhachHang();
+            }
+            else { DLTrenTungTrang_KhachHang(); }
            
         }
 
@@ -927,6 +972,7 @@ namespace BanLinhKien
             DataTable datatable_ncc = bus_ncc.BangNCC();
             if (btnThemNCC.Text.Contains("Th"))
             {
+                lb_hoantacncc.Visible = true;
                 txtIDNCC.Text =(bus_ncc.MaNCC()+1).ToString();
                 txtTenNCC.Text = "";
                 txtDiaChiNCC.Text = "";
@@ -957,30 +1003,36 @@ namespace BanLinhKien
                     MessageBox.Show(bus_ncc.LuuBangNhaCungCap(nhacungcap));
                     DLTrenTungTrang_BangNCC();
                     btnThemNCC.Text = "Thêm";
+                    lb_hoantacncc.Visible = false;
                 }
             }
         }
 
         private void btnSuaNCC_Click(object sender, EventArgs e)
         {
-            int mancc = Int32.Parse(txtIDNCC.Text);
-            String tenncc = txtTenNCC.Text;
-            String diachi = txtDiaChiNCC.Text;
-            String fax = txtFaxNCC.Text;
-            String email = txtEmailNCC.Text;
-            String ngaytao = DateTime.Now.ToString("yyyy-MM-dd");
+            if (Hoantac(btnSuaNCC.Text))
+            {
+                int mancc = Int32.Parse(txtIDNCC.Text);
+                String tenncc = txtTenNCC.Text;
+                String diachi = txtDiaChiNCC.Text;
+                String fax = txtFaxNCC.Text;
+                String email = txtEmailNCC.Text;
+                String ngaytao = DateTime.Now.ToString("yyyy-MM-dd");
 
-            NhaCungCap nhacungcap = new NhaCungCap(mancc, tenncc, diachi, fax, email, ngaytao);
-            MessageBox.Show(bus_ncc.SuuBangNhaCungCap(nhacungcap));
-            DLTrenTungTrang_BangNCC();
+                NhaCungCap nhacungcap = new NhaCungCap(mancc, tenncc, diachi, fax, email, ngaytao);
+                MessageBox.Show(bus_ncc.SuuBangNhaCungCap(nhacungcap));
+                DLTrenTungTrang_BangNCC();
+            }else { DLTrenTungTrang_BangNCC(); }
 
         }
 
         private void btnXoaNCC_Click(object sender, EventArgs e)
         {
-            int mancc = Int32.Parse(txtIDNCC.Text);
-            MessageBox.Show(bus_ncc.XoaDLBangNhaCungCap(mancc));
-            DLTrenTungTrang_BangNCC();
+            if (Hoantac(btnXoaNCC.Text)) {
+                int mancc = Int32.Parse(txtIDNCC.Text);
+                MessageBox.Show(bus_ncc.XoaDLBangNhaCungCap(mancc));
+                DLTrenTungTrang_BangNCC();
+            }else { DLTrenTungTrang_BangNCC(); }
            
         }
 
@@ -1035,6 +1087,52 @@ namespace BanLinhKien
         string sanitizeString(string str)
         {
             return String.Join("", str.Split(',', '.'));
+        }
+
+
+        private void tabControlQL_DuLieu_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                switch(tabControlQL_DuLieu.SelectedTab.Name)
+                {
+                    case "tabDanhMuc":
+                        {
+                            CapNhapLaiDLTrenForm();
+                            lb_hoantacdanhmuc.Visible = false;
+                            btnThemDM.Text = "Thêm";
+                        }break;
+                    case "tabHang":
+                        {
+                            configDGVHang();
+                            lb_hoantachang.Visible = false;
+                            btnThemHang.Text = "Thêm";
+                        }
+                        break;
+                    case "tabKhachHang":
+                        {
+                            DLTrenTungTrang_KhachHang();
+                            lb_hoantackhachhang.Visible = false;
+                            btnThemKH.Text = "Thêm";
+                        }
+                        break;
+                    case "tabNhaCungCap":
+                        {
+                            DLTrenTungTrang_BangNCC();
+                            lb_hoantacncc.Visible = false;
+                            btnThemNCC.Text = "Thêm";
+                        }
+                        break;
+                    case "tabNhanVien":
+                        {
+                            DLTrenTungTrang_BangNhanVien();
+                            lb_hoantacnhanviven.Visible = false;
+                            btnThemNV.Text = "Thêm";
+                        }
+                        break;
+                    default: { }break;
+                }
+            }
         }
     }
 

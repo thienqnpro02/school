@@ -192,8 +192,14 @@ namespace BanLinhKien
             Hang hang = (Hang)listhang[txt_gia.Tag];
             try
             {
-               
-                hang.Gia = Convert.ToInt32(sanitizeString(txt_gia.Text));
+
+                if (txt_gia.TextLength < 12)
+                {
+                    hang.Gia = Convert.ToInt32(sanitizeString(txt_gia.Text));
+
+                }
+                else { txt_gia.Text = hang.Gia.ToString(); }
+                
                 if (!txt_gia.Text.Equals("0"))
                 {
                     Label label_gia = listlabel[txt_gia.TabIndex];
@@ -202,15 +208,6 @@ namespace BanLinhKien
                     txt_gia.Select(txt_gia.TextLength, 0);
                     totalPaymentAmount();
                 }
-                if (txt_gia.TextLength > 11)
-                {
-                    txt_gia.Text = "";
-                    txt_gia.Focus();
-                    Label lb_gia = listlabel[txt_gia.TabIndex];
-                    lb_gia.Text = "0 VNĐ";
-                    totalPaymentAmount();
-                }
-
             }
             catch(FormatException ex) { }
         }
@@ -261,6 +258,11 @@ namespace BanLinhKien
                 {
                     actionReloadHang();
                     MessageBox.Show("Nhập hàng thành công");
+
+                    listhang.Clear();
+                    listlabel.Clear();
+                    totalPaymentAmount();
+                    flpDanhSachSanPham.Controls.Clear(); 
                 }
             }
             else
