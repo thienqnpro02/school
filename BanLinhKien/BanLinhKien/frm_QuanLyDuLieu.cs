@@ -240,7 +240,7 @@ namespace BanLinhKien
                 {
                     MessageBox.Show("Không thể xóa Danh mục này, vì có chứa các mặt hàng");
                 }
-            }else { CapNhapLaiDLTrenForm(); }
+            }
         }
        
         private void dgvDanhMuc_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -563,7 +563,7 @@ namespace BanLinhKien
                     currentPageHang = BUS_Hang.Instance.totalPage;
                     txtTrangHang.Text = currentPageHang.ToString();
                 }
-            }else { configDGVHang(); }
+            }
                 
         }
 
@@ -733,7 +733,7 @@ namespace BanLinhKien
                 int manv = Int32.Parse(txtIDNhanVien.Text);
                 MessageBox.Show(bus_nhanvien.XoaDLBangNhanVien(manv));
                 DLTrenTungTrang_BangNhanVien();
-            }else { DLTrenTungTrang_BangNhanVien(); }   
+            } 
         }
 
         private void btnSuaNV_Click(object sender, EventArgs e)
@@ -888,7 +888,7 @@ namespace BanLinhKien
                 MessageBox.Show(bus_khachhang.XoaDlBangKhachHang(makh));
                 DLTrenTungTrang_KhachHang();
             }
-            else { DLTrenTungTrang_KhachHang(); }
+            
            
         }
 
@@ -1032,7 +1032,7 @@ namespace BanLinhKien
                 int mancc = Int32.Parse(txtIDNCC.Text);
                 MessageBox.Show(bus_ncc.XoaDLBangNhaCungCap(mancc));
                 DLTrenTungTrang_BangNCC();
-            }else { DLTrenTungTrang_BangNCC(); }
+            }
            
         }
 
