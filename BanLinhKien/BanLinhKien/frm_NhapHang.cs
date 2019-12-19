@@ -154,6 +154,7 @@ namespace BanLinhKien
         }
 
         private static Hashtable listhang = new Hashtable();
+
         private void btnThemVaoGioNhapHang_Click(object sender, EventArgs e)
         {
             int mahang =Convert.ToInt32(dgvDanhSachHang.CurrentRow.Cells[0].Value);

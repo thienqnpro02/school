@@ -7,3 +7,12 @@ D:\Ex-on-school\school\BanLinhKien\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.ca
 D:\Ex-on-school\school\BanLinhKien\DAO\obj\Debug\DAO.csproj.CopyComplete
 D:\Ex-on-school\school\BanLinhKien\DAO\obj\Debug\DAO.dll
 D:\Ex-on-school\school\BanLinhKien\DAO\obj\Debug\DAO.pdb
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\DAO\bin\Debug\DAO.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\DAO\bin\Debug\DAO.pdb
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\DAO\bin\Debug\DTO.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\DAO\bin\Debug\DTO.pdb
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\DAO\obj\Debug\DAO.csprojAssemblyReference.cache
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\DAO\obj\Debug\DAO.csproj.CopyComplete
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\DAO\obj\Debug\DAO.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\DAO\obj\Debug\DAO.pdb
