@@ -15,9 +15,12 @@ namespace BanLinhKien
     public partial class frm_GioHang : Form
     {
         public Hashtable items_picked;
+
         private DataTable dt_hang;       
         private int idOldCustomer = -1;
         private bool isAnonymousCustomer = true;
+        private Hashtable hash_Label = new Hashtable();
+
         public delegate void ReloadHang();
         public ReloadHang actionReloadHang;
 
@@ -78,12 +81,15 @@ namespace BanLinhKien
                 lbl.AutoSize = false;
                 lbl.Size = new Size(231, 46);
                 lbl.Location = new Point(128, 15);
+                
 
                 Label lblGiaHang = new Label();
                 lblGiaHang.Name = "lblGiaHang" + row["MAHANG"].ToString();
                 lblGiaHang.Text = formatCultureToString(Convert.ToInt32(row["GIA"])) + " VNĐ";
                 lblGiaHang.AutoSize = true;
                 lblGiaHang.Location = new Point(356, 86);
+                lblGiaHang.Tag = row["GIA"].ToString();
+                hash_Label.Add(row["MAHANG"].ToString(), lblGiaHang);
 
                 Label lblSoLuong = new Label();
                 lblSoLuong.Name = "lblSoLuong" + row["MAHANG"].ToString();
@@ -123,16 +129,25 @@ namespace BanLinhKien
         private void Num_ValueChanged(object sender, EventArgs e)
         {
             NumericUpDown num = sender as NumericUpDown;
-            items_picked[num.Tag.ToString()] = Convert.ToInt32(num.Value);
+            Label lbl = hash_Label[num.Tag.ToString()] as Label;
+            int soLuong = Convert.ToInt32(num.Value);
+
+            items_picked[num.Tag.ToString()] = soLuong;
+            lbl.Text = (Convert.ToInt32(lbl.Tag) * soLuong).ToString();
+            lbl.Text = formatCultureToString(Convert.ToInt32(lbl.Text)) + " VNĐ";
+
             totalPaymentAmount();
         }
 
         private void totalPaymentAmount()
         {
-            int total = 0;
-            foreach(DataRow row in dt_hang.Rows)
+            int total = 0; 
+            foreach(DictionaryEntry section in hash_Label)
             {
-                total += Convert.ToInt32(row["GIA"]) * Convert.ToInt32(items_picked[row["MAHANG"].ToString()]);
+                Label lbl = section.Value as Label;
+                string soTien = sanitizeString(lbl.Text);
+
+                total += Convert.ToInt32(soTien);
             }
             
             lblTongTien.Text = formatCultureToString(total) + " VNĐ";
@@ -295,6 +310,17 @@ namespace BanLinhKien
         {
             return String.Format("{0:n0}", num);
 
+        }
+
+        string sanitizeString(string str)
+        {
+            string strSanitize = String.Join("", str.Split(',', '.'));
+            int idx = strSanitize.IndexOf(' ');
+            
+            strSanitize = strSanitize.Remove(idx);
+
+
+            return strSanitize;
         }
     }
 }
