@@ -258,7 +258,7 @@
             this.Controls.Add(this.dgvDanhSachHang);
             this.Name = "frm_NhapHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "frm_NhapHang";
+            this.Text = "Nhập hàng";
             this.Load += new System.EventHandler(this.frm_NhapHang_Load);
             this.gbLocHang.ResumeLayout(false);
             this.gbLocHang.PerformLayout();
