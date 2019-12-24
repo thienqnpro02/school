@@ -169,6 +169,7 @@ namespace BanLinhKien
             
             flpDanhSachSanPham.Controls.Remove(gpParent);
             items_picked.Remove(btnDel.Tag.ToString());
+            hash_Label.Remove(btnDel.Tag.ToString());
 
             totalPaymentAmount();
 
