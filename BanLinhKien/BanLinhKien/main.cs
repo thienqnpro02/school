@@ -167,6 +167,7 @@ namespace BanLinhKien
             }
 
             updatePagingText();
+            sortHang((int)cbSapXep.SelectedValue);
         }
 
         private void BtnPrev_Click(object sender, EventArgs e)
@@ -189,6 +190,7 @@ namespace BanLinhKien
             }
 
             updatePagingText();
+            sortHang((int)cbSapXep.SelectedValue);
         }
 
         void searchHang()
@@ -273,6 +275,7 @@ namespace BanLinhKien
             }            
 
             updatePagingText();
+            sortHang((int)cbSapXep.SelectedValue);
         }
 
         private void ĐăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)

@@ -85,6 +85,7 @@ namespace BanLinhKien
             {
                 int madanhmuc = Convert.ToInt32(cbLocDanhMuc.SelectedValue);
                 DLTrenTungTrang_NhapHang(madanhmuc);
+                cbSapXep_SelectedIndexChanged(new object(), new EventArgs());
             }
             catch(InvalidCastException ex) { }
         }
@@ -100,6 +101,7 @@ namespace BanLinhKien
                 bus_nhaphang.currentPage--;
                 DLTrenTungTrang_NhapHang((int)cbLocDanhMuc.SelectedValue);
             }
+            cbSapXep_SelectedIndexChanged(new object(), new EventArgs());
         }
 
         private void btnNext_Click(object sender, EventArgs e)
@@ -113,6 +115,7 @@ namespace BanLinhKien
                 bus_nhaphang.currentPage++;
                 DLTrenTungTrang_NhapHang((int)cbLocDanhMuc.SelectedValue);
             }
+            cbSapXep_SelectedIndexChanged(new object(), new EventArgs());
         }
 
         private void cbSapXep_SelectedIndexChanged(object sender, EventArgs e)
