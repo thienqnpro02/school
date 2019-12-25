@@ -21,6 +21,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_19F3A2CCF3774B01B094B978F93717D9"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_5515B98D9B0B38F3D0C4964114424C65"
         "OwnerKey" = "8:_8FFB11E9227744E38CC2C98D4A032B87"
         "MsmSig" = "8:_UNDEFINED"
@@ -52,12 +58,6 @@
         "Entry"
         {
         "MsmKey" = "8:_7D8676555C334433B844DF3B67AB81B3"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_855B1044DE73467E8DB8E0B155E36EEA"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -99,6 +99,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_C539C8B1CBF1435FB1FAEEE3DE251F8B"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_C8AA46BFABB48A64C844093CA2B969C3"
         "OwnerKey" = "8:_D7C0254CBC69AC9D034F51375E1AB64F"
         "MsmSig" = "8:_UNDEFINED"
@@ -118,12 +124,6 @@
         "Entry"
         {
         "MsmKey" = "8:_D9B0D78BD7C345459A48DECB0AEE1CFE"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_F9B6C23FD1AD49749E9E206F61DD1FF1"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -308,6 +308,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_19F3A2CCF3774B01B094B978F93717D9"
+            {
+            "SourcePath" = "8:..\\BanLinhKien\\QL_LINHKIEN.mdf"
+            "TargetName" = "8:QL_LINHKIEN.mdf"
+            "Tag" = "8:"
+            "Folder" = "8:_07467670BBB74DD59DB49053DBC01B5A"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_5515B98D9B0B38F3D0C4964114424C65"
             {
             "AssemblyRegister" = "3:1"
@@ -450,26 +470,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_855B1044DE73467E8DB8E0B155E36EEA"
-            {
-            "SourcePath" = "8:..\\BanLinhKien\\QL_LINHKIEN_log.ldf"
-            "TargetName" = "8:QL_LINHKIEN_log.ldf"
-            "Tag" = "8:"
-            "Folder" = "8:_07467670BBB74DD59DB49053DBC01B5A"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8B3982FB424A4057B30A1C969214A1C9"
             {
             "SourcePath" = "8:..\\BanLinhKien\\images\\b9rrdmzjio.jpg"
@@ -581,6 +581,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C539C8B1CBF1435FB1FAEEE3DE251F8B"
+            {
+            "SourcePath" = "8:..\\BanLinhKien\\QL_LINHKIEN_log.ldf"
+            "TargetName" = "8:QL_LINHKIEN_log.ldf"
+            "Tag" = "8:"
+            "Folder" = "8:_07467670BBB74DD59DB49053DBC01B5A"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_C8AA46BFABB48A64C844093CA2B969C3"
@@ -696,26 +716,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F9B6C23FD1AD49749E9E206F61DD1FF1"
-            {
-            "SourcePath" = "8:..\\BanLinhKien\\QL_LINHKIEN.mdf"
-            "TargetName" = "8:QL_LINHKIEN.mdf"
-            "Tag" = "8:"
-            "Folder" = "8:_07467670BBB74DD59DB49053DBC01B5A"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_FD9F8C214CC83D15AA4B96DD040D66D9"
             {
             "AssemblyRegister" = "3:1"
@@ -815,7 +815,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Setup"
         "ProductCode" = "8:{484710F8-5EE2-49E7-A659-0376BA948563}"
-        "PackageCode" = "8:{C652EEBE-FBB9-46D2-8533-9E94A9163E06}"
+        "PackageCode" = "8:{FF32A567-4812-460E-8B1A-BEDC87C0B765}"
         "UpgradeCode" = "8:{E5C4069E-ECB3-40E5-B8F6-152DE0FEDB12}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
