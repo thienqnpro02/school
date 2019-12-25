@@ -1,0 +1,431 @@
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\BanLinhKien.exe.config
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\BanLinhKien.exe
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\BanLinhKien.pdb
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\BUS.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\DTO.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.ReportViewer.Design.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\DAO.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\EnvDTE.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\stdole.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.MSXML.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\BUS.pdb
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\DTO.pdb
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\DAO.pdb
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.csprojAssemblyReference.cache
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.frm_CaNhan.resources
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.frm_ChiTietPhieuNhap.resources
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.frm_ChonKhach.resources
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.frm_DangNhap.resources
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.frm_NhapHang.resources
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.frm_QuanLyDuLieu.resources
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.frm_ChiTietHang.resources
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.frm_GioHang.resources
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.frm_ThongKe.resources
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.main.resources
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.Properties.Resources.resources
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.csproj.GenerateResource.cache
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\obj\Debug\RdlCompile.cache
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\obj\Debug\RdlCompile.compiled
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.csproj.CoreCompileInputs.cache
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.csproj.CopyComplete
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.exe
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.pdb
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\DevExpress.Data.v19.1.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\DevExpress.Xpo.v19.1.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\DevExpress.Data.v19.1.xml
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\DevExpress.Xpo.v19.1.xml
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\de\DevExpress.Data.v19.1.resources.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\es\DevExpress.Data.v19.1.resources.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\ja\DevExpress.Data.v19.1.resources.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\ru\DevExpress.Data.v19.1.resources.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\de\DevExpress.Xpo.v19.1.resources.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\es\DevExpress.Xpo.v19.1.resources.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\ja\DevExpress.Xpo.v19.1.resources.dll
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\ru\DevExpress.Xpo.v19.1.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\BanLinhKien.exe.config
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\BanLinhKien.exe
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\BanLinhKien.pdb
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\BUS.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\DTO.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\DAO.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\EnvDTE.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\stdole.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.VSHelp.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.Shell.Interop.9.0.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.ProjectAggregator.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.ComponentModelHost.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.Debugger.InteropA.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\EnvDTE80.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.Build.Tasks.Core.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.Data.Services.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\VSLangProj.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.Shell.Interop.11.0.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.Data.Core.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.Shell.Interop.10.0.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\VSLangProj80.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.ManagedInterfaces.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.WCFReference.Interop.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.Debugger.Interop.11.0.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\Newtonsoft.Json.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\System.Threading.Tasks.Dataflow.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.GraphModel.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.MSXML.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.Build.Utilities.Core.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.10.0.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.Build.Framework.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\VSLangProj2.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\BUS.pdb
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\DTO.pdb
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\DevExpress.Data.v19.1.xml
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\DevExpress.Xpo.v19.1.xml
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\DAO.pdb
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.xml
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\de\DevExpress.Data.v19.1.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\es\DevExpress.Data.v19.1.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\ja\DevExpress.Data.v19.1.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\ru\DevExpress.Data.v19.1.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\de\DevExpress.Xpo.v19.1.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\es\DevExpress.Xpo.v19.1.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\ja\DevExpress.Xpo.v19.1.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\ru\DevExpress.Xpo.v19.1.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.csprojAssemblyReference.cache
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.frm_CaNhan.resources
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.frm_ChiTietPhieuNhap.resources
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.frm_ChonKhach.resources
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.frm_DangNhap.resources
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.frm_NhapHang.resources
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.frm_QuanLyDuLieu.resources
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.frm_ChiTietHang.resources
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.frm_GioHang.resources
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.frm_ThongKe.resources
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.main.resources
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.Properties.Resources.resources
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.csproj.GenerateResource.cache
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\obj\Debug\RdlCompile.cache
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\obj\Debug\RdlCompile.compiled
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.csproj.CoreCompileInputs.cache
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.csproj.CopyComplete
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.exe
+C:\Users\user\Downloads\PhanMemQuanLi - LINH KIEN\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.pdb
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\QL_LINHKIEN.mdf
+D:\Ex-on-school\school\BanLinhKien\BanLinhKien\bin\Debug\QL_LINHKIEN_log.ldf
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\QL_LINHKIEN.mdf
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\QL_LINHKIEN_log.ldf
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\BanLinhKien.exe.config
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\BanLinhKien.exe
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\BanLinhKien.pdb
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\BUS.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\DTO.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\DAO.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\EnvDTE.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\stdole.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.VSHelp.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.Shell.Interop.9.0.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.ProjectAggregator.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.ComponentModelHost.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.Debugger.InteropA.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\EnvDTE80.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.Build.Tasks.Core.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.Data.Services.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\VSLangProj.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.Shell.Interop.11.0.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.Data.Core.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.Shell.Interop.10.0.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\VSLangProj80.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.ManagedInterfaces.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.WCFReference.Interop.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.Debugger.Interop.11.0.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\Newtonsoft.Json.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\System.Threading.Tasks.Dataflow.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.GraphModel.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.MSXML.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.Build.Utilities.Core.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.10.0.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.Build.Framework.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\VSLangProj2.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\BUS.pdb
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\DTO.pdb
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\DAO.pdb
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.xml
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.csprojAssemblyReference.cache
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.frm_CaNhan.resources
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.frm_ChiTietPhieuNhap.resources
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.frm_ChonKhach.resources
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.frm_DangNhap.resources
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.frm_NhapHang.resources
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.frm_QuanLyDuLieu.resources
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.frm_ChiTietHang.resources
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.frm_GioHang.resources
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.frm_ThongKe.resources
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.main.resources
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.Properties.Resources.resources
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.csproj.GenerateResource.cache
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\obj\Debug\RdlCompile.cache
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\obj\Debug\RdlCompile.compiled
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.csproj.CoreCompileInputs.cache
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.csproj.CopyComplete
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.exe
+C:\Users\user\Downloads\school\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.pdb
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\QL_LINHKIEN.mdf
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\QL_LINHKIEN_log.ldf
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\BanLinhKien.exe.config
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\BanLinhKien.exe
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\BanLinhKien.pdb
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\BUS.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\DTO.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\DAO.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\EnvDTE.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\stdole.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.VSHelp.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.Shell.Interop.9.0.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.ProjectAggregator.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.ComponentModelHost.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.Debugger.InteropA.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\EnvDTE80.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.Build.Tasks.Core.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.Data.Services.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\VSLangProj.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.Shell.Interop.11.0.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.Data.Core.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.Shell.Interop.10.0.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\VSLangProj80.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.ManagedInterfaces.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.WCFReference.Interop.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.Debugger.Interop.11.0.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\Newtonsoft.Json.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\System.Threading.Tasks.Dataflow.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.GraphModel.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.MSXML.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.Build.Utilities.Core.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.10.0.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.Build.Framework.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\VSLangProj2.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\BUS.pdb
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\DTO.pdb
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\DAO.pdb
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.xml
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.csprojAssemblyReference.cache
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.frm_CaNhan.resources
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.frm_ChiTietPhieuNhap.resources
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.frm_ChonKhach.resources
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.frm_DangNhap.resources
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.frm_NhapHang.resources
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.frm_QuanLyDuLieu.resources
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.frm_ChiTietHang.resources
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.frm_GioHang.resources
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.frm_ThongKe.resources
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.main.resources
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.Properties.Resources.resources
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.csproj.GenerateResource.cache
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\obj\Debug\RdlCompile.cache
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\obj\Debug\RdlCompile.compiled
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.csproj.CoreCompileInputs.cache
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.csproj.CopyComplete
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.exe
+C:\Users\user\Downloads\BanLinhKien\BanLinhKien\obj\Debug\BanLinhKien.pdb

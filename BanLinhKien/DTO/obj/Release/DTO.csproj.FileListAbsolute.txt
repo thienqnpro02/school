@@ -1,0 +1,6 @@
+D:\Ex-on-school\school\BanLinhKien\DTO\bin\Release\DTO.dll
+D:\Ex-on-school\school\BanLinhKien\DTO\bin\Release\DTO.pdb
+D:\Ex-on-school\school\BanLinhKien\DTO\obj\Release\DTO.csprojAssemblyReference.cache
+D:\Ex-on-school\school\BanLinhKien\DTO\obj\Release\DTO.csproj.CoreCompileInputs.cache
+D:\Ex-on-school\school\BanLinhKien\DTO\obj\Release\DTO.dll
+D:\Ex-on-school\school\BanLinhKien\DTO\obj\Release\DTO.pdb
