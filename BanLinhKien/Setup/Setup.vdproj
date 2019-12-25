@@ -21,14 +21,20 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_19F3A2CCF3774B01B094B978F93717D9"
+        "MsmKey" = "8:_20CE74CA1344432C80D7EB89A0EFA519"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_29705AD981654F439880F92553407FBB"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_5515B98D9B0B38F3D0C4964114424C65"
-        "OwnerKey" = "8:_8FFB11E9227744E38CC2C98D4A032B87"
+        "OwnerKey" = "8:_29705AD981654F439880F92553407FBB"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -45,13 +51,19 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_7546E99B261BB66D4BA66F3E08108A90"
-        "OwnerKey" = "8:_8FFB11E9227744E38CC2C98D4A032B87"
+        "MsmKey" = "8:_660AE53233894F2E871FDFA130298237"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_7D0C9A688B8142FFB7849B2EDCAA6D6E"
+        "MsmKey" = "8:_7546E99B261BB66D4BA66F3E08108A90"
+        "OwnerKey" = "8:_29705AD981654F439880F92553407FBB"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_78A7B11E5C004E19801C82FA9F30763B"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -64,12 +76,6 @@
         "Entry"
         {
         "MsmKey" = "8:_8B3982FB424A4057B30A1C969214A1C9"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_8FFB11E9227744E38CC2C98D4A032B87"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -88,19 +94,13 @@
         "Entry"
         {
         "MsmKey" = "8:_BDDD4B092E01E1D86FFA35B12F6F4CE1"
-        "OwnerKey" = "8:_8FFB11E9227744E38CC2C98D4A032B87"
+        "OwnerKey" = "8:_29705AD981654F439880F92553407FBB"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_BDDD4B092E01E1D86FFA35B12F6F4CE1"
         "OwnerKey" = "8:_7546E99B261BB66D4BA66F3E08108A90"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_C539C8B1CBF1435FB1FAEEE3DE251F8B"
-        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -142,7 +142,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_8FFB11E9227744E38CC2C98D4A032B87"
+        "OwnerKey" = "8:_BDDD4B092E01E1D86FFA35B12F6F4CE1"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_29705AD981654F439880F92553407FBB"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -185,12 +191,6 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_D7746F9E5A94DFED0BA933BC3CD048AB"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_BDDD4B092E01E1D86FFA35B12F6F4CE1"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -308,10 +308,41 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_19F3A2CCF3774B01B094B978F93717D9"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_20CE74CA1344432C80D7EB89A0EFA519"
             {
             "SourcePath" = "8:..\\BanLinhKien\\QL_LINHKIEN.mdf"
             "TargetName" = "8:QL_LINHKIEN.mdf"
+            "Tag" = "8:"
+            "Folder" = "8:_07467670BBB74DD59DB49053DBC01B5A"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_29705AD981654F439880F92553407FBB"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:BanLinhKien, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_29705AD981654F439880F92553407FBB"
+                    {
+                    "Name" = "8:BanLinhKien.exe"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:..\\BanLinhKien\\bin\\Debug\\BanLinhKien.exe"
+            "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_07467670BBB74DD59DB49053DBC01B5A"
             "Condition" = "8:"
@@ -399,6 +430,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_660AE53233894F2E871FDFA130298237"
+            {
+            "SourcePath" = "8:..\\BanLinhKien\\QL_LINHKIEN_log.ldf"
+            "TargetName" = "8:QL_LINHKIEN_log.ldf"
+            "Tag" = "8:"
+            "Folder" = "8:_07467670BBB74DD59DB49053DBC01B5A"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_7546E99B261BB66D4BA66F3E08108A90"
             {
             "AssemblyRegister" = "3:1"
@@ -430,7 +481,7 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7D0C9A688B8142FFB7849B2EDCAA6D6E"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_78A7B11E5C004E19801C82FA9F30763B"
             {
             "SourcePath" = "8:..\\BanLinhKien\\bin\\Debug\\BanLinhKien.exe.config"
             "TargetName" = "8:BanLinhKien.exe.config"
@@ -476,37 +527,6 @@
             "TargetName" = "8:b9rrdmzjio.jpg"
             "Tag" = "8:"
             "Folder" = "8:_929656013DEC47A0835D05A50D413174"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_8FFB11E9227744E38CC2C98D4A032B87"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:BanLinhKien, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_8FFB11E9227744E38CC2C98D4A032B87"
-                    {
-                    "Name" = "8:BanLinhKien.exe"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:..\\BanLinhKien\\bin\\Debug\\BanLinhKien.exe"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_07467670BBB74DD59DB49053DBC01B5A"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -581,26 +601,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C539C8B1CBF1435FB1FAEEE3DE251F8B"
-            {
-            "SourcePath" = "8:..\\BanLinhKien\\QL_LINHKIEN_log.ldf"
-            "TargetName" = "8:QL_LINHKIEN_log.ldf"
-            "Tag" = "8:"
-            "Folder" = "8:_07467670BBB74DD59DB49053DBC01B5A"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_C8AA46BFABB48A64C844093CA2B969C3"
@@ -815,7 +815,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Setup"
         "ProductCode" = "8:{484710F8-5EE2-49E7-A659-0376BA948563}"
-        "PackageCode" = "8:{FF32A567-4812-460E-8B1A-BEDC87C0B765}"
+        "PackageCode" = "8:{4A4B4A60-44ED-4850-A341-9195027BA8E1}"
         "UpgradeCode" = "8:{E5C4069E-ECB3-40E5-B8F6-152DE0FEDB12}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -943,7 +943,7 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_8FFB11E9227744E38CC2C98D4A032B87"
+            "Target" = "8:"
             "Folder" = "8:_DFB92D5A5EFA455CBE458ACC4BE8CDAA"
             "WorkingFolder" = "8:_07467670BBB74DD59DB49053DBC01B5A"
             "Icon" = "8:"
