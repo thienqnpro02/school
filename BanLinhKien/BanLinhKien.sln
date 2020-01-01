@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAO", "DAO\DAO.csproj", "{8
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{F8069360-F678-498A-9259-2FE23BBAF8AB}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Phan_mem", "..\Cai dat\Phan_mem\Phan_mem.vdproj", "{A5B1615A-48F5-4D8A-9B63-09B972918398}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Phan_mem", "Phan_mem\Phan_mem.vdproj", "{01E50AD1-A02C-4EDD-BDAD-16849AC2B2F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,8 +39,8 @@ Global
 		{8B9B8341-0899-44F5-A422-1A25B952E6F9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F8069360-F678-498A-9259-2FE23BBAF8AB}.Debug|Any CPU.ActiveCfg = Debug
 		{F8069360-F678-498A-9259-2FE23BBAF8AB}.Release|Any CPU.ActiveCfg = Release
-		{A5B1615A-48F5-4D8A-9B63-09B972918398}.Debug|Any CPU.ActiveCfg = Debug
-		{A5B1615A-48F5-4D8A-9B63-09B972918398}.Release|Any CPU.ActiveCfg = Release
+		{01E50AD1-A02C-4EDD-BDAD-16849AC2B2F9}.Debug|Any CPU.ActiveCfg = Debug
+		{01E50AD1-A02C-4EDD-BDAD-16849AC2B2F9}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
