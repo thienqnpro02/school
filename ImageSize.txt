@@ -1,0 +1,7 @@
+Icon Logo: 		16 x 16 pixels
+Logo :		1140 x 415 pixels ( background: transparent )
+Hình chữ : 	400 x 89 pixels ( background: transparent )
+Hình nền:	 tùy chỉnh
+Banner:	1300 x 420 pixels ( áp dụng lên tất cả các loại banner )
+Icon Menu :	615 x 615 pixels ( background: transparent )	
+Slide: 		1300 x 440 pixels
